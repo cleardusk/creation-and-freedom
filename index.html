@@ -13,7 +13,7 @@ button,input,select{font-size:inherit}button{cursor:pointer;background:transpare
 .js body::before{content:"";position:fixed;inset:0 0 auto;height:64px;background:var(--paper);z-index:3;pointer-events:none}.skip-link{position:fixed;z-index:8;top:-80px;left:16px;background:var(--paper);padding:12px}.skip-link:focus{top:12px}.menu-button{position:fixed;right:24px;top:12px;z-index:4;font-size:14px;background:var(--paper);border-radius:4px}.menu-button:hover{background:var(--panel)}
 main{max-width:820px;margin:auto;padding:110px 64px 90px}#cover{max-width:680px;margin:auto;padding-top:34px}.cover-meta{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:14px;font-size:11px;letter-spacing:.07em;color:var(--secondary)}.cover-title{padding-top:44px}.cover-title h1{font-size:clamp(42px,5.3vw,76px);font-weight:600;line-height:1.3;letter-spacing:.065em;margin:0 0 18px}.subtitle{font-size:clamp(20px,2vw,26px);line-height:1.75;margin:0;color:var(--secondary)}.reading-entry{display:inline-flex;gap:28px;align-items:center;justify-content:space-between;min-height:46px;margin-top:40px;padding:10px 20px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:4px;font-size:14px;line-height:1.6;text-decoration:none}.reading-entry:hover{opacity:.85}.cover-index{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;border-top:1px solid var(--line);margin-top:52px;padding-top:22px}.cover-index a{display:flex;gap:16px;align-items:center;min-height:44px;text-decoration:none;font-size:14px}.cover-index a:hover .part-name{text-decoration:underline}.part-number{font-size:11px;color:var(--secondary);font-variant-numeric:tabular-nums}.part-arrow{margin-left:auto;color:var(--secondary)}.cover-toc{margin-top:50px}.js .cover-toc{display:none}
 #reading-stage{width:min(100%,30em);font-size:var(--body-size);margin:auto}.chapter{font:var(--body-size)/1.9 var(--body-font);overflow-wrap:break-word;line-break:strict}.chapter-header{margin-bottom:2.3em;break-inside:avoid}.chapter-part{font-size:12px;color:var(--secondary);letter-spacing:.05em;margin:0 0 20px}.chapter h1{font-weight:500;font-size:1.55em;line-height:1.5;margin:0;text-wrap:balance}.row{display:contents}.prose{display:contents}.prose p{margin:0 0 1.05em;text-align:justify;orphans:2;widows:2}.prose h2{font-size:1.05em;font-weight:600;line-height:1.6;margin:2em 0 .85em;break-after:avoid;break-inside:avoid}.chapter-header+.heading-row h2{margin-top:0}.chapter-nav{display:flex;gap:24px;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;margin-top:2.6em;font-size:13px;line-height:1.6;break-inside:avoid}.chapter-nav a{max-width:46%;padding:10px 0;text-decoration:none}.chapter-nav a:last-child{margin-left:auto;text-align:right}.chapter-nav-label{display:block;font-size:11px;color:var(--secondary)}.chapter-nav-title{display:block;margin-top:4px}.chapter-nav a:hover .chapter-nav-title{text-decoration:underline}
-.paragraph-note{position:relative;display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;top:-.2em;width:18px;height:18px;margin-left:4px;border-radius:50%;font:10px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--secondary);background:#eeeeea;text-decoration:none;white-space:nowrap}.paragraph-note::after{content:"";position:absolute;inset:-13px}.paragraph-note:hover{color:var(--ink);background:#e1e1da}.paragraph-note:focus-visible{outline:1px solid var(--ink);outline-offset:2px}:root[data-night] .paragraph-note{background:#363632}:root[data-night] .paragraph-note:hover{background:#45453e}.js .notes-hidden .paragraph-note{visibility:hidden;pointer-events:none}.annotation-bank{border-top:1px solid var(--line);margin-top:50px}.annotation-bank article{padding:20px 0}.js .annotation-bank{display:none}
+.paragraph-note{position:relative;display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;top:-.2em;width:18px;height:18px;margin-left:4px;border-radius:50%;font:10px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--secondary);background:#eeeeea;text-decoration:none;white-space:nowrap}.paragraph-note::after{content:"";position:absolute;inset:-13px}@media(hover:hover) and (pointer:fine){.paragraph-note:hover{color:var(--ink);background:#e1e1da}}:root[data-night] .paragraph-note{background:#363632}@media(hover:hover) and (pointer:fine){:root[data-night] .paragraph-note:hover{background:#45453e}}.js .notes-hidden .paragraph-note{visibility:hidden;pointer-events:none}.annotation-bank{border-top:1px solid var(--line);margin-top:50px}.annotation-bank article{padding:20px 0}.js .annotation-bank{display:none}
 .js body.is-paged{overflow:clip}.js body.is-paged main{max-width:none;padding:0}.js body.is-paged #reading-stage{position:fixed;top:max(76px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(30em,calc(100vw - 64px));height:calc(100dvh - 158px - env(safe-area-inset-bottom));overflow:clip;touch-action:pan-y pinch-zoom}.js body.is-paged .chapter{height:100%;width:100%;column-width:var(--page-width);column-gap:var(--page-gap);column-fill:auto;transform:translateX(var(--page-shift,0px))}.js body.is-paged .chapter-nav{display:none}.js body.is-paged .chapter-header{margin-bottom:1.8em}.js body.is-paged .prose p{widows:2;orphans:2}
 #pager{position:fixed;bottom:max(16px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(600px,calc(100vw - 40px));display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.025em;color:var(--secondary);background:var(--paper);z-index:3}#pager svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.25}#pager button{color:var(--secondary)}#pager button:hover{color:var(--ink)}#page-status{font-variant-numeric:tabular-nums}
 dialog{color:var(--ink);background:var(--paper);border:1px solid var(--line);padding:28px;width:min(500px,calc(100vw - 48px));max-height:calc(100dvh - 64px);overflow:auto;overscroll-behavior:contain}dialog::backdrop{background:rgb(0 0 0 / 16%)}body:has(dialog:modal){overflow:hidden}.dialog-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}dialog h2{font-size:17px;font-weight:500;line-height:1.5;margin:0}.close-button{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;padding:0;color:var(--secondary);margin:0}.close-button svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.close-button:hover{color:var(--ink)}.note-kind-label{font-size:10px;letter-spacing:.06em;color:var(--secondary);margin:0 0 7px}#note-dialog-content{font:max(17px,calc(var(--body-size) - 2px))/1.8 var(--body-font)}.note-copy>p{margin:0 0 20px}.note-links{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:12px;font:13px/1.6 var(--sans)}.note-links a{display:inline-block;overflow-wrap:anywhere;text-decoration-color:var(--line)}.note-source{font-size:11px;color:var(--secondary);margin-top:3px}.note-meta{font:12px/1.7 var(--sans);color:var(--secondary)}.note-evidence{margin-top:16px}.note-evidence summary{font:12px/1.6 var(--sans);color:var(--secondary);cursor:pointer;min-height:32px}.source-short{display:none}.source-full{display:inline}
@@ -131,8 +131,10 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 #note-dialog .note-copy>p{margin-bottom:18px}
 #note-dialog .note-links{gap:10px;padding-top:14px}
 :root[data-night] #note-dialog{--note-paper:#22221f;box-shadow:0 5px 24px rgb(0 0 0 / 20%)}
-.paragraph-note:focus-visible{outline:none;background:#d5ddd3;color:var(--ink);box-shadow:0 0 0 4px #e9ede7}
-:root[data-night] .paragraph-note:focus-visible{background:#515b4a;box-shadow:0 0 0 4px #333b2e}
+.paragraph-note{-webkit-tap-highlight-color:transparent}
+.paragraph-note:focus-visible{outline:none;background:#d5ddd3;color:var(--ink);box-shadow:none}
+@media(min-width:701px){#tap-help{display:none}}
+:root[data-night] .paragraph-note:focus-visible{background:#515b4a}
 @media(max-width:700px){#note-dialog{border-radius:16px}#note-dialog .note-scroll{padding:20px}#note-dialog .dialog-header{margin-bottom:14px}}
 @media(forced-colors:active){#note-dialog{border-color:CanvasText;box-shadow:none}#note-dialog::before{border-color:CanvasText}.paragraph-note:focus-visible{outline:2px solid Highlight;outline-offset:3px}}
 
@@ -175,8 +177,8 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 <div id="reading-mode" class="choice-row" role="radiogroup" aria-labelledby="reading-mode-label"><span id="reading-mode-label" class="choice-label">翻页</span><div class="choice-options"><label><input type="radio" name="reading-mode" value="paged" checked><span>左右翻页</span></label><label><input type="radio" name="reading-mode" value="scroll"><span>连续滚动</span></label></div></div>
 <label class="font-control" for="font-size">字号 <output id="font-value" for="font-size">18</output><input id="font-size" type="range" min="12" max="26" value="18"></label>
 <label><input id="night-mode" type="checkbox">夜读</label><label><input id="show-notes" type="checkbox">显示批注</label>
-</div><p class="mark-help muted">选中文字可高亮或划线，标记保存在当前浏览器。</p><p id="mark-storage-message" class="muted" hidden></p></details>
-<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.1/creation-and-freedom-v2.3.1.epub" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.1/creation-and-freedom-v2.3.1.pdf" download>PDF</a></p>
+</div><p id="tap-help" class="mark-help muted" hidden>轻点正文左侧返回、右侧前进，中间可选字。</p><p class="mark-help muted">选中文字可高亮或划线，标记保存在当前浏览器。</p><p id="mark-storage-message" class="muted" hidden></p></details>
+<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.2/creation-and-freedom-v2.3.2.epub" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.2/creation-and-freedom-v2.3.2.pdf" download>PDF</a></p>
 <p id="storage-message" class="muted" hidden>当前浏览器无法保存阅读进度。</p>
 </div></dialog>
 <dialog id="note-dialog" aria-labelledby="note-dialog-title" aria-modal="false"><div class="note-scroll">
@@ -219,7 +221,9 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   const paged = () => mode.value === 'paged' && Boolean(current);
   const pinned = () => wideScreen.matches && state.tocPinned === true;
   const menuBlocking = () => menu.open && !pinned();
-  let touch=null;
+  let touch=null,tap=null,tapTimer=0;
+  const phoneScreen=matchMedia('(max-width:700px)');
+  const cancelTap=()=>{clearTimeout(tapTimer);tapTimer=0;tap=null;};
   const syncContents = () => {
     document.body.classList.toggle('has-pinned-contents',pinned() && menu.open);
     pinContents.hidden = !wideScreen.matches;
@@ -237,6 +241,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
     $('font-value').value = font.value;
     document.querySelectorAll('.paragraph-note').forEach(a => { a.tabIndex = notes.checked ? 0 : -1; a.setAttribute('aria-hidden',String(!notes.checked)); });
     $('pager').hidden = !paged();
+    $('tap-help').hidden=mode.value!=='paged';
   };
   const updatePager = () => {
     $('page-status').textContent = `${page+1} / ${pages}`;
@@ -568,6 +573,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
     }
   };
   const layout = pos => {
+    cancelTap();
     touch=null;
     if(!current)return;
     const chapter=active();chapter.style.setProperty('--page-shift','0px');page=0;
@@ -589,6 +595,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
     if(noteDialog.contains(document.activeElement))document.activeElement.blur();
     if(noteDialog.open)noteDialog.close();
     if(returnFocus)link?.focus({preventScroll:true});
+    else if(document.activeElement===link)link.blur();
   };
   const placeNote = () => {
     if(!noteDialog.open||!trigger)return;
@@ -616,6 +623,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   let noteFrame;
   const queueNotePlacement=()=>{if(noteDialog.open&&!noteFrame)noteFrame=requestAnimationFrame(()=>{noteFrame=null;placeNote();});};
   const show = (hash,restore=false,atEnd=false) => {
+    cancelTap();
     touch=null;
     dismissMarks(true);
     const found=$(hash.replace(/^#/,'')), chapter=found?.closest('.chapter');
@@ -640,17 +648,47 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   root.classList.remove('reader-starting');
   window.addEventListener('hashchange',()=>show(location.hash));
   const turn = direction => {
+    cancelTap();
     if(!paged()||menuBlocking()||noteDialog.open)return;
     if(page+direction>=0&&page+direction<pages){setPage(page+direction);remember();return;}
     const i=data.chapters.findIndex(c=>c.id===current),next=data.chapters[i+direction];
     if(next)navigate('#c'+next.id,false,direction<0);
   };
   $('previous-page').addEventListener('click',()=>turn(-1));$('next-page').addEventListener('click',()=>turn(1));
+  const canTapPage=(target,x,y)=>{
+    if(!phoneScreen.matches||!paged()||menuBlocking()||noteDialog.open||!markToolbar.hidden||getSelection()?.toString()||(window.visualViewport?.scale||1)>1)return false;
+    if(target.closest('a,button,input,select,textarea,summary,[role="button"],[contenteditable],.reader-mark'))return false;
+    const box=stage.getBoundingClientRect();
+    return y>=box.top&&y<=box.bottom;
+  };
+  // Wait briefly so a second tap or long press can keep native text selection.
+  document.addEventListener('pointerdown',e=>{
+    const secondTap=Boolean(tapTimer);cancelTap();
+    if(secondTap||!e.isPrimary||!['touch','pen'].includes(e.pointerType)||!canTapPage(e.target,e.clientX,e.clientY))return;
+    tap={id:e.pointerId,x:e.clientX,y:e.clientY,time:Date.now(),chapter:current,page,target:e.target};
+  },true);
+  document.addEventListener('pointermove',e=>{
+    if(tap&&(e.pointerId!==tap.id||Math.hypot(e.clientX-tap.x,e.clientY-tap.y)>10))cancelTap();
+  },{capture:true,passive:true});
+  document.addEventListener('pointerup',e=>{
+    const point=tap;tap=null;
+    if(!point||e.pointerId!==point.id||Date.now()-point.time>250||Math.hypot(e.clientX-point.x,e.clientY-point.y)>10||!canTapPage(point.target,e.clientX,e.clientY))return;
+    const view=window.visualViewport,left=view?.offsetLeft||0,width=view?.width||innerWidth;
+    const direction=e.clientX<left+width/3?-1:e.clientX>left+width*2/3?1:0;
+    if(!direction)return;
+    tapTimer=setTimeout(()=>{
+      tapTimer=0;
+      if(current===point.chapter&&page===point.page&&point.target.isConnected&&canTapPage(point.target,point.x,point.y))turn(direction);
+    },240);
+  },true);
+  document.addEventListener('pointercancel',cancelTap,true);
+  document.addEventListener('contextmenu',cancelTap,true);
   const closeContents=()=>{
     const pos=position();if(pinned()){state.tocPinned=false;save();}
     menu.close();syncContents();layout(pos);remember();$('menu-button').focus({preventScroll:true});
   };
   const openMenu=()=>{
+    cancelTap();
     touch=null;
     if(menu.open){closeContents();return;}
     dismissMarks(true);remember();closeNote();menu.showModal();syncContents();
@@ -689,6 +727,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   document.addEventListener('focusin',e=>{if(noteDialog.open&&!noteDialog.contains(e.target)&&e.target!==trigger)closeNote();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&noteDialog.open){e.preventDefault();e.stopPropagation();closeNote(true);}},true);
   const openNote=(link,keyboard)=>{
+    cancelTap();
     touch=null;
     dismissMarks(true);
     const note=$(link.dataset.note);if(!note)return;
@@ -701,7 +740,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
     if(!noteDialog.open)noteDialog.show();
     noteDialog.querySelector('.note-scroll').scrollTop=0;placeNote();noteDialog.style.visibility='';
     if(keyboard)noteDialog.querySelector('.close-button').focus({preventScroll:true});
-    else if(noteDialog.contains(document.activeElement))document.activeElement.blur();
+    else if(noteDialog.contains(document.activeElement)||document.activeElement===link)document.activeElement.blur();
   };
   document.addEventListener('click',e=>{
     const link=e.target.closest('a[href^="#"]');if(!link||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
@@ -762,7 +801,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   window.addEventListener('scroll',()=>{dismissMarks();queueNotePlacement();if(!paged()){clearTimeout(timer);timer=setTimeout(remember,200);}},{passive:true});
   window.visualViewport?.addEventListener('resize',()=>{dismissMarks();queueNotePlacement();});
   window.visualViewport?.addEventListener('scroll',()=>{dismissMarks();queueNotePlacement();});
-  window.addEventListener('pagehide',()=>{touch=null;remember();});document.addEventListener('visibilitychange',()=>{if(document.hidden){touch=null;remember();}});
+  window.addEventListener('pagehide',()=>{cancelTap();touch=null;remember();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelTap();touch=null;remember();}});
 })();
 </script>
 </body></html>
