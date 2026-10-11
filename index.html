@@ -172,9 +172,9 @@ dialog{color:var(--ink);background:var(--paper);border:1px solid var(--line);pad
   // A malformed hash leaves the whole book readable; script enhancement is applied last.
   root.classList.add('js');
   document.getElementById('menu-button').hidden = false;
-  const initial = location.hash || (state.chapter ? `#c${state.chapter}` : '#cover');
+  const initial = location.hash || '#cover';
   const reloading = performance.getEntriesByType('navigation')[0]?.type === 'reload';
-  show(initial, !location.hash || (reloading && location.hash === `#c${state.chapter}`));
+  show(initial, reloading && location.hash === `#c${state.chapter}`);
   window.addEventListener('hashchange', () => show(location.hash));
   document.addEventListener('click', e => {
     const link = e.target.closest('a[href^="#"]');
