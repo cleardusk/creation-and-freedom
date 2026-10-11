@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark"><meta name="description" content="Creation and Freedom：A Naval Reader。">
+<script>if(/^#c(?:0\d|1[0-4])(?:-b\d{3})?$/.test(location.hash)){document.documentElement.classList.add('reader-starting');document.addEventListener('DOMContentLoaded',()=>document.documentElement.classList.remove('reader-starting'),{once:true});}</script>
 <title>Creation and Freedom · A Naval Reader</title><link rel="icon" href="data:,"><style>:root{--paper:#fff;--ink:#242424;--secondary:#686862;--line:#deded9;--panel:#f6f6f3;--body-size:18px;--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",SimSun,serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;--body-font:var(--serif);--page-gap:48px;color-scheme:light}
 :root[data-night]{--paper:#191919;--ink:#e1e1dc;--secondary:#aaa9a2;--line:#41413d;--panel:#22221f;color-scheme:dark}
 :root[data-font=sans]{--body-font:var(--sans)}:root[data-font=kai]{--body-font:"Kaiti SC","STKaiti","KaiTi",var(--serif)}
@@ -54,9 +55,9 @@ html[lang=en] .language-switch{right:108px}
 
 /* The shared engraving plate belongs to the cover, outside the reading text. */
 .cover-art{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain;margin:30px 0 0;mix-blend-mode:multiply}
-.cover-art+.reading-entry{margin-top:24px}
+.cover-artwork+.reading-entry{margin-top:24px}
 :root[data-night] .cover-art{filter:invert(1);mix-blend-mode:screen}
-@media(max-width:700px){.cover-art{margin-top:24px}.cover-art+.reading-entry{margin-top:20px}.cover-index{margin-top:32px}}
+@media(max-width:700px){.cover-art{margin-top:24px}.cover-artwork+.reading-entry{margin-top:20px}.cover-index{margin-top:32px}}
 @media print{.cover-art{margin-top:14mm;max-height:70mm;object-fit:contain;filter:none!important;mix-blend-mode:normal!important}}
 
 /* A pinned contents panel is a reading companion, with its own scroll area. */
@@ -115,6 +116,8 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 .marks-hint,#marks-message{line-height:1.7;margin:4px 0 16px}
 #undo-mark{display:block;width:100%;border-top:1px solid var(--line);margin-top:4px;font-size:12px;color:var(--secondary);border-radius:0 0 8px 8px}
 .settings-shortcut circle{fill:var(--panel)}
+
+.reader-starting main{visibility:hidden}
 </style>
 </head>
 <body class="notes-hidden">
@@ -125,8 +128,8 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 <section id="cover" aria-labelledby="book-title">
 <div class="cover-meta"><span>2021 — 2026</span><span>FOUR PARTS · TWELVE CHAPTERS</span></div>
 <header class="cover-title"><h1 id="book-title">Creation and Freedom</h1><p class="subtitle">A Naval Reader</p></header>
-<img class="cover-art" src="../assets/cover-art.png" width="1774" height="887" alt="" fetchpriority="high" decoding="async">
-<a id="reading-entry" class="reading-entry" href="#c00" hidden>Start reading <span aria-hidden="true">→</span></a>
+<div class="cover-artwork"><img class="cover-art" data-src="../assets/cover-art.webp" width="1774" height="887" alt="" fetchpriority="high" decoding="async"><noscript><style>.cover-art[data-src]{display:none}</style><img class="cover-art" src="../assets/cover-art.webp" width="1774" height="887" alt="" decoding="async"></noscript></div>
+<a id="reading-entry" class="reading-entry" href="#c00">Start reading <span aria-hidden="true">→</span></a>
 <nav class="cover-index" aria-label="Four parts"><a href="#c01"><span class="part-number">01</span><span class="part-name">Leverage and Distribution</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c04"><span class="part-number">02</span><span class="part-name">Specific Knowledge and Credibility</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c07"><span class="part-number">03</span><span class="part-name">Understanding and Choice</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c10"><span class="part-number">04</span><span class="part-name">Desire and Freedom</span><span class="part-arrow" aria-hidden="true">→</span></a></nav>
 <nav class="book-toc cover-toc" aria-label="Full contents"><div class="toc-group"><h2>Opening</h2><a href="#c00">Before We Begin</a></div><div class="toc-group"><h2>Part 1 · Leverage and Distribution</h2><a href="#c01"><span class="toc-number">01</span><span class="toc-title">Turning Intention into Something Real</span></a><a href="#c02"><span class="toc-number">02</span><span class="toc-title">Taking Back Your Time</span></a><a href="#c03"><span class="toc-number">03</span><span class="toc-title">When Code Gets Cheaper, Who Owns the Value?</span></a></div><div class="toc-group"><h2>Part 2 · Specific Knowledge and Credibility</h2><a href="#c04"><span class="toc-number">04</span><span class="toc-title">Discovering Your Specific Knowledge Through Action</span></a><a href="#c05"><span class="toc-number">05</span><span class="toc-title">Judgment Gives Leverage Its Direction</span></a><a href="#c06"><span class="toc-number">06</span><span class="toc-title">Credibility Means Being Willing to Lose a Sale</span></a></div><div class="toc-group"><h2>Part 3 · Understanding and Choice</h2><a href="#c07"><span class="toc-number">07</span><span class="toc-title">How a Good Product Holds Together</span></a><a href="#c08"><span class="toc-number">08</span><span class="toc-title">Making Understanding Your Own</span></a><a href="#c09"><span class="toc-number">09</span><span class="toc-title">Choose a Difficulty You Are Willing to Take On</span></a></div><div class="toc-group"><h2>Part 4 · Desire and Freedom</h2><a href="#c10"><span class="toc-number">10</span><span class="toc-title">How Desire Taxes Your Time</span></a><a href="#c11"><span class="toc-number">11</span><span class="toc-title">Can Creative Drive and Happiness Coexist?</span></a><a href="#c12"><span class="toc-number">12</span><span class="toc-title">What Kind of Day Should Wealth Make Possible?</span></a></div><div class="toc-group"><h2>Closing</h2><a href="#c13">Afterword: Bringing Understanding Back to Your Life</a><a href="#c14">A Note on the Sources</a></div></nav>
 </section>
@@ -155,7 +158,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 <label class="font-control" for="font-size">Size <output id="font-value" for="font-size">18</output><input id="font-size" type="range" min="12" max="26" value="18"></label>
 <label><input id="night-mode" type="checkbox">Night</label><label><input id="show-notes" type="checkbox">Show notes</label>
 </div><p class="mark-help muted">Select text to highlight or underline. Marks are saved in this browser.</p><p id="mark-storage-message" class="muted" hidden></p></details>
-<p class="downloads"><a href="https://github.com/cleardusk/naval-research-reading/releases/download/v2.2.8/creation-and-freedom-v2.2.8-en.epub" download>EPUB</a><a href="https://github.com/cleardusk/naval-research-reading/releases/download/v2.2.8/creation-and-freedom-v2.2.8-en.pdf" download>PDF</a></p>
+<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.2.9/creation-and-freedom-v2.2.9-en.epub" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.2.9/creation-and-freedom-v2.2.9-en.pdf" download>PDF</a></p>
 <p id="storage-message" class="muted" hidden>This browser cannot save your reading position.</p>
 </div></dialog>
 <dialog id="note-dialog" aria-labelledby="note-dialog-title">
@@ -506,7 +509,9 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
 
   const charRect = (el,offset=0) => {
     const nodes=textNodes(el);let left=Math.max(0,offset);
-    for(const n of nodes){if(left<n.length){const r=document.createRange();r.setStart(n,left);r.setEnd(n,left+1);return r.getBoundingClientRect();}left-=n.length;}
+    // A character at a column boundary may have two fragments. Its final
+    // fragment locates the continuing text; their union can point a page back.
+    for(const n of nodes){if(left<n.length){const r=document.createRange();r.setStart(n,left);r.setEnd(n,left+1);return (paged()&&[...r.getClientRects()].at(-1))||r.getBoundingClientRect();}left-=n.length;}
     return el.getClientRects()[0] || el.getBoundingClientRect();
   };
   const position = () => {
@@ -572,7 +577,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
       const pos=restore&&state.chapter===current&&state.language===data.language?oldSaved:found?.matches('[data-prose]')?{anchor:found.id,textOffset:0}:null;
       layout(pos);if(atEnd&&paged())setPage(pages-1);
       (found?.matches('[tabindex]')?found:chapter.querySelector('h1')).focus({preventScroll:true});
-    }else{window.scrollTo(0,0);$('language-switch').hash='cover';markCurrent();}
+    }else{const art=document.querySelector('.cover-art[data-src]');if(art&&!art.hasAttribute('src'))art.src=art.dataset.src;window.scrollTo(0,0);$('language-switch').hash='cover';markCurrent();}
     busy=false;remember();
     if(pinned())menu.querySelector('#panel-toc a[aria-current="page"]')?.scrollIntoView({block:'nearest'});
   };
@@ -580,6 +585,7 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   root.classList.add('js');$('menu-button').hidden=false;applyOptions();markCurrent();
   const reloading=performance.getEntriesByType('navigation')[0]?.type==='reload';
   show(location.hash||'#cover',reloading&&location.hash===(state.hash||'#c'+state.chapter));
+  root.classList.remove('reader-starting');
   window.addEventListener('hashchange',()=>show(location.hash));
   const turn = direction => {
     if(!paged()||menuBlocking()||noteDialog.open)return;
@@ -662,7 +668,9 @@ html[lang=en] .chapter h1,html[lang=en] .chapter h2{hyphens:none}
   document.querySelector('.search-form').addEventListener('submit',e=>{e.preventDefault();runSearch();});
   window.addEventListener('keydown',e=>{
     if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(!menu.open)openMenu();$('search-panel').open=true;search.focus();return;}
-    if(!paged()||e.shiftKey||getSelection()?.toString()||!markToolbar.hidden||e.ctrlKey||e.metaKey||e.altKey||menuBlocking()||noteDialog.open||e.target.closest('#contents,input,select,textarea,summary,[contenteditable]'))return;
+    if(e.shiftKey||getSelection()?.toString()||!markToolbar.hidden||e.ctrlKey||e.metaKey||e.altKey||menuBlocking()||noteDialog.open||e.target.closest('#contents,input,select,textarea,summary,[contenteditable]'))return;
+    if(!current){if(e.key==='ArrowRight'&&(!e.target.closest('a,button')||e.target===$('reading-entry'))){e.preventDefault();navigate($('reading-entry').hash,true);}return;}
+    if(!paged())return;
     if(e.key===' '&&e.target.closest('button,a'))return;
     if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();turn(1);}
     if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();turn(-1);}
