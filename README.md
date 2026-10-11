@@ -6,7 +6,7 @@
 
 **[中文阅读](https://guojianzhu.com/naval-research-reading/)** · **[Read in English](https://guojianzhu.com/naval-research-reading/en/)** · **[v2.2.3 下载](https://github.com/cleardusk/naval-research-reading/releases/tag/v2.2.3)**
 
-阅读器 v2.2.4 支持在桌面点击图钉固定或取消固定目录，并记住选择；手机目录继续自动收起。书稿与电子书沿用 v2.2.3。
+阅读器 v2.2.5 统一目录图标和对齐，支持在桌面用图钉固定目录并记住选择；手机目录自动收起。批注保留正文与出处链接。书稿与电子书沿用 v2.2.3。
 
 v2.2.3 经中英文全文审读，修正专长积累的表述，删去材料支持不足的发挥与重复。全书共用黑白版画封面。网页与EPUB保留35条批注；PDF采用无批注、无注号的阅读版式。网页支持语言切换、字体与字号设置（默认18px，可调12—26px）、翻页或滚动阅读、弹出批注；EPUB和PDF各有中英文版本。
 

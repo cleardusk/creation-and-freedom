@@ -6,7 +6,7 @@ An independent book based on Naval Ravikant’s public ideas from 2021 to 2026. 
 
 **[Read in English](https://guojianzhu.com/naval-research-reading/en/)** · **[中文版](https://guojianzhu.com/naval-research-reading/)** · **[v2.2.3 downloads](https://github.com/cleardusk/naval-research-reading/releases/tag/v2.2.3)**
 
-Reader v2.2.4 adds a desktop pin icon to keep the contents open, with your preference saved. Mobile contents still close automatically. The book and ebooks remain at v2.2.3.
+Reader v2.2.5 aligns the contents controls and remembers your desktop pin preference. Mobile contents close automatically. Notes retain their text and source links. The book and ebooks remain at v2.2.3.
 
 v2.2.3 follows a full bilingual editorial review, clarifies the different ways specific knowledge develops, and removes unsupported additions and repetition. Both languages share a black-and-white engraving cover. The web and EPUB editions include 35 notes; PDFs provide a clean reading layout without notes or note markers. The web reader supports language switching, typeface and size settings (18px by default, adjustable from 12 to 26px), paged or scrolling layouts, and popup notes. EPUB and PDF editions are available in both languages.
 
