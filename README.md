@@ -4,9 +4,9 @@
 
 根据纳瓦尔2021—2026年的公开表达独立编写，四部十二章，围绕创造、判断与自由展开。书中保留来源与批注。
 
-**[中文阅读](https://guojianzhu.com/naval-research-reading/)** · **[Read in English](https://guojianzhu.com/naval-research-reading/en/)** · **[v2.2.6 下载](https://github.com/cleardusk/naval-research-reading/releases/tag/v2.2.6)**
+**[中文阅读](https://guojianzhu.com/naval-research-reading/)** · **[Read in English](https://guojianzhu.com/naval-research-reading/en/)** · **[v2.2.7 下载](https://github.com/cleardusk/naval-research-reading/releases/tag/v2.2.7)**
 
-v2.2.6 经两位独立读者审读，澄清一处中文歧义、打磨三处英文表达，修复 iPhone 阅读设置排版。批注采用圆角弹窗，桌面目录可固定，手机目录自动收起。
+v2.2.7 经文学、移动阅读、无障碍与数据三位读者审查，恢复三处原材料条件与概念精度，并打磨中英文表达。网页支持高亮、划线和局部清除，标记保存在当前浏览器，中英文分别保存；批注数字采用小圆底。
 
 网页、EPUB、PDF 正文同步，共用黑白版画封面。网页与 EPUB 保留 35 条批注；PDF 不含批注或注号。网页支持中英切换、字体与字号设置（默认 18px，可调 12—26px）、翻页或滚动阅读。
 
