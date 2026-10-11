@@ -1,0 +1,7 @@
+# New binary editions are distributed as GitHub Release assets.
+# Existing tracked downloads remain available for compatibility.
+*.epub
+*.pdf
+*.zip
+cover*.png
+.DS_Store
