@@ -2,7 +2,7 @@
 
 纳瓦尔思想读本 · [English](README.md)
 
-根据纳瓦尔2021—2026年的公开表达独立编写。四部十二章，讨论创造、判断与自由，附原始出处与批注。
+根据纳瓦尔2021—2026年的公开表达独立编写，重点讨论AI、创造、判断与自由。四部十二章，附原始出处与批注。
 
 **[中文阅读](https://guojianzhu.com/creation-and-freedom/)** · **[Read in English](https://guojianzhu.com/creation-and-freedom/en/)** · **[下载 EPUB / PDF](https://github.com/cleardusk/creation-and-freedom/releases/latest)**
 
