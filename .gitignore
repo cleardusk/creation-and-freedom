@@ -5,3 +5,6 @@
 *.zip
 cover*.png
 .DS_Store
+
+# Artwork used by the reading website.
+!assets/cover-art.png
