@@ -7,18 +7,18 @@
 <title>创造与自由 · 纳瓦尔思想读本</title><link rel="icon" href="data:,"><style>
 @font-face{font-family:"Creation Song";src:url("assets/fonts/reader-song-v240.woff2") format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
 
-/* Tokens. One warm paper, one ink, one seal-red accent used sparingly. */
+/* Tokens. One neutral paper, one ink, one ink-indigo accent used sparingly. */
 :root{
- --paper:#faf9f6;--raised:#fff;--ink:#1f1e1c;--secondary:#6b6963;--line:#e5e2db;--line-strong:#cfcbc2;--toggle-off:#8d8980;--panel:#f3f1ec;
- --accent:#a8432a;--accent-soft:rgb(168 67 42 / 9%);--accent-line:rgb(168 67 42 / 32%);--wash:rgb(31 30 28 / 5%);--wash-strong:rgb(31 30 28 / 9%);
- --shadow:0 1px 2px rgb(31 30 28 / 6%),0 10px 32px rgb(31 30 28 / 10%);
+ --paper:#f7f7f5;--raised:#fff;--ink:#1b1c1f;--secondary:#666870;--line:#e2e3e3;--line-strong:#c9cbcd;--toggle-off:#8a8c92;--panel:#efeff0;
+ --accent:#2e4a6b;--accent-soft:rgb(46 74 107 / 8%);--accent-line:rgb(46 74 107 / 30%);--wash:rgb(27 28 31 / 5%);--wash-strong:rgb(27 28 31 / 9%);
+ --shadow:0 1px 2px rgb(27 28 31 / 6%),0 10px 32px rgb(27 28 31 / 10%);
  --body-size:18px;--serif:"Creation Song","Songti SC","Noto Serif CJK SC","Source Han Serif SC",SimSun,serif;
  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;--kai:"Kaiti SC","STKaiti","KaiTi",var(--serif);
  --body-font:var(--serif);--page-gap:48px;--bar:56px;--ease:cubic-bezier(.2,.7,.2,1);color-scheme:light
 }
 :root[data-night]{
- --paper:#141412;--raised:#201f1c;--ink:#dedad1;--secondary:#a19e95;--line:#2f2e2a;--line-strong:#46443f;--toggle-off:#76736b;--panel:#1a1a17;
- --accent:#d98468;--accent-soft:rgb(217 132 104 / 18%);--accent-line:rgb(217 132 104 / 40%);--wash:rgb(255 255 255 / 6%);--wash-strong:rgb(255 255 255 / 11%);
+ --paper:#121315;--raised:#1d1f22;--ink:#dcdde0;--secondary:#9c9fa6;--line:#2b2d31;--line-strong:#43464c;--toggle-off:#73767d;--panel:#18191c;
+ --accent:#93abc7;--accent-soft:rgb(147 171 199 / 16%);--accent-line:rgb(147 171 199 / 38%);--wash:rgb(255 255 255 / 6%);--wash-strong:rgb(255 255 255 / 11%);
  --shadow:0 1px 2px rgb(0 0 0 / 30%),0 12px 36px rgb(0 0 0 / 40%);color-scheme:dark
 }
 :root[data-font=sans]{--body-font:var(--sans)}:root[data-font=kai]{--body-font:var(--kai)}
@@ -27,7 +27,7 @@ html[lang=en]{--serif:Charter,"Iowan Old Style",Georgia,"Times New Roman",serif;
 /* Base */
 *{box-sizing:border-box}html{scroll-padding-top:84px;background:var(--paper)}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-::selection{background:rgb(168 67 42 / 18%)}:root[data-night] ::selection{background:rgb(217 132 104 / 30%)}
+::selection{background:rgb(46 74 107 / 16%)}:root[data-night] ::selection{background:rgb(147 171 199 / 28%)}
 a{color:inherit;text-underline-offset:.24em;text-decoration-thickness:1px;text-decoration-color:var(--line-strong)}
 a:hover{text-decoration-color:currentColor}
 strong{font-weight:600}
@@ -72,11 +72,11 @@ html[lang=en] .cover-title h1{letter-spacing:-.015em;line-height:1.04;font-weigh
 .cover-art{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain;margin:28px 0 0;mix-blend-mode:multiply;filter:brightness(1.02) contrast(1.03);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
 :root[data-night] .cover-art{filter:brightness(1.02) contrast(1.03) invert(1) brightness(.7);mix-blend-mode:screen;opacity:.9}
 .cover-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:20px}
-.reading-entry{display:inline-flex;gap:22px;align-items:center;justify-content:space-between;min-height:50px;padding:12px 22px 12px 24px;background:var(--ink);color:var(--paper);border-radius:999px;font-size:15px;font-weight:500;line-height:1.5;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / 10%),0 6px 18px rgb(31 30 28 / 14%);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.reading-entry{display:inline-flex;gap:22px;align-items:center;justify-content:space-between;min-height:50px;padding:12px 22px 12px 24px;background:var(--ink);color:var(--paper);border-radius:999px;font-size:15px;font-weight:500;line-height:1.5;text-decoration:none;box-shadow:0 1px 2px rgb(0 0 0 / 10%),0 6px 18px rgb(27 28 31 / 14%);transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
 :root[data-night] .reading-entry{background:var(--raised);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line-strong),0 8px 24px rgb(0 0 0 / 30%)}
 :root[data-night] :is(.cover-meta,.cover-index a){border-color:var(--line-strong)}
 .reading-entry span{transition:transform .2s var(--ease)}
-@media(hover:hover){.reading-entry:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgb(0 0 0 / 12%),0 10px 24px rgb(31 30 28 / 18%)}}.reading-entry:hover span{transform:translateX(3px)}
+@media(hover:hover){.reading-entry:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgb(0 0 0 / 12%),0 10px 24px rgb(27 28 31 / 18%)}}.reading-entry:hover span{transform:translateX(3px)}
 .reading-entry:active{transform:none}
 .disclaimer{margin:0;font-size:12px;line-height:1.6;color:var(--secondary)}
 .cover-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px;margin-top:64px}
@@ -150,7 +150,7 @@ html[lang=zh-CN] .paragraph-note{margin-left:1px}
 
 /* Dialogs */
 dialog{color:var(--ink);background:var(--raised);border:1px solid var(--line);padding:28px;width:min(500px,calc(100vw - 48px));max-height:calc(100dvh - 64px);overflow:auto;overscroll-behavior:contain}
-dialog::backdrop{background:rgb(20 18 15 / 26%);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+dialog::backdrop{background:rgb(16 18 22 / 26%);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 body:has(dialog:modal){overflow:hidden}
 .dialog-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
 dialog h2{font-size:17px;font-weight:600;line-height:1.5;margin:0}
@@ -253,7 +253,7 @@ input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
 .reader-mark[data-flags="2"],.reader-mark[data-flags="3"]{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:1.5px;text-underline-offset:.22em}
 :root[data-night] .reader-mark[data-flags="1"],:root[data-night] .reader-mark[data-flags="3"]{background:#574a22}
 #mark-toolbar{position:fixed;z-index:6;max-width:calc(100vw - 24px);background:var(--ink);color:var(--paper);border-radius:14px;box-shadow:var(--shadow);padding:4px;font:13px/1.5 var(--sans)}
-:root[data-night] #mark-toolbar{background:#22211e;color:var(--ink);border:1px solid var(--line-strong)}
+:root[data-night] #mark-toolbar{background:#1f2124;color:var(--ink);border:1px solid var(--line-strong)}
 .mark-actions{display:flex;align-items:center;gap:2px}
 .mark-actions button{min-height:44px;padding:0 13px;border-radius:10px;white-space:nowrap;color:inherit;font-weight:500}
 @media(hover:hover){.mark-actions button:hover:not(:disabled){background:rgb(128 128 128 / 22%)}}
@@ -268,7 +268,7 @@ input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
 /* Notes float beside their passage and point back to it. */
 #note-dialog{position:fixed;inset:auto;margin:0;padding:0;max-width:none;max-height:none;overflow:visible;z-index:8;background:var(--raised);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 #note-dialog .note-scroll{max-height:var(--note-max-height,70dvh);padding:20px 22px 22px;overflow:auto;overscroll-behavior:contain;border-radius:inherit}
-:root[data-night] #note-dialog{background:#22211e;border-color:var(--line-strong)}
+:root[data-night] #note-dialog{background:#1f2124;border-color:var(--line-strong)}
 :root[data-night] #note-dialog::before{border-color:var(--line-strong)!important}
 #note-dialog::before{content:"";position:absolute;left:var(--note-arrow-x,50%);width:12px;height:12px;background:inherit;transform:translateX(-50%) rotate(45deg);pointer-events:none}
 #note-dialog[data-side=below]::before{top:-7px;border-left:1px solid var(--line);border-top:1px solid var(--line)}
@@ -351,7 +351,7 @@ html[lang=en] #note-dialog-content{line-height:1.65}
 
 @media print{
  @page{size:A5;margin:18mm 15mm}
- body{--paper:#fff;--ink:#222;--secondary:#666;--line:#ccc;--accent:#8a3a26;--body-size:11pt;overflow:visible!important}
+ body{--paper:#fff;--ink:#222;--secondary:#666;--line:#ccc;--accent:#2e4a6b;--body-size:11pt;overflow:visible!important}
  .topbar,.skip-link,dialog,.chapter-nav,.paragraph-note,.annotation-bank,.cover-actions,.cover-index,.cover-toc,#pager,#mark-toolbar,#mark-status,.last-position{display:none!important}
  main,.has-pinned-contents main{padding:0!important;margin:0!important;max-width:none!important}
  #reading-stage{position:static!important;transform:none!important;width:100%!important;height:auto!important;overflow:visible!important}
@@ -370,9 +370,9 @@ html[lang=en] #note-dialog-content{line-height:1.65}
 <main id="reading" tabindex="-1">
 <section id="cover" aria-labelledby="book-title">
 <div class="cover-meta"><span>2021 — 2026</span><span>四部 · 十二章</span></div>
-<header class="cover-title"><h1 id="book-title">创造与自由</h1><p class="subtitle">纳瓦尔思想读本</p><p class="tagline">创造的成本下降了，自由的成本没有。</p></header>
+<header class="cover-title"><h1 id="book-title">创造与自由</h1><p class="tagline">创造的成本下降了，自由的成本没有。</p></header>
 <div class="cover-artwork"><img class="cover-art" data-src="assets/cover-art.webp" width="1774" height="887" alt="" fetchpriority="high" decoding="async"><noscript><style>.cover-art[data-src]{display:none}</style><img class="cover-art" src="assets/cover-art.webp" width="1774" height="887" alt="" decoding="async"></noscript></div>
-<div class="cover-actions"><a id="reading-entry" class="reading-entry" href="#c00">开始阅读 <span aria-hidden="true">→</span></a><p class="disclaimer">独立编写 · 未经纳瓦尔授权或审阅</p></div>
+<div class="cover-actions"><a id="reading-entry" class="reading-entry" href="#c00">开始阅读 <span aria-hidden="true">→</span></a></div>
 <nav class="cover-index" aria-label="四部"><a href="#c01"><span class="part-number">01</span><span class="part-name">杠杆与分配</span><span class="part-range">第01—03章</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c04"><span class="part-number">02</span><span class="part-name">专长与信誉</span><span class="part-range">第04—06章</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c07"><span class="part-number">03</span><span class="part-name">理解与选择</span><span class="part-range">第07—09章</span><span class="part-arrow" aria-hidden="true">→</span></a><a href="#c10"><span class="part-number">04</span><span class="part-name">欲望与自由</span><span class="part-range">第10—12章</span><span class="part-arrow" aria-hidden="true">→</span></a></nav>
 <nav class="book-toc cover-toc" aria-label="全书目录"><div class="toc-group"><h2>卷首</h2><a href="#c00">写在前面</a></div><div class="toc-group"><h2>第1部 · 杠杆与分配</h2><a href="#c01"><span class="toc-number">01</span><span class="toc-title">知道自己要什么</span></a><a href="#c02"><span class="toc-number">02</span><span class="toc-title">省下的时间归谁</span></a><a href="#c03"><span class="toc-number">03</span><span class="toc-title">代码便宜以后，谁拥有价值</span></a></div><div class="toc-group"><h2>第2部 · 专长与信誉</h2><a href="#c04"><span class="toc-number">04</span><span class="toc-title">一万次迭代，而非一万小时</span></a><a href="#c05"><span class="toc-number">05</span><span class="toc-title">当工具总说“你说得对”</span></a><a href="#c06"><span class="toc-number">06</span><span class="toc-title">信誉是愿意放弃一次成交</span></a></div><div class="toc-group"><h2>第3部 · 理解与选择</h2><a href="#c07"><span class="toc-number">07</span><span class="toc-title">好产品难以随意改动</span></a><a href="#c08"><span class="toc-number">08</span><span class="toc-title">从百分之二十读到百分之三十一</span></a><a href="#c09"><span class="toc-number">09</span><span class="toc-title">最小的团队，最高的信任</span></a></div><div class="toc-group"><h2>第4部 · 欲望与自由</h2><a href="#c10"><span class="toc-number">10</span><span class="toc-title">欲望是一份不快乐的契约</span></a><a href="#c11"><span class="toc-number">11</span><span class="toc-title">创造欲与幸福能否同时存在</span></a><a href="#c12"><span class="toc-number">12</span><span class="toc-title">把钱留在桌上</span></a></div><div class="toc-group"><h2>书后</h2><a href="#c13">结语：创造的成本下降了，自由的成本没有</a><a href="#c14">材料说明</a></div></nav>
 </section>
