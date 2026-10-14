@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark"><meta name="description" content="{{description}}">
+<script>if(/^#c(?:0\d|1[0-4])(?:-b\d{3})?$/.test(location.hash)){document.documentElement.classList.add('reader-starting');document.addEventListener('DOMContentLoaded',()=>document.documentElement.classList.remove('reader-starting'),{once:true});}</script>
+<title>{{title}} · {{subtitle}}</title><link rel="icon" href="data:,"><style>
+{{css}}
+</style>
+</head>
+<body class="notes-hidden">
+<a class="skip-link" href="#reading">{{skip}}</a>
+<header class="topbar"><a class="brand" href="#cover">{{title}}</a><div class="top-actions"><a id="language-switch" class="language-switch" href="{{other}}" lang="{{other_lang}}" hreflang="{{other_lang}}" aria-label="{{switch}}">{{other_label}}</a><button id="menu-button" class="menu-button" aria-haspopup="dialog" aria-controls="contents" aria-expanded="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span>{{contents}}</span></button></div><div id="read-progress" aria-hidden="true"></div></header>
+<main id="reading" tabindex="-1">
+<section id="cover" aria-labelledby="book-title">
+<div class="cover-meta"><span>{{meta_a}}</span><span>{{meta_b}}</span></div>
+<header class="cover-title"><h1 id="book-title">{{title}}</h1><p class="subtitle">{{subtitle}}</p><p class="tagline">{{tagline}}</p></header>
+<div class="cover-artwork"><img class="cover-art" data-src="{{assets}}cover-art.webp" width="1774" height="887" alt="" fetchpriority="high" decoding="async"><noscript><style>.cover-art[data-src]{display:none}</style><img class="cover-art" src="{{assets}}cover-art.webp" width="1774" height="887" alt="" decoding="async"></noscript></div>
+<div class="cover-actions"><a id="reading-entry" class="reading-entry" href="#c00">{{start}} <span aria-hidden="true">→</span></a><p class="disclaimer">{{disclaimer}}</p></div>
+<nav class="cover-index" aria-label="{{parts_label}}">{{parts}}</nav>
+<nav class="book-toc cover-toc" aria-label="{{full_toc}}">{{toc}}</nav>
+</section>
+<div id="reading-stage">{{chapters}}</div>
+<section class="annotation-bank" aria-label="{{notes_bank}}">{{bank}}</section>
+</main>
+<nav id="pager" aria-label="{{pager}}" hidden>
+<button id="previous-page" aria-label="{{prev_page}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+<span id="page-status" role="status" aria-live="polite" aria-atomic="true"></span>
+<button id="next-page" aria-label="{{next_page}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+</nav>
+<dialog id="contents" aria-labelledby="contents-title">
+<header class="dialog-header"><h2 id="contents-title">{{contents}}</h2><div class="contents-actions"><button id="settings-shortcut" class="settings-shortcut" aria-label="{{settings}}" title="{{settings}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></svg></button><button id="pin-contents" class="pin-contents" aria-pressed="false" aria-label="{{pin}}" title="{{pin}}" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l-1 7 4 4H6l4-4-1-7Z"/><path d="M12 14v7"/></svg></button><button class="close-button" data-close aria-label="{{close_contents}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div></header>
+<div class="drawer-body">
+<details id="search-panel" class="drawer-section"><summary>{{search}}</summary><form class="search-form" role="search"><label class="visually-hidden" for="search">{{search}}</label><div class="search-field"><input id="search" type="search" placeholder="{{search_placeholder}}" autocomplete="off" spellcheck="false"></div><p id="search-count" class="muted" role="status"></p></form></details>
+<div id="search-results" hidden></div>
+<details id="marks-panel" class="drawer-section"><summary><span>{{marks}} <span id="marks-count" class="muted"></span></span></summary>
+<div class="mark-backup"><button id="export-marks" type="button">{{export}}</button><button id="import-marks" type="button">{{import_}}</button><input id="marks-file" type="file" accept="application/json,.json" hidden></div>
+<p class="muted marks-hint">{{marks_hint}}</p><p id="marks-message" class="muted" role="status" hidden></p><div id="mark-list"></div><p id="marks-empty" class="muted">{{marks_empty}}</p>
+</details>
+<details id="settings-panel" class="drawer-section settings-panel"><summary>{{settings}}</summary>
+<div class="reading-options" role="group" aria-label="{{reading}}">
+<div id="font-family" class="choice-row" role="radiogroup" aria-labelledby="font-family-label"><span id="font-family-label" class="choice-label">{{typeface}}</span><div class="choice-options"><label class="font-serif"><input type="radio" name="typeface" value="serif" checked><span>{{face_a}}</span></label><label class="font-sans"><input type="radio" name="typeface" value="sans"><span>{{face_b}}</span></label><label class="font-kai"><input type="radio" name="typeface" value="kai"><span>{{face_c}}</span></label></div></div>
+<div id="reading-mode" class="choice-row" role="radiogroup" aria-labelledby="reading-mode-label"><span id="reading-mode-label" class="choice-label">{{layout}}</span><div class="choice-options"><label><input type="radio" name="reading-mode" value="paged" checked><span>{{mode_a}}</span></label><label><input type="radio" name="reading-mode" value="scroll"><span>{{mode_b}}</span></label></div></div>
+<label class="font-control" for="font-size">{{size}} <output id="font-value" for="font-size">18</output><input id="font-size" type="range" min="12" max="26" value="18"></label>
+<label><input id="night-mode" type="checkbox">{{night}}</label><label><input id="show-notes" type="checkbox">{{show_notes}}</label>
+</div><p id="tap-help" class="mark-help muted" hidden>{{tap_help}}</p><p class="mark-help muted">{{mark_help}}</p><p id="mark-storage-message" class="muted" hidden></p></details>
+<a class="toc-cover" href="#cover">{{back_cover}}</a><nav id="panel-toc" class="book-toc" aria-label="{{chapters_label}}">{{toc}}</nav>
+
+<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.3/{{epub}}" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.3.3/{{pdf}}" download>PDF</a><span class="muted">{{downloads_note}}</span></p>
+<p id="storage-message" class="muted" hidden>{{storage}}</p>
+</div></dialog>
+<dialog id="note-dialog" aria-labelledby="note-dialog-title" aria-modal="false"><div class="note-scroll">
+<header class="dialog-header"><div><p id="note-dialog-kind" class="note-kind-label"></p><h2 id="note-dialog-title">{{note}}</h2></div><button class="close-button" data-close aria-label="{{close_note}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></header>
+<div id="note-dialog-content"></div></div></dialog>
+<div id="mark-toolbar" role="toolbar" aria-label="{{text_marks}}" hidden><div class="mark-actions"><button type="button" data-mark="1" aria-pressed="false">{{mark_a}}</button><button type="button" data-mark="2" aria-pressed="false">{{mark_b}}</button><button type="button" data-mark="0">{{mark_c}}</button><button type="button" id="close-marks" aria-label="{{close_marks}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div><button id="undo-mark" type="button" hidden>{{undo}}</button><p id="mark-feedback" hidden></p></div>
+<p id="mark-status" class="visually-hidden" role="status" aria-live="polite"></p>
+<script id="book-data" type="application/json">{{data}}</script><script>
+{{js}}
+</script>
+</body></html>

@@ -8,3 +8,4 @@ cover*.png
 
 # Artwork used by the reading website.
 !assets/cover-art.png
+__pycache__/
