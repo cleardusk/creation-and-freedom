@@ -287,6 +287,7 @@ html[lang=en] #note-dialog-content{line-height:1.65}
 .note-links{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:14px;font:13px/1.55 var(--sans)}
 .note-links a{display:inline-block;overflow-wrap:anywhere;font-weight:500}
 .note-source{font-size:11px;color:var(--secondary);margin-top:2px}
+@media(any-pointer:coarse){.note-links a{display:flex;align-items:center;min-height:44px;padding:4px 0}}
 @media(prefers-reduced-motion:no-preference){
  #note-dialog[open]{animation:pop .16s var(--ease)}
  #contents[open]{animation:slide-in .22s var(--ease)}
