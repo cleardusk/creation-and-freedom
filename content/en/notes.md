@@ -1,3 +1,7 @@
+@ n40 | Always Day One
+The name Impossible, "It's always day one," and not wanting to be only an investor, philosopher, or commentator come from the opening of the February 2026 conversation.
+> A Motorcycle for the Mind | https://nav.al/ai | Naval; hosted by Nivi
+
 @ n01 | Coding Again
 Naval dates the turning point to the release of Claude Opus 4.5 around December 2025. The workflow he describes: describe an app in language, and the agent downloads libraries, wires up connectors, builds test harnesses, runs the program, and takes spoken or written feedback. He mentions his computer science degree and decades away from serious coding.
 > A Return to Code | https://nav.al/code | Naval; hosted by Nivi
@@ -45,7 +49,7 @@ The 92 percent versus 88 percent comparison comes from February 2026. The analys
 > ‘Nothing Ever Happens’ Is Over | https://nav.al/over | Naval; hosted by Nivi
 
 @ n08 | Ownership and Open Code
-The 2021 conversation links open code, user data, and contributor ownership, using building blocks to explain composability. The later part of the chapter on how these ideas fared is the editor's retrospective, not a statement by Naval.
+The 2021 conversation links open code, user data, and contributor ownership, using building blocks to explain composability. The judgment in the chapter's editor's note on how these ideas fared is the editor's retrospective, not a statement by Naval.
 > Tim Ferriss #542 | https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/ | Naval Ravikant and Chris Dixon; hosted by Tim Ferriss
 
 @ n10 | Real Feedback
@@ -143,7 +147,7 @@ The 2024 post describes contentment as a calm easily interrupted by desire.
 > Desire and fragile contentment | https://x.com/naval/status/1864727453773763062 | Naval
 
 @ n29 | A Creative Person's Question
-The 2021 post only raises the tension between creativity and happiness. The chapter uses earlier conversations collected in Happiness as his answer.
+The 2021 post reads: "It's a rare creative who dares to be happy." The chapter follows it with earlier conversations collected in Happiness as his answer to that tension.
 > Creative people and happiness | https://x.com/naval/status/1426752559679643651 | Naval
 > Happiness | https://nav.al/happiness | Naval
 

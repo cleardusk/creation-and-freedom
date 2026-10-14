@@ -8,6 +8,6 @@
 
 网页支持字体设置、翻页或滚动、手机点击翻页、夜读、随文批注、高亮与划线。进度和标记保存在当前浏览器，标记可导出备份并恢复。
 
-2.4版重写了正文：编者的声音更明确，每章末尾增加“边界”一节讨论反例与限制，并新写了结语。EPUB与PDF下载仍为2.3.3版文本，PDF不含批注。双语电子书、离线包及旧版下载均见 [Releases](https://github.com/cleardusk/creation-and-freedom/releases)。
+2.4版重写了正文：以纳瓦尔第一人称讲述，内容只取自他的公开言论；每章末尾另设“编者按”，讨论反例与限制，并新写了结语。EPUB与PDF下载仍为2.3.3版文本，PDF不含批注。双语电子书、离线包及旧版下载均见 [Releases](https://github.com/cleardusk/creation-and-freedom/releases)。
 
 网页由 `content/<lang>/book.md` 与 `notes.md` 经 `python3 tools/build.py` 生成；修改中文正文后用 `tools/subset_font.py` 重新子集化字体。

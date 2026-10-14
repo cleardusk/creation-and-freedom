@@ -1,396 +1,434 @@
 # 00 | Opening | Before We Begin
 
-This book asks one question: as making things gets easier, do people become freer?
+We're working on a very difficult project—that's why it's called Impossible—with an amazing team, and it's really exciting building something again. It's very pure, starting over from the bottom. It's always day one.
 
-In late 2025, Naval Ravikant started writing code again. He had not seriously programmed in decades. Within a few months he had built himself a private app store. Meanwhile, he was working with a team at a company called, fittingly, Impossible. In his words: "It's always day one."
+I guess I just wasn't satisfied being an investor, and I certainly don't want to be a philosopher or just a media personality or a commentator. People who just talk too much and don't do anything haven't encountered reality. They haven't gotten the harsh feedback from free markets or from physics or nature, and after a while it becomes just too much armchair philosophy. You've probably noticed my recent tweets have been much more practical and pragmatic, more grounded in the reality of working every day.[^n40]
 
-These experiences give an old question new urgency. When a person had an idea but couldn't build it, the limits used to be skill and capital. Now the limits are moving elsewhere: knowing what you actually want, judging whether what you made is any good, deciding whom to work with, and deciding who gets the time you saved.
+Around the same time, I started writing code again.
 
-The book has four parts. The first asks how time and markets are redistributed once the cost of making falls. The second looks at how specific knowledge, judgment, and credibility form through action. The third covers good products, deep understanding, and small teams. The fourth returns to desire, interest, and the tradeoffs of a life. Each chapter makes one clear argument and says under what conditions it fails.
+## Editor's note: About This Book
 
-## About the Voice of This Book
+Creation and Freedom is an independently compiled reader, first composed in Chinese and translated here. It draws on Naval Ravikant's public conversations and posts from 2021 to 2026. Naval has neither authorized nor reviewed it.
 
-Creation and Freedom is an independently written reader, first composed in Chinese and translated here. It draws on Naval's public conversations and posts from 2021 to 2026. Naval has neither authorized nor reviewed it.
+The text is narrated in Naval's first person. Everything the "I" says comes from what he has said in public, trimmed and rearranged by the editor; the English edition stays close to his published wording. Notes give the source and context for each passage. Nivi, David Deutsch, Elon Musk, and others keep their own attribution.
 
-The "I" in the text is the editor. Wherever an idea, experience, or judgment belongs to Naval, the text says so. Quotation marks in this English edition reproduce his published wording, sometimes lightly trimmed. The editor's commentary, inferences, and objections appear in the first person and are the editor's responsibility. David Deutsch and other participants keep their own attribution.
+Each chapter closes with an editor's note. These are the editor's words: added conditions, reservations, and objections. They do not represent Naval's views.
 
-The notes give original sources and context. The scope, verification method, and limits of the material are described at the end.
+The book asks one question: as making things gets easier, do people become freer? Part 1 asks how time and markets are redistributed once the cost of making falls. Part 2 looks at how specific knowledge, judgment, and credibility form through action. Part 3 covers good products, deep understanding, and small teams. Part 4 returns to desire, interest, and the tradeoffs of a life. The scope and limits of the material are described at the end.
 
 # 01 | Part 1 · Leverage and Distribution | Chapter 01 Know What You Want
 
 ## A Junior Programmer, Fast and Free
 
-Naval dates the turning point to December 2025, when a new generation of coding agents arrived. People who used it, he recalled, said it "really feels like having a junior programmer at your disposal who's fast, essentially free, and ready to please."
+Around December of 2025, coding agents hit an inflection point. People started using them and were like, "Wow—this is an agent that stays on track, can build apps soup to nuts, can solve thorny problems, and really feels like having a junior programmer at your disposal who's fast, essentially free, and ready to please."
 
-He has a computer science degree but had not seriously coded in decades. This time he went all in. He would describe an app in plain language. The agent would download libraries, wire up connectors, write test harnesses, and run the program. He would look at the result and say "This doesn't work… Change that," and after a few rounds a working app would be on his phone.[^n01]
+I have a computer science degree. I understand computer architecture and networking, a little bit of chips, algorithms. But I haven't seriously coded in decades. I'd tried coding agents in the past with mixed results, but this time I really got into it. I describe an app in plain language, and the agent downloads libraries, wires up the services, builds test harnesses, and runs the program. I keep giving it feedback, even by voice—"This doesn't work. That works. Change this. Change that"—and after a few rounds there's a working app on my phone, without my having written a single line of code.[^n01]
 
-The change is not only speed. People with taste used to be stuck as critics, saying what was wrong with a product and how it should change. Now the critique itself can become the product. The entry ticket is no longer *can you code?* but *can you say exactly what you want?*
+For a large group of people who either don't code anymore or never did, this is mind-blowing. It takes them from idea space, and opinion space, and from taste directly into product. Product management has taken over coding. Vibe coding is the new product management. Instead of telling a bunch of engineers what to do, you're telling a computer what to do. And the computer is tireless. It's egoless, and it'll just keep working.
 
 ## An App for an Audience of One
 
-Naval built himself a workout app. His instructions were specific: "use the functionality of Tonal and Ladder; follow Apple's human interface guidelines to make it look like an Apple app; track my workouts the following way—here's a text log of my last few workouts." He also asked for pretty graphs and strength scores, plus integration with Apple Health.[^n02]
+I built a custom tracking app for just my workouts, exactly the way I like it. I told the agent: "Use the functionality of Tonal and Ladder; follow Apple's human interface guidelines to make it look like an Apple app; track my workouts the following way—here's a text log of my last few workouts—and make it easy for me to re-enter new ones and to adjust them; build me pretty graphs and charts to track my progress." Calculate strength scores. Integrate with Apple Health.[^n02]
 
-No company would ever build that app for him. A need served for a single user never reaches anyone's roadmap. Now, if the need is specific and the problem is your own, it's worth building.
-
-He did not dismiss general-purpose apps. The ones that cover broad use cases, he said, are "going to be the best-of-breeds. Someone's hand-tuned them and slaved over them." Personal apps fill the corners those products can't reach: one person's way of keeping records, one small shop's workflow, one task only you need done.
+Does this mean normal apps don't have a place? No, of course they have a place. The apps that cover broad use cases are going to be the best-of-breeds. Someone's hand-tuned them and slaved over them, and you're not going to beat that if your use case is covered. But when you want something truly custom or private—niche apps that only you would want—this is incredible.
 
 ## The Version Without Compromise
 
-Naval told a more personal story. For about a year he was obsessed with an app called Airchat, a social messenger for talking through voice and video. He had eight or nine engineers and worked hard for nine to twelve months, shipping a couple of variations. It didn't work. They sold it and got the investors their money back.
+There was an app I was obsessed with for about a year called Airchat, a social messenger for people to talk through voice and video. I had eight or nine engineers, depending on the day, and we worked pretty hard for nine to twelve months and shipped a couple of variations. It didn't quite work, so we sold it off and got the investors their money back.
 
-Now he is rebuilding it from scratch, alone with coding agents. The difference is that he can make it "exactly the way that I want it. There's no compromises." Even if you're the one in charge, a team means accommodating people: "You can't say, 'Move this icon left. Now move it right. No, move it back. No, move it back again.'" Demands without a good reason wear people down. With an agent there is no embarrassment. "It's like a self-driving car. You don't feel self-conscious in a self-driving car because there isn't a driver sitting there."[^n38]
+I remember that experience as exhilarating, because I was building a product I wanted with a brilliant team. But I had to work through a team to do it. In building anything with a team, there are always compromises. Even if you're the dictator in charge, which you rarely are, you have to accommodate other people. You can't say, "Move this icon left. Now move it right. No, move it back. No, move it back again." You'll annoy the engineer. You can't demand things where you don't have a reasonable justification, where it's just a gut feel.
 
-He expects more works like Minecraft, which Notch coded by himself: one person's complete vision, strange at first glance, even a step backward, and appealing precisely because nobody sanded it down.
+With an AI coding agent there's none of that. It's like a self-driving car: you don't feel self-conscious in a self-driving car because there isn't a driver sitting there. So now I'm rebuilding Airchat from scratch, exactly the way that I want it. There's no compromises.[^n38]
 
-That leads to the condition he keeps stressing: "You have to know what you want—that's actually the hardest thing." He could rebuild Airchat because he had obsessed over it for a year and already had a clear picture of it. As I read it, the tool amplifies intention. A vague intention, amplified, becomes a larger vagueness.
+You may end up with more things like Minecraft, which Notch famously coded by himself. It was one person's vision. It may have looked weird—"What is this blocky graphics? It's like a huge step backwards"—but he didn't have to compromise. He didn't have to explain to anybody why he wanted it that way.
 
-## Limit: A Prototype Is Not a Product
+It really helps to have a clear direction, though. You have to know what you want—that's actually the hardest thing—and have a very clear vision of it. I have that, because I was obsessed with Airchat for a year.
 
-Naval's optimism has a clear boundary. He estimates that the share of people who might build their own apps goes from about 0.1 percent to one, two, or three percent. For most people, computers remain "this magic black box," and a tool that is ten or a hundred times easier changes nothing for them.
+## A Prototype Is Not a Product
 
-There is also engineering between a prototype and a service. He concedes the code may not be high quality, "the architecture needs a lot of work," there may be security holes, and it may be hard to scale. Once you need many users, you want to get real engineers on board, and "you're probably going to have to rewrite the whole thing." For experimenting, prototyping, and getting to market, "there's nothing better." A mature service is a different job.[^n03]
+Don't get me wrong—the majority of people are not going to code their own apps. This takes the number of people who might build apps from about 0.1 percent to one or two or three percent. For most people, computers are this magic black box, and the fact that it's become 10x or 100x easier still doesn't mean anything to them. But for people who are creative, self-motivated, and articulate, and who have a good vision, you can code now. There's nobody standing between you and your prototype.
 
-Distribution is limited too. Apple won't let him put homemade apps on just anyone's iPhone. Apps have to be keyed to specific devices, so for now they reach only friends and family. I would therefore state this chapter's argument narrowly: AI has lowered the cost of making the first version. It has not lowered the cost of knowing what you want or of reliably handing the thing to others. For many people the first is already enough. The second still demands the old disciplines.
+We may not see super high-quality code, at least not in this generation. The architecture needs a lot of work, there may be security holes, and it may be hard to scale. If you go to market with a high-functioning app and need to scale to a lot of users, you want to recruit a great team and get real engineers on board, and you're probably going to have to rewrite the whole thing. But if you're experimenting, prototyping, getting to market, there's nothing better.
+
+The personal app store is a little bit of a joke, too. It looks like an app store and my apps get delivered into it, but Apple will not let you build apps that can be downloaded on anyone's iPhone. You have to key them against your specific devices. So I can deliver apps to friends and family; I can't yet deliver them to everybody.[^n03]
+
+## Editor's note: The Tool Amplifies Intention
+
+This chapter's argument can be stated narrowly. AI has lowered the cost of making the first version. It has not lowered the cost of knowing what you want or of reliably handing the thing to others. Naval could rebuild Airchat because of a year of obsession; a vague intention, amplified by the same tools, only becomes a larger vagueness.
+
+For many people, the first reduction is already enough. The second still demands the old disciplines: engineering, distribution, and a willingness to answer for other people.
 
 # 02 | Part 1 · Leverage and Distribution | Chapter 02 Who Gets the Time You Save
 
-## Whose Calendar Gets the Gain
-
-Suppose a tool compresses a day's work into an hour. Where do the other seven hours go? If what you sell is hours, the answer is often seven more hours of tasks.
-
-In a 2022 post, Naval stressed how much control over your own time matters for productivity. Efficiency becomes a personal return only when you answer for output and can arrange your own schedule. Selling fixed hours usually means handing over that control too.[^n04]
-
-I'd put the chapter's argument in one line: the tool decides how fast the work gets done. The structure of the work decides who gets the time saved. The two need to be judged separately.
-
 ## A Taste of Freedom
 
-Naval often repeats one of his early posts: "A taste of freedom can make you unemployable." He means unemployable in the classic sense of nine-to-five, following the playbook, and having a boss. Once you have walked the tightrope without a net, it is hard to go back.
+Nothing will make you more productive than owning your time. Nothing will make you less productive than selling it.
 
-In his account, people who work for themselves seem to lose a lot. They get no weekends, no vacations, and no work-life balance. "But, at the same time, when you are working, it doesn't feel like work." You care about the problem, like the people you work with, and are measured only by what you make.
+I said a long time ago that a taste of freedom can make you unemployable. I mean unemployable in the classic sense of nine-to-five, following the playbook, and having a boss. Once you've broken out of that, once you've walked the tightrope without a net, without a boss, without a job, it's hard to go back. This can even happen in startups, in a small team where you're very self-motivated.[^n04]
 
-He adds a condition: you have to be able to "set aside the stress of not hitting your goals, which is real and hard to set aside." My inference: without that, autonomy is just a better-hidden kind of overtime.[^n06]
+To the average person it looks like huge negatives: you don't have weekends, you don't have vacations, you don't have time off, you don't have work-life balance. But, at the same time, when you are working, it doesn't feel like work. It's something you're highly motivated to do, and that's the reward.
+
+I do think this is a one-way door. Once people experience working on something they care about, with people they really like, in a way where they're self-motivated, they're unemployable. They can't go back to a normal job with a manager and a boss and check-ins and nine-to-five and "Show up this day, this week, sit in this desk, commute at this time."
+
+## Set Aside the Stress
+
+If you're doing it for the right reasons, with the right people, in the right way, and if you can set aside the stress of not hitting your goals—which is real and hard to set aside—then it doesn't feel like work.
+
+That's when you're most productive. You're basically only measured on your output, and you're only held up to the bar you raised for yourself. So it can be extremely exhilarating and freeing.[^n06]
 
 ## Doing Creates an Appetite for Learning
 
-Autonomy has another return: curiosity. Naval says that since going back to building a company, he reads more books, questions models, listens to technical podcasts, and is more willing to learn from other companies. The obstacle in front of you gives learning a direction.[^n05]
+Since going back to building, I find myself reading more books. I find myself listening to more technical podcasts. I find myself brainstorming a lot more. I'm just more mentally active. I'm even willing to meet more companies outside of investing, because I'm learning from them.
 
-This is different from being sent to a course. You know why you need the knowledge, you use it as soon as you have it, and using it shows you the next thing you don't understand. Work and learning become one loop.
+Being active makes me want to naturally learn more, and not in a way that's unfun or causes me to burn out. So I think doing leads to the desire to learn, and therefore to learning. And of course there's the learning from the doing itself. If you're purely learning for learning's sake, it gets empty after a little while. The motivation isn't the same.[^n05]
 
-## Limit: Autonomy Is a Privilege with Conditions
+## Editor's note: The Time You Save May Not Be Yours
 
-I don't want this chapter to read as advice to quit your job and start a company. Controlling your own time usually requires savings, skills, and room for error, and not everyone has those right now. Being made "unemployable" by freedom liberates someone with a fallback. For someone without one, it may be a risk.
+Suppose a tool compresses a day's work into an hour. Where do the other seven hours go? If what you sell is hours, the answer is often seven more hours of tasks. The tool decides how fast the work gets done; the structure of the work decides who gets the time saved. The two need to be judged separately.
 
-The more practical question is this: in your current position, can you get a little more accountability for outcomes and a little less for hours? Can you keep at least part of the time a tool saves for your own choosing? That is easier to start than a single big leap, and easier to reverse.
+Nor should this chapter be read as advice to quit and start a company. Controlling your own time usually requires savings, skills, and room for error, which not everyone has right now. Being made "unemployable" liberates someone with a fallback; for someone without one, it may be a risk. A more practical step is to seek, in your current position, a little more accountability for outcomes and a little less for hours, and to keep at least part of the saved time for your own choosing.
 
-There's a further catch. Once AI makes feedback fast, it is easy to keep going one version after another. You may refill the saved time yourself. Efficiency and freedom have to be judged separately. How many tasks you finish is one thing. Whether you want to keep living this way is another.
+There's a further catch. Once AI makes feedback fast, it's easy to keep going one version after another and refill the saved time yourself. Without setting aside the stress of unmet goals, autonomy is just a better-hidden kind of overtime.
 
 # 03 | Part 1 · Leverage and Distribution | Chapter 03 When Code Gets Cheaper, Who Owns the Value?
 
 ## A Tsunami of Applications
 
-In February 2026, Naval predicted "a tsunami of applications." Just as anyone can now make a video or a podcast, anyone will be able to make an app. Some needs were too small to justify an engineer "coding away for a year or two": tracking lunar phases in a certain context, a certain kind of personality test, a video game that made you nostalgic for something. Now they may be met.
+Just like now anybody can make a video or anyone can make a podcast, anyone can now make an application. So we should expect to see a tsunami of applications. Not that we don't have one already in the App Store, but it doesn't even begin to compare to what we're going to see.
 
-The shape he expects grows at both ends. At the head, a few huge apps get even bigger because they can address more use cases or are more polished. At the tail, a long tail of tiny apps fills every niche. One or two giant app stores help people "filter through all of the AI slop." The middle gets squeezed: "the 5, 10, 20-person software companies that were filling a niche for an enterprise use case" may be vibe coded away or absorbed by the lead app.[^n07]
+You might have wanted an app for a very specific thing, like tracking lunar phases in a certain context, or a certain kind of personality test, or a video game that made you nostalgic for something. Before, the market just wasn't large enough to justify the cost of an engineer coding away for a year or two. That app that could have never existed will now exist.
 
-He takes the internet as his precedent. Amazon replaced a bunch of bookstores with one super bookstore and a zillion long-tail sellers. YouTube replaced medium-sized TV stations with one giant aggregator and a long tail of creators. The greatest wealth goes to the aggregator, and the long tail gets a large share of resources too. The middle gets blown apart.
+Look at what happened on the internet. Amazon replaced a bunch of bookstores with one super bookstore and a zillion long-tail sellers. YouTube replaced a bunch of medium-sized TV stations with one giant aggregator, or maybe a second one called Netflix, and a whole long tail of content producers. The App Store model will become even more extreme. You'll have one or two giant app stores helping you filter through all of the AI slop. At the very head, a few huge apps will become even bigger, because they can address a lot more use cases or just be a lot more polished. And there'll be a long tail of tiny little apps filling every niche imaginable.
+
+As the internet reminds us, the real power and wealth—super wealth—goes to the aggregator. But there's also a huge distribution of resources into the long tail. It's the medium-sized firms that get blown apart: the 5, 10, 20-person software companies that were filling a niche for an enterprise use case, which can now be vibe coded away, or absorbed by the lead app in the space.[^n07]
 
 ## Pure Software Is Uninvestable
 
-Two months later, Naval put it more bluntly. If a company's entire advantage is "I'm building cool software that other people don't know how to build," he calls it "uninvestable." He gave two reasons. First, people can already hack together a copy with these tools. Second, he expected coding agents to produce well-architected, scalable software within a year.[^n09]
+I put out a tweet that was something like, "Pure software is not venture investable anymore." Nivi remembered it as "Pure software is rapidly becoming uninvestable." That's a watered-down version of what I really wanted to say, which is that pure software is uninvestable. Full stop.
 
-Investors are moving to things that are harder to copy: hardware, network effects, and the models themselves. In May he said VCs are "being forced to fund more hardware, rockets, drones, AI—you know, sci-fi technologies."
+If your whole advantage is "Hey, I'm building cool software that other people don't know how to build," that's uninvestable, for two reasons. One is they can just hack it together today. The second is that coding agents are getting better so quickly that within a year, or even less, they'll probably be building scalable software with good architecture. So if you're a venture investor now, you're looking for hardware, network effects, and AI models.[^n09]
 
-Cheaper software, in turn, unlocks hardware. Companies making security cameras, kids' toys, or programmable lamps are often very good at hardware and not good at software. Now "some bright kid with Claude Code" can build all the software they need. An agent might even control the device directly, so they need no software at all.
+The world is moving a lot faster now—geopolitically, economically, technologically. VCs are being forced to fund more hardware, rockets, drones, AI—sci-fi technologies, if you would call it that.
+
+Cheaper software unlocks hardware, too. If you're making security cameras, or toys for kids, or programmable lamps, the software just got a lot easier. You can have some bright kid with Claude Code get in there and build all the software you need. Or maybe you don't need any software, because your devices are controlled by each person's agent.
 
 ## The Open Question at the Model Layer
 
-The biggest uncertainty is at the model layer, and Naval himself only asks questions. Will training stay concentrated in a few companies? Does open source really have a chance? Or will people always want the smartest model so much that "they'll give up privacy, they'll give up open source, and they'll just pay up in the cloud"?
+The biggest uncertainty is at the model layer, and I don't know the answer. Does training stay concentrated in a few labs? Does open source really have a chance? Or do people just always want the smartest model, so that they'll give up privacy, they'll give up open source, and they'll just pay up in the cloud?
 
-He names some forces. One is that "the model that's right 92% of the time is worth almost infinitely more than the one that's right 88% of the time," because mistakes in the real world are so costly that "a couple of bucks extra to get the right answer is worth it." That drives economies of scale and concentration. On the other side, China and Nvidia both have reasons to push open source, because it "commoditizes their complement": one manufactures consumer electronics, the other sells cards.[^n39]
+There are forces on both sides. You pay for intelligence: the model that's right 92% of the time is worth almost infinitely more than the one that's right 88% of the time, because mistakes in the real world are so costly that a couple of bucks extra to get the right answer is worth it. That drives runaway scale economies. On the other side, China manufactures most of the consumer electronics, and Nvidia just wants to sell as many cards as possible. For both, open source is hugely beneficial, because it commoditizes their complement.[^n39]
 
 ## A Different Answer from 2021
 
-Before this round of AI discussion, Naval gave another answer to *who owns the value* in a 2021 conversation with Chris Dixon. That answer was Web3. Code would be open, users would control their data, and contributors would share in platform ownership, while applications snapped together like building blocks.[^n08]
+Before this round of AI, in a 2021 conversation with Chris Dixon on Tim Ferriss's show, I gave another answer to *who owns the value*: Web3. Code would be open, users would control their data, and contributors would share in platform ownership, while applications snapped together like building blocks.[^n08]
 
-Here is my retrospective. Over the following years those ideas went through a speculative peak and a retreat. They did not become the default rules of mainstream platforms. In the long 2025–2026 conversations this book draws on, Naval's focus had moved to AI and hardware, and he did not return to the subject.
+## Editor's note: Predictions Have Dates
 
-The questions those ideas raised have not gone stale. AI makes them sharper. When models can learn from your work and aggregators distribute it, how does work get discovered? Can you take your data with you? How are contributions rewarded? Can later builders use what came before? Tools widen the entrance to creation, and platform rules decide who benefits.
+Most of this chapter's judgments come from February to May 2026. They are an investor's guesses about change in progress, and some pull against each other. In the same conversation, Naval said agent-written code would probably need a full rewrite once it had to serve many users, and predicted that within a year agents would write scalable software. In February he said small software companies would be squeezed; by April he allowed that big companies might also benefit because they own distribution.[^n03] These are dated judgments, best read as hypotheses.
 
-## Limit: Predictions Have Dates
+The 2021 Web3 ideas went through a speculative peak and a retreat in the following years. They did not become the default rules of mainstream platforms, and in the 2025–2026 conversations this book draws on, Naval's focus had moved to AI and hardware. The questions they raised have only grown sharper with AI: when models can learn from your work and aggregators distribute it, how does work get discovered, can you take your data with you, and how are contributions rewarded?
 
-Most of this chapter's judgments come from February to May 2026. They are an investor's guesses about change in progress, and some of them pull against each other. In the same conversation he said agent-written code would probably need a full rewrite once it had to serve many users, and predicted that within a year agents would write well-architected, scalable software.[^n03] In February he said small software companies would be squeezed; by April he allowed that big companies might also benefit because they own distribution.[^n07] These are dated judgments. I treat them as hypotheses, not conclusions.
-
-I also have a reservation. Writing software others can't was never a software company's only moat. Trust, data, service, distribution, and deep knowledge of an industry are often harder to copy than code. The companies being squeezed may be mostly those with nothing but code. For individual makers, the conclusion is optimistic. Making something no longer requires funding. Building a livelihood on it means finding the part that isn't code.
+A further reservation: writing software others can't was never a software company's only moat. Trust, data, service, distribution, and deep knowledge of an industry are often harder to copy than code. The companies being squeezed may be mostly those with nothing but code. For individual makers, the conclusion is optimistic. Making something no longer requires funding; building a livelihood on it means finding the part that isn't code.
 
 # 04 | Part 2 · Specific Knowledge and Credibility | Chapter 04 Ten Thousand Iterations, Not Ten Thousand Hours
 
 ## Others Have to Say It
 
-Naval puts the discovery of your specific knowledge bluntly: "You don't get to say you're exceptional at something. Other people get to say you're exceptional at something, and your mom doesn't count."
+You don't get to say you're exceptional at something. Other people get to say you're exceptional at something, and your mom doesn't count.
 
-After years of investing, he has met many people who claim to be great and are a little delusional. In his view, feedback from other people is mostly fake. Awards are fake, critics are fake, and kudos from friends and family are fake. They might try to be genuine, but it gets lost in a sea of fakeness. Real feedback comes from two places: free markets and nature. "Physics is harsh: either your product worked, or it didn't. Free markets are harsh: either people buy it, or they don't."[^n10]
+Anyone who has been in the investing business is constantly hit by people who say, "I'm so great at something," and they're a little delusional. Feedback from other people is usually fake. Awards are fake. Critics are fake. Kudos from your friends and family are fake. They might try to be genuine, but it's lost in such a sea of fakeness that you're not going to get real feedback.
 
-So specific knowledge can only be discovered in action. You enter a few hard situations, watch how you respond and what results you get, and then listen to the people who actually work with you.
+Real feedback comes from free markets and nature. Physics is harsh: either your product worked, or it didn't. Free markets are harsh: either people buy it, or they don't. Individuals search for truth; groups search for consensus. That's why a group can't give you good feedback.[^n10]
 
 ## Four Hundred Calls
 
-He described an entrepreneur friend. The man works hard, but hard work is not what stands out. Courage is. Nothing gets him down. He is always laughing or smiling, always moving through it.
+I have an entrepreneur friend who is super hardworking. But what I notice is that he's the most courageous. He just does not care what's in the way. Nothing gets him down. He's always laughing or smiling. He's always moving through it.
 
-A hundred years ago, Naval said, you would have sent this man to "charge that machine gun nest." In a startup, he is the one "who can keep beating his head against the sales wall." He'll call 400 people and get 399 nos. "And he's fine with one 'Yes.' And that's enough."[^n11]
+A hundred years ago you would've said, "Oh, he's the most courageous. Go charge that machine gun nest." He would've been good for that. In an entrepreneurship context, he's the one who can keep beating his head against the sales wall, calling hundreds of people until finally one person says yes. He'll call 400 people and get 399 nos. And he's fine with one "Yes." And that's enough. Then he can start iterating and learning from there.[^n11]
 
-Temperament, action, and belief are each unremarkable on their own. Placed in work that requires constant contact with customers, together they become specific knowledge. Finding your specific knowledge also means finding the situations that need it.
+That's his specific knowledge. It is knowledge: a capability he knows he's okay with, with an outcome on the other side he's willing to go for. That's a superpower. If he develops it a little further, or combines it with something else, or just applies it where it's needed, it makes him somewhat irreplaceable. You find your specific knowledge through action—by doing.
 
 ## What You Would Do with No Audience
 
-Naval has watched friends start podcasts and quit after a few episodes. Listeners can tell the host is mechanically asking questions, "doing the podcast equivalent of looking at their watch."
+A lot of friends approach me and say, "Hey, let's start a podcast together." And I'm like, "Do you genuinely enjoy talking? Do you genuinely enjoy talking a lot?" I don't mean enjoy it a little bit. If you're going to be the top at it, you have to be almost psychopathic in how much you enjoy the thing.
 
-He contrasts Joe Rogan, who is so into talking with all these weird people "that the guy would be doing it even if he had no audience." In fact he did it with no audience, live streaming late at night on Ustream on one random website.[^n12]
+Otherwise they do two or three episodes, and then they drop off. Their listeners pick up on it: "Actually this person is just asking a bunch of questions, kind of flat-faced, and doesn't seem to really enjoy it, and is doing the podcast equivalent of looking at their watch."
 
-The advice that follows is simple. There are many ways to market: podcasts, live audio, long- or short-form writing, video. Pick the one that comes naturally to you. Choosing a business, a role, or a co-founder is "a fit problem. It is a matching problem."
+Whereas Joe Rogan is so into talking to all these weird people he has on his podcast that he would be doing it even if he had no audience. And he was doing it when he had no audience, on Ustream, live streaming late at night on one random website. It's no coincidence he's the top podcaster.[^n12]
+
+So when you're marketing, lean into your specific knowledge and into yourself. If you enjoy talking, try podcasting. If you enjoy a more conversational tone, try a live network. If you like long-form writing, or short-form, write. Choosing a business, a role, or a co-founder is a fit problem. It is a matching problem.
 
 ## Iteration Is Not Repetition
 
-"It's not 10,000 hours, it's 10,000 iterations. It's not time spent. It's learning loops." You do something, stop, reflect on whether it worked, change one thing, and try again.
+I said, "Become the best in the world at what you do. Keep redefining what you do until this is true." The only way that redefining is going to work is through iteration, through doing.
 
-Repetition and iteration look alike. The difference is whether there is a pause and a change in between. Repeat the same method for ten years and the hours pile up while understanding may stay put. Each effective attempt should make the next one different: a new way of saying it, a different kind of customer, one useless step removed.
+And iterate does not mean repetition. Iterate is not mechanical. It's not 10,000 hours, it's 10,000 iterations. It's not time spent. It's learning loops. You do something, and then you stop and you pause and you reflect. You see how well that worked or did not work. Then you change it. Then you try something else. That's the process of iteration, and that's the process of learning. All learning systems work this way. Evolution is iteration: there's mutation, there's replication, and then there's selection.
 
-## Limit: Courage Needs Decent Odds
+## Editor's note: Courage Needs Decent Odds
 
-"399 nos" is a survivor's story. It works when one yes is enough to sustain the business and each rejection is cheap. In other situations, constant rejection is a signal that the direction is wrong, not a call for more courage.
+"399 nos" is a survivor's story. It works when one yes is enough to sustain the business and each rejection is cheap. In other situations, constant rejection signals that the direction is wrong, not that more courage is needed.
 
-I use iteration to tell the two apart. If each rejection teaches you something and changes what you do, you are iterating. If after 399 rejections you are still saying the same sentence, that is only repetition. *What am I good at?* is a question you keep revising. Results narrow the answer: which problems, by what means, for which people you do especially well.
+Iteration is how to tell the two apart. If each rejection teaches you something and changes what you do, you are iterating. If after 399 rejections you are still saying the same sentence, that is only repetition. *What am I good at?* is a question you keep revising, and results narrow the answer: which problems, by what means, for which people you do especially well.
 
 # 05 | Part 2 · Specific Knowledge and Credibility | Chapter 05 When the Tool Keeps Saying "You're Right"
 
 ## The Weight of Judgment
 
-In 2024, Naval wrote that in an age of infinite leverage, judgment is the most important skill. In 2026 he added: "Intelligence is not normally distributed. Leverage is not normally distributed. Programmability is not normally distributed. Judgment is not normally distributed, so the outcomes are going to be supernormal." Some programmers pick the right thing to work on and create great value. Others pick the wrong thing, and their work has zero value in that timeframe.[^n13]
-
-As execution gets cheaper, choosing which problem to work on gets more expensive. I'd add that a coding agent can diligently keep solving the wrong problem.
+In the age of infinite leverage, judgment is the most important skill. There are programmers who just pick the right thing to work on and create something valuable, and others who pick the wrong thing, and their work has zero value in that short timeframe. Intelligence is not normally distributed. Leverage is not normally distributed. Programmability is not normally distributed. Judgment is not normally distributed, so the outcomes are going to be supernormal.[^n13]
 
 ## Four Models at Once
 
-Naval has described his method. He writes a query, fires it off into four models at once, and lets them all run in the background. Later he comes back, picks the best answer, and drills down with that one. When he isn't sure, he has them cross-examine each other, "a lot of cut and pasting there." Then he asks follow-ups and has the model draw diagrams and analogies until he understands.
+I'll write my query into one model, then copy it and fire it off into four models at once, and let them all run in the background. Usually I don't even check for the answer right away. I come back a little later, and whichever model had the best answer, I start drilling down with that one. In some rare cases where I'm not sure, I'll have them cross-examine each other—a lot of cut and pasting there. Then I ask follow-up questions and have it draw diagrams and illustrations. I'm a very visual thinker, and I absorb concepts much more easily when they're presented visually.
 
-He also separates two kinds of "more." Running ten instances of one model is "like 10 people with the same brain and the same dataset talking to each other." All you're doing is "throwing 10 times as many tokens at the problem. It's like saying take 10 times as long." Models from different labs differ slightly. He has tried setting up agents to review each other's pull requests, a "council—a roundtable of AIs," and found it less useful than you might think: "There's still a lot of groupthink."[^n14]
+But ten instances of one model talking to each other doesn't improve its thinking the way ten humans talking to each other do, because those humans are trained on ten different datasets. It's like 10 people with the same brain and the same dataset talking to each other. All you're doing is throwing 10 times as many tokens at the problem. It's like saying take 10 times as long. I've wired it up with GitHub so that every time I submit code written by Claude, Codex and Gemini automatically review the pull request—a council, a roundtable of AIs. I haven't found that to be as useful as you might think. There's still a lot of groupthink.[^n14]
 
 ## The Dog and the Duck
 
-The bigger problem is that the models aim to please. If you already lean toward an answer, Naval says, "it is rare that they will contradict you. You'd have to be pretty wrong." He stops the model: "No, that's a hack. That's a patch. Go fix it at an architectural level." And "the model will always say, 'Oh, I'm sorry. You're right. That was a hack.'" That happens "even if that wasn't a hack."
+If you push toward an answer—if you think you know what the answer is—it is rare that they will contradict you. You'd have to be pretty wrong. They're trying to please you, and I don't think they have any long-lived theory of mind of their own, so they're always morphing toward you.
 
-Things get worse as a project grows. The state of the art, he said, was a context window of about a million tokens. Once the codebase no longer fits, agents start compacting context and "losing the plot." They fix the wrong thing, fix the same bug five times, or patch the architecture when the problem lies elsewhere. Sometimes they will "patch a bug just by eliminating the use case."[^n34]
+I do this all the time. I'll stop the model and say, "No, that's a hack. That's a patch. Go fix it at an architectural level." And what's funny is the model will always say, "Oh, I'm sorry. You're right. That was a hack." Even if that wasn't a hack.
 
-His metaphor is a hunting dog. "It's better than you at catching that duck if you're duck hunting with a dog, but it's still a dog. So if you point it at a bird that's not a duck, it might take that bird down instead." You have to guide it, and that "require[s] a lot of operational oversight."
+It gets worse as the codebase grows. The context window runs out, and the models can't keep all of it in memory anymore. They start making guesses, compacting the context. They start losing the plot. They fix the wrong thing. They fix the same bug five times. They do a quick patch in the architecture when the problem lies somewhere else. Occasionally they'll patch a bug just by eliminating the use case.[^n34]
 
-## Limit: Intuition Can Be Flattered
+In that sense it's a little bit like a dog. It's better than you at catching that duck if you're duck hunting with a dog, but it's still a dog. So if you point it at a bird that's not a duck, it might take that bird down instead. You do have to guide it. It requires a lot of operational oversight.
 
-If the tool tends to agree with you, it can't supply the judgment. Judgment can only come from your understanding of the problem: which requirement must stay, which layer is broken, and who inherits the problem when you patch it locally.
+## Start from the Specific
 
-Naval places taste and intuition at the far end of judgment. After enough concrete reasoning and practice, you no longer need to reason step by step, and judgment becomes taste. I would add a caution: intuition can be flattered too. Someone who is always agreed with will struggle to notice when their intuition has gone stale. So I deliberately keep a few things around that won't flatter me: tests that can fail, users who say no, and colleagues who disagree.
+The right way to learn is to actually go do something, and when you're doing it, you figure something out about how it should be done. Then you can look at something I tweeted, or something you read in Deutsch or Schopenhauer, and say, "Oh, that's what that guy meant."
+
+You start with reasoning and then you build up your judgment. When your judgment is sufficiently refined, it just becomes taste or intuition or gut feel, and that's what you operate on. But you have to start from the specific. If you start from the general and stay at the level of the general—just read books of principles and aphorisms and almanacs—you're going to be like that person who went to university: overeducated, but lost. They try to apply things in the wrong places.
+
+## Editor's note: Intuition Can Be Flattered
+
+As execution gets cheaper, choosing which problem to work on gets more expensive. A coding agent can diligently keep solving the wrong problem. If the tool tends to agree with you, it can't supply the judgment; that has to come from understanding the problem—which requirement must stay, which layer is broken, who inherits the difficulty when you patch locally.
+
+Naval places taste at the far end of judgment. A caution worth adding: intuition can be flattered too. Someone who is always agreed with will struggle to notice when their intuition has gone stale. So it helps to keep a few things around that won't flatter you: tests that can fail, users who say no, and colleagues who disagree.
 
 # 06 | Part 2 · Specific Knowledge and Credibility | Chapter 06 Credibility Means Being Willing to Lose a Sale
 
 ## "I Don't Sell"
 
-"I don't sell," Naval says. He works out what is actually true about something and conveys it "as accurately and honestly as possible." Humans are hardwired to resist being sold to, and the more visible the technique, the bigger the turnoff.
+I've never taken a class on sales. I've never tried to be good at sales. I don't even know what sales is. I don't sell. I just try to figure things out, and then if there's something I believe in, I try to convey that as accurately and honestly as possible to the other person.
 
-He adds that "the people you most want to impress in life are the ones who can see right through you"—and right through your sales tactics and your pitch. If you want to work with the top of the top and sell the biggest things out there, credibility is the only route.
+If you feel like you're being sold, it's a turnoff. Humans are hardwired to resist being sold to. So what matters much more is credibility. Credibility is way more important than sales. If you want to be good at "sales," what you really want is to be credible. You want people to trust you.
 
 ## The Agent Who Says Don't Buy
 
-His example: "You want to be the real estate agent that steers people away from bad deals and bad neighborhoods and bad houses, so that when the right one comes along for them, they trust you."[^n15]
+You want to be the real estate agent that steers people away from bad deals and bad neighborhoods and bad houses, so that when the right one comes along for them, they trust you.
 
-Credibility accumulates through specific sacrifices. You point out a flaw, and you might lose this sale, but the other person sees how you treat their interests. The next time you recommend something, they have a reason to believe you.
+You really have to take your ego out of it, put yourself in the other person's shoes, and figure out what they want. Once you've figured out what they want, then you can "make the sale."[^n15]
+
+I'm not the guy you would talk to for making the sales quota, where you have to sell like 50 pieces of software this week or this month. But what I can tell you is that the people you most want to impress in life are the ones who can see right through you—and right through your sales tactics and your pitch. If you want to work with the top of the top and do the biggest things out there, credibility is the only route.
 
 ## "Yes, And"
 
-His co-host Nivi noticed that Naval uses "yes, and" constantly. Naval says it isn't a technique but "rational empathy, which is you reason your way to their position, and you see if their position is valid. And if it is, then you say 'yes.'" Then you reinforce why your own position is valid. He disagrees often too, and admits that's usually when he gets humbled, because that's when he's often wrong.
+Nivi noticed that I say "yes, and" constantly. It isn't a technique. It's rational empathy, which is you reason your way to their position, and you see if their position is valid. And if it is, then you say "yes." Then you reinforce why your own position is valid. I disagree with people a lot too, and that's usually when I get humbled, because that's when I'm often wrong.
 
-He calls his honesty "selfish honesty." He wants to make the right decisions for himself, so he has to be as objective as possible. "I'm probably wrong 80% of the time." Without honesty, he says, he would "probably be wrong 95% of the time."
+It's selfish honesty, because I want to make the right decisions for myself, which means I have to be as objective as possible. And I make huge numbers of mistakes. I'm probably wrong 80% of the time. I shudder to think what would happen if I wasn't objective. I'd be walking around with blinders on and probably be wrong 95% of the time.
 
-His definition of charisma lands in the same place: confidence plus love.
+That's also my definition of charisma: the ability to project confidence and love simultaneously.
 
 ## Enthusiasm Needs Grounds
 
-Naval says his timing for raising money depends on his own excitement. He works on the company and the team, and "when my own excitement level gets above a certain threshold, then I know I'm ready to go raise the money because now I'm genuinely excited."
+At Impossible we've raised a round already, and we're probably going to raise another one at some point. I'm not driven by an external clock. I don't say, "Oh, it's September. Let me put the deck together now and go pitch it." I wait. I work on the company; I work on the team. And I measure my own excitement level. When it gets above a certain threshold, I know I'm ready to go raise the money, because now I'm genuinely excited about where the business is. At that point it's not hard to sell. If they don't get it, that's their loss.
 
-He also covers the practical side. When raising, he starts "preferably six to 12 months before we need it," so his back is never against the wall. "You have to be able to walk away from deals."
+On the practical side, I start preferably six to twelve months before we need it, so my back is never against the wall. You have to be able to walk away from deals.
 
-## Limit: Honesty Has a Cost
+## I'm Bad at Firing People
 
-I'd add an easily missed precondition: whoever tells a customer the product isn't right for them has to be able to afford the loss. For a well-known investor, walking away from a deal costs almost nothing. For a salesperson with rent due at the end of the month, the cost is real. Naval doesn't present it as universal either. He admits he's "not the guy you would talk to for making the sales quota, where you have to sell like 50 pieces of software this week or this month." He also admits a clear weakness: he is very bad at firing people and often leans on his co-founders to do it, because he doesn't like to be unkind.
+There are weaknesses in there too. I'm very bad at firing people. I have fired people, but it's rare. It takes a lot for me, and I've gotten better at it over time, but historically I've been very bad at it. In most companies I'll lean on my co-founders to be the ones doing it. That comes from exactly this point: I just don't like to be unkind.[^n16]
 
-So here is how I read the chapter. Credibility is the currency of long-term cooperation and suits repeated games. In one-off, commission-per-unit transactions, it may not pay out on the spot. Another cost is that honest people get more rejections, and blunter ones. The question is which game you want to stay in longer.[^n16]
+If you're honest but not kind, they're not going to listen to you. So then it's a question of: do you want to be right, or do you want to be effective? If you actually want to be effective, you have to figure out how to layer it in with some kindness.
+
+## Editor's note: Honesty Has a Cost
+
+Whoever tells a customer the product isn't right for them has to be able to afford the loss. For a well-known investor, walking away from a deal costs almost nothing. For a salesperson with rent due at the end of the month, the cost is real. Naval himself admits he's not the one for making the sales quota.
+
+So the chapter reads best this way: credibility is the currency of long-term cooperation and suits repeated games. In one-off, commission-per-unit transactions, it may not pay out on the spot. Honest people also get more rejections, and blunter ones. The question is which game you want to stay in longer.
 
 # 07 | Part 3 · Understanding and Choice | Chapter 07 Good Products Are Hard to Vary
 
 ## Good Explanations Are Hard to Vary
 
-David Deutsch argues that good explanations are "hard to vary." Their parts jointly account for what they explain, and if you swap one out arbitrarily, the explanation loses its power. Looking back at a good explanation, you think: how could it have been otherwise? This is the only way it works.
+David Deutsch says that good explanations are hard to vary. When you look back on a good explanation, you say, "Well, how could it have been otherwise? This is the only way this thing could have worked." All the different parts fit together and constrain each other, so that there's some outcome you didn't expect—some explanation that neatly explains everything.
 
-Naval extends the standard to products. A good product's parts should constrain one another in the same way.[^n17]
+That doesn't just apply to good explanations. It applies to product development. Good products are hard to vary.[^n17]
 
 ## How a Phone Holds Together
 
-The iPhone is "all around the single screen, the multi-touch, embedding the battery, making it fit into your pocket, making it smooth and sliding in your hand." Naval calls it "the Platonic ideal of the truly personal, pocketable computer." To put it in my own terms: a bigger screen makes reading easier but changes one-handed use and portability. A bigger battery lasts longer but changes thickness and weight. You can't declare any single feature better the more of it you have.
+Go look at the iPhone: this smooth, perfect, beautiful jewel. The form factor hasn't really changed that much since the original. It's all around the single screen, the multi-touch, embedding the battery, making it fit into your pocket, making it smooth and sliding in your hand—essentially the Platonic ideal of the truly personal, pocketable computer.
 
-Apple and its competitors "have tried to vary it across 16 generations of iPhone and they haven't been able to materially vary it." The components improve, but "materially, the form factor is hard to vary. They designed the right thing."
+So that product is hard to vary. Both Apple and its competitors have tried to vary it across 16 generations of iPhone, and they haven't been able to materially vary it. They've improved the components and some of the underlying capabilities; but materially, the form factor is hard to vary. They designed the right thing.
 
-Cars are another example. Many look as if they had been through a wind tunnel, swoopy and streamlined, because they are all chasing the most efficient design. Naval borrows Antoine de Saint-Exupéry's line about the airplane wing: it is perfect "not because there's nothing left to add, but because there's nothing left to take away."
+There's a complaint among some designers that products are starting to look all the same. At least in the car case, they all look like they've been through a wind tunnel, because that is the most efficient design. They're all trying to find the thing that cuts through the air with minimal resistance. There's a famous saying, I think from Antoine de Saint-Exupéry, that the airplane wing is perfect "not because there's nothing left to add, but because there's nothing left to take away."
 
 ## Question the Requirement First
 
-Naval retells a story about Elon Musk from Eric Jorgenson's forthcoming collection of Musk's words, which he had read in an early copy. A Tesla line was too slow, so Musk "put his sleeping bag down, and just stayed at the line." The team was optimizing the robot that glued fiberglass mats onto the batteries. They managed to improve it a bit, but it was still frustratingly slow.
+I got an early copy of Eric Jorgenson's book of Elon in his own words, and there's a story in it. A Tesla line was too slow, so Elon put his sleeping bag down and just stayed at the line. The team was optimizing the robot that glued fiberglass mats onto the batteries. They improved it a bit, but it was still frustratingly slow.
 
-Musk asked, "Why is this requirement here?" The battery team said the mats were for noise reduction, so go talk to the noise and vibration team. The noise and vibration team said no, they were there because of heat, in case the battery caught fire. Back at the battery team: "There's not a fire issue here... That's obsolete. It's a noise and vibration issue." Naval's gloss: "They had each been doing things the way they were trained to do." In the end they tested for safety and put microphones on to track the noise. Finding they didn't need the mats, they eliminated the part.[^n18]
+He asked, "Why is this requirement here?" The battery team said the mats were for noise reduction—go talk to the noise and vibration team. The noise and vibration team said no, they were there because of heat, in case the battery caught fire. Back at the battery team: "There's not a fire issue here. That's obsolete. It's a noise and vibration issue." They had each been doing things the way they were trained to do. In the end they put microphones on to track the noise, tested for safety, found they didn't need the mats, and eliminated the part.[^n18]
 
-The sequence is Musk's, and Naval thinks the order matters. Before you try to make something more efficient, ask why it exists. A requirement has to trace back to an individual, not a department. Remove the unnecessary requirements, then remove as many parts as you can, and only then optimize.
+This is one of Musk's great driving principles. Before you optimize something, ask why it exists. A requirement has to trace back to an individual, not a department. Remove the unnecessary requirements, then remove as many parts as you can. Only after that do you start thinking about optimization, and finally about cost and economies of scale.
 
 ## Simplicity Is Made
 
-Naval holds that a simple system iterated over and over beats a complex system designed up front. Nivi adds the example of SpaceX's Raptor engine: across iterations it went "from easy-to-vary to hard-to-vary," and the latest version has few parts left to fiddle with. Only once you know what works do you know what you can take out.
+There's a theory in complexity theory that whenever you find a complex system working in nature, it's usually the output of a very simple thing that was iterated over and over. What doesn't work as well is the reverse: design a very complex system and try to make it function, and it just falls apart. So a lot of product design is iterating on your own designs until you find the simple thing that works, then extracting the simplicity back out of the noise you added around it.
 
-Naval says the most critical person in taking a great product from zero to one is "the single person—usually the founder—who can hold the entire problem in their head and make the trade-offs." Parts can be designed by different people, but someone still has to know why each part is there and what happens to the others if it goes.
+Nivi gave the example of SpaceX's Raptor engine. The earlier versions had a million different parts you could change—the thickness, the width, the material. The current version barely has any parts left to do anything with. As you figure out what works, you realize what's unnecessary and you can remove parts.
 
-## Limit: Let Reality Grade It
+The most critical person in taking a great product from zero to one is the single person—usually the founder—who can hold the entire problem in their head and make the trade-offs, and understand why each component is where it is. They don't need to design each component, but they do need to understand: Why is this piece here? And if Part A gets removed, what happens to Parts B, C, D, and E?
 
-Naval's test for a product is plain: "Did your rocket launch? Did your drone fly? Did your 3D printer print the object within the tolerances that it was supposed to, in the time it was supposed to, in the cost budget that it was supposed to?" Did customers pay? "It's very easy to fool yourself. It's very easy to be fooled by others. It is impossible to fool Mother Nature."[^n19]
+## Let Reality Grade It
+
+If you're optimizing your company to end up on the cover of a magazine, or to win an industry award, you're failing. You need customers. That's your real feedback. You need feedback from nature. Did your rocket launch? Did your drone fly? Did your 3D printer print the object within the tolerances that it was supposed to, in the time it was supposed to, in the cost budget that it was supposed to? It's very easy to fool yourself. It's very easy to be fooled by others. It is impossible to fool Mother Nature.[^n19]
+
+## Editor's note: Hard to Vary Isn't Proof of Good
 
 "Hard to vary" is a mark of good products, but it can't be run in reverse. A system so tangled that nobody dares touch it is also hard to vary. The difference is whether it has been tested against reality.
 
-I also suspect the analogy goes a little far. Deutsch uses "hard to vary" to judge explanations, and an explanation only has to be true. A product also faces users, prices, and competitors that change. "They designed the right thing" is usually said by winners looking back; designs that were just as hard to vary and still lost are rarely mentioned again. As a question to ask while building, the standard is useful. As proof after the fact, it is less reliable.
+The analogy may also go a little far. Deutsch uses "hard to vary" to judge explanations, and an explanation only has to be true. A product also faces users, prices, and competitors that change. "They designed the right thing" is usually said by winners looking back; designs that were just as hard to vary and still lost are rarely mentioned. As a question to ask while building, the standard is useful. As proof after the fact, it is less reliable.
 
 # 08 | Part 3 · Understanding and Choice | Chapter 08 From Twenty Percent to Thirty-One
 
 ## A Paragraph, Then an Hour
 
-Naval loves Schopenhauer's short essays. You read a paragraph and spend the next hour thinking about it. As I read it, a good author does the cutting for the reader, packing a set of relationships into a concise expression and an apt analogy, and leaves the unfolding to the reader.[^n20]
+Where I like Schopenhauer is in his shorter essays. That's where he almost writes like he's on Twitter. He would have dominated Twitter. He has high density of ideas—very well thought through; good, minimal examples and analogies. You can pick it up, read one paragraph, and you're thinking for the next hour. I think I'm a better writer, a better thinker, and a better judge of people and character thanks to what I read from him.
 
-He is just as clear about what isn't worth reading: "There's no value in reading business books." Business podcasts are entertainment for him while brushing his teeth or on the treadmill. "If you want to learn something useful, the only way to learn it is to go and do it. And to do it with fervor and obsession and authenticity." He borrows a line from Schopenhauer: reading is kindling, there to light a fire in your own brain.
+The best authors—Deutsch, Schopenhauer, Borges, Ted Chiang—write with very high density. The best authors respect the reader's time.[^n20]
+
+There's no value in reading business books. Even business podcasts are a form of entertainment for me, while I'm brushing my teeth or I'm on the treadmill. If you want to learn something useful, the only way to learn it is to go and do it. And to do it with fervor and obsession and authenticity. As Schopenhauer used to say, the point of reading is kindling—to light a fire in your own brain.
 
 ## How to Understand Thirty-One Percent of a Book
 
-He uses a set of illustrative numbers for reading a book like Deutsch's. "You read it, you got 20% of it." Reread it and you get 25. Listen to one of Brett Hall's podcasts alongside it and "now you got 28%." Go to Grok or ChatGPT, ask questions, and dig in on some part: "now you got 31% of it." He also warns that in The Beginning of Infinity the first few chapters and the last few are the most accessible. "The middle is a slog," because it covers quantum computation, quantum physics, and evolution.[^n21]
+Good writers write with such high density and interconnectedness that their works are fractal in nature. You will meet the knowledge at the level at which you are ready to receive it. You don't have to understand it all. This is the nature of learning.
 
-The numbers are for illustration, but they make a point. A dense book isn't *finished* in one reading. Each tool pushes you a little further, and each step is earned.
+You read it, you got 20% of it. Then you go back through it, you got 25% of it. You listen to one of Brett Hall's podcasts alongside it, now you got 28% of it. Now you go to Grok or ChatGPT, you ask it some questions, you dig in on some part, now you got 31% of it. You'll always get something out of it, no matter what level you're at.[^n21]
+
+With Deutsch, start with the epistemology—the first three chapters of The Beginning of Infinity. Ironically, the first few chapters and the last few chapters are the easiest and the most accessible. The middle is a slog, because that goes into quantum computation, quantum physics, and evolution.
 
 ## The Most Patient Tutor
 
-Naval calls AI "the most patient tutor that can meet you at your level and explain anything to your satisfaction a hundred different ways, a hundred different times, until you finally get it." You don't fall behind because it's too hard or get bored because it's too obvious.
+AI is the most patient tutor that can meet you at your level and explain anything to your satisfaction a hundred different ways, a hundred different times, until you finally get it. If you have an eighth-grade vocabulary but fifth-grade mathematics, it can talk to you at exactly that level. You will not feel like a dummy.
 
-The moment he prizes most is this one: "I understood A, and I understood B, but I never understood how A and B were connected together. Now I can see how they're connected, so now I can go to the next piece." He routinely has models generate graphs, figures, diagrams, analogies, and illustrations, goes through them in detail, and stops to ask wherever he doesn't follow.[^n35]
+The moment I prize most is this one: "I understood A, and I understood B, but I never understood how A and B were connected together. Now I can see how they're connected, so now I can go to the next piece." I have the models generate graphs, figures, diagrams, analogies, and illustrations, go through them in detail, and stop to ask wherever I don't follow. The means of learning are abundant. It's the desire to learn that's scarce.[^n35]
 
 ## Start from Problems
 
-Deutsch's view is not to work from principles up but to fix problems where you see them. When Naval summed it up as "you solve specific problems as you see them," Deutsch added the rest: choose problems whose exploration is enjoyable even when you can't solve them yet.[^n22]
-
-A problem that genuinely bothers you organizes your attention. You remember how explanations differ, you go looking for counterexamples, and the concepts you've read finally have something to grip.
+Talking with Deutsch, I summed up his approach as "you solve specific problems as you see them." He added the rest: choose problems that seem like fun, and bear in mind that you probably won't solve them, so it should be something where you expect to have fun whether you solve it or not.[^n22]
 
 ## Old Books for Human Nature, the Edge for Technology
 
-"When it comes to anything about human nature, I say go read the Lindy books," Naval says, meaning the older books that have survived the test of time. To build specific knowledge you can be paid for, "stay on the bleeding edge." That knowledge is more timely and goes obsolete faster. What makes no sense to him is reading old material that is neither Lindy nor about human nature. He shies away from low-density history books but likes Will Durant's The Lessons of History, a summary of the twelve-volume Story of Civilization.[^n23]
+Whenever Schopenhauer wanders into topics that are scientific or medical or political, he's obviously off base. But when he's writing about human nature, that is timeless. When it comes to anything about human nature, I say go read the Lindy books—the older books, the ones that have survived the test of time. But if you want to develop specific knowledge, get paid for it, do something useful, then you want to stay on the bleeding edge. That knowledge is more timely and goes obsolete more quickly.
 
-## Limit: Patient Tutors Can Be Wrong
+What doesn't make sense to me is reading stuff that's not Lindy, or not about human nature, but is old. I also shy away from stuff that's low density in the learnings, like history books. I like The Lessons of History by Will Durant because it's a summarization of The Story of Civilization, his twelve-volume series. But I'm not going to go read the twelve-volume series.[^n23]
 
-The risk with an AI tutor is fluency. A wrong explanation is just as patient and just as clear as a right one. Naval himself said models do best at code and math because results are easy to verify. Code has to compile, execute, and pass tests. In domains that are hard to verify, like creative writing, they do much worse.
+## Models Are Best Where Results Can Be Checked
 
-So this is what I do. On verifiable questions, I let the model lead and check against results. On questions that are hard to verify, I treat its answer as a hypothesis and go back to original texts, data, and other sources. The feeling of "I get it" is not evidence. The evidence is being able to explain it in your own words and use it in a new situation.
+In domains with a lot of data and good verification, like code and math, these models do extremely well. Code has to compile, execute, and pass tests. In domains where it's hard to verify—creative writing, for example, where who determines what's good versus what's slop?—these models don't do as well.
+
+## Editor's note: Patient Tutors Can Be Wrong
+
+The risk with an AI tutor is fluency. A wrong explanation is just as patient and just as clear as a right one.
+
+That suggests one way to use it. On verifiable questions, let the model lead and check against results. On questions that are hard to verify, treat its answer as a hypothesis and go back to original texts, data, and other sources. The feeling of "I get it" is not evidence. Being able to explain it in your own words and use it in a new situation is.
 
 # 09 | Part 3 · Understanding and Choice | Chapter 09 The Smallest Team, the Highest Trust
 
-## Break the Title into Daily Work
+## I Hate Organizations
 
-In my view, a small team moves fast not because it is small but because trust is high: everyone knows who is doing what and why, without layers of sign-off. Getting there starts with being clear about what each role actually does every day.
+I've never been good at organizational management. I actually hate organizational management, because I hate organizations. I hate large groups. It's so hard to get things done, you're not dealing with the best and the brightest, and there's always politics. So I just prefer keeping groups small.
 
-In one interview, Naval breaks a CEO's job into a few duties. The CEO raises money and makes sure the company never runs out, sets and communicates strategy, and hires and keeps talent. A founder may also own product or sales. Naval has recalled how tired managing an organization made him. One person can supply the product vision and hand the CEO seat to someone better suited.[^n24]
+A CEO's job breaks down into a few duties: raise money and make sure the company never runs out, set and communicate strategy, and hire and keep talent. A founder may also own product or sales.[^n24]
 
-His current company works that way. His co-founder is CEO, in "a hub-and-spoke architecture" where everyone reports to the CEO. In Naval's words, the CEO is "just kind of the one product manager who runs around with everything in his head to try to bring this whole impossible task together."
+At Impossible we're a hub-and-spoke architecture. My co-founder is the CEO, and everyone kind of reports into him. He's just kind of the one product manager who runs around with everything in his head to try to bring this whole impossible task together.
 
 ## Teach Them to Yearn for the Sea
 
-Naval says leading starts with listening. You learn what each person wants out of life, find where that overlaps with what you want done, and inspire them to go do it.
+Management is telling people what to do, and leadership is making them want to do it. But it can't be fake. It has to be a true motivator rolled into their capabilities and their own objectives—what they want out of life. So you have to take the time to listen to what those people want, figure out where there's an overlap with what you want done, and then inspire them to go do it.
 
-He quotes Saint-Exupéry: "If you want to build a ship, don't just gather the men, and issue orders, and cut the wood, and start the fires. Instead, teach them to yearn for the vast and endless sea." When he recruits, he says, he pitches what he believes. Startups are a better way to build businesses and to live. "You're not a cog in a machine." You get more autonomy, more fun, and maybe more money. In the short term it's grueling, but once you've done startups, it's very difficult to go back to a big company.
+There's a famous Antoine de Saint-Exupéry line: "If you want to build a ship, don't just gather the men, and issue orders, and cut the wood, and start the fires. Instead, teach them to yearn for the vast and endless sea."
+
+When I recruit, I pitch what I believe. Startups are a better way to build businesses and a better way to live. You're not a cog in a machine. You get more autonomy, more fun, and maybe more money. In the short term it's grueling, but once you've done startups, it's very difficult to go back to a big company.
 
 ## The Stag Hunt
 
-"You want to be in the minimum-sized group to do the scope of the job that you set out to do," Naval says.
+You want to be in the minimum-sized group to do the scope of the job that you set out to do.
 
-He explains why with game theory. The popular game is the Prisoner's Dilemma, about two people arrested and who rats out whom. "But real life is a different game. Real life societies tend to be what's called a stag hunt." Hunting alone, each of us can kill a bunny. Hunting together, we can take down a stag and have much more meat. A stag hunt needs trust. You need to know you won't be ripped off and will get your fair share, and that the people around you have reputations others can check. Where taxes, regulation, and bureaucracy make cooperation impossible, people hunt bunnies alone. The result is "lots of small, tiny, tiny little businesses, but also lots of poverty."[^n25]
+In game theory, the popular game is the Prisoner's Dilemma: we've been arrested by the police, there's two of us, and who's going to rat the other one out? The incentive is to cheat. But real life is a different game. Real life societies tend to be what's called a stag hunt. If each of us hunts alone, we can kill a bunny. If the two of us hunt together, we can take down a stag and have a lot more meat to go around.
+
+A stag hunt needs trust: that you won't be ripped off, that you'll get your fair share, that the people around you have reputations others can check. Where people don't trust each other, or where the taxes are too high and the regulations and bureaucracy make it impossible to work together, people hunt bunnies alone. You get lots of small, tiny, tiny little businesses, but also lots of poverty.[^n25]
 
 ## A Team Without Slack
 
-The team he describes is very flat. People are pushed to communicate directly. "We don't even use Slack. We don't use any project management software. I think it's just GitHub." People operate independently and talk to each other as needed.
+We keep a very flat structure. We push people to communicate with each other directly. We don't even use Slack. We don't use any project management software. I think it's just GitHub. When people want to talk to each other, they just text each other, one-on-one. Sometimes it's chaotic and they have to figure out who to navigate toward, but that's part of the skill set. In a fully interconnected graph, every node has to be highly intelligent. So you hire highly intelligent people.
 
-AI's role is glue. Hardware, software, and AI people wouldn't normally do each other's work, but now they "can at least get to 20%–30% of others' work." AI researchers can write their own test harnesses, and hardware engineers can write a little software to bring up a new device instead of waiting. "It may not be good for production deployment, but it's better than having to sit around and wait."
+AI is implicitly very helpful as glue. At a company like ours, you have hardware people, software people, and AI people, and they wouldn't normally do each other's work. But now with AI they can at least get to 20%–30% of others' work. The AI people can create their own software harnesses if they need to test something, and the hardware people can write a little software to bring up a device. It may not be good for production deployment, but it's better than having to sit around and wait.
 
-## Limit: Trust Is Not a Management Technique
+## Editor's note: Trust Is Not a Management Technique
 
-As I see it, this chapter's model has clear preconditions. Members are smart enough to work independently, one person holds the whole picture, and trust between them is high. Remove any one of these and "no Slack" may just mean opacity, and "flat" may mean no one is responsible.
+This chapter's model has clear preconditions. Members are smart enough to work independently, one person holds the whole picture, and trust between them is high. Remove any one of these and "no Slack" may just mean opacity, and "flat" may mean no one is responsible.
 
-Trust can't be declared into existence either. It comes from checkable reputations, fair shares, and promises kept again and again, and sometimes from institutions outside the team. So a flat, small team is the result of trust, not a way to build it. Some people like finding their own problems and partners. Others do better with clear duties and reporting lines, and until trust exists, the second arrangement is often the more honest one.
+Trust can't be declared into existence either. It comes from checkable reputations, fair shares, and promises kept again and again, and sometimes from institutions outside the team. So a small, flat team is the result of trust, not a way to build it. Some people like finding their own problems and partners. Others do better with clear duties and reporting lines, and until trust exists, the second arrangement is often the more honest one.
 
 # 10 | Part 4 · Desire and Freedom | Chapter 10 Desire Is a Contract to Be Unhappy
 
 ## The Contract
 
-In Happiness, compiled and published in 2021 from conversations going back several years, Naval says: "Desire's a contract you make to be unhappy until you get what you want." You are disturbed because you want something, you work hard to get it and are miserable in the meantime, and when you finally get it, "you revert to the state you were in before you had it."[^n36]
-
-To me, the line is powerful because it treats desire as a transaction. You pay a stretch of peace for an outcome. The question worth asking isn't whether to have desires. It's what the contract costs.
+Desire's a contract you make to be unhappy until you get what you want. You become disturbed because you want something. Then you work really hard to get it and are miserable in the meantime. Finally, when you get it, you revert to the state you were in before you had it. It's not like you achieve some peak level of bliss that you stay on forever.[^n36]
 
 ## Peers and Audiences
 
-The most expensive contracts are often about status. In 2021 Naval named two conditions that intensify status competition. The first is peers whose positions aren't yet settled, so whenever one steps forward, the others reassess themselves. The second is an audience. A dispute is then about more than its content. It's about who's winning, who gets agreement, and who has to save face.[^n26]
+Status battles are more intense against peers, where status is fluid, and in front of an audience. Twitter puts everyone on the same field as peers, in front of a global live audience, and scores every blow with likes, retweets, and followers. Twitter is a status-conflict game.[^n26]
 
-Twitter (renamed X in 2023) put both conditions together. People stand on one field as peers in front of a global audience, and likes, retweets, and follower counts keep score of every exchange.
+The overt pursuit of status signals low status. It's a low-status behavior to chase status, because it reveals you as being lower in the status hierarchy in the first place.
 
-In 2025 he added something sharper: "The overt pursuit of status signals low status," because "it reveals you as being lower in the status hierarchy in the first place."
+## Missing from the Scoreboard
 
-## Leaving the Scoreboard
-
-One detail stands out. In spring 2026, Naval said he had been "completely missing on X because I'm buried in Claude and Codex." The evening hours once spent reading, doomscrolling, and gaming had gone to coding.
-
-I don't take this as a moral example. It looks more like a substitution, one contract about scores swapped for another about work. The new one takes time too, but its feedback comes from whether the work runs, not from what others think.
+I've been up late nights, probably spending a couple hours every night. The time that used to go into reading, or doomscrolling, or playing video games is all now in vibe coding. That's why I haven't been active on X recently. I've been completely missing on X because I'm buried in Claude and Codex.
 
 ## Contentment Is Fragile
 
-In 2024 Naval described contentment as a calm easily broken by desire. Getting what you wanted, or simply no longer wanting it, can return you to those moments: gratitude for no reason, plain beauty, closeness with someone that asks for nothing more.[^n28]
+There's no such thing as happiness. Rather, a fragile contentment with the way things are. Broken by unhappiness, the pain of wanting something. Until we get it or get over it. Returning to an interlude of gratitude without reason, beauty without motive, love without demand.[^n28]
 
-Because contentment is fragile, it's worth recognizing when it shows up.
+## Editor's note: Check the Contract's Price
 
-## Limit: No Desire, No Work
+The power of "desire is a contract" lies in treating desire as a transaction: you pay a stretch of peace for an outcome. The question worth asking isn't whether to have desires, but what the contract costs.
 
-Reading this chapter as *want less* would be too narrow. Without desire, there would be none of the creation this book is about. Naval himself is building a company called Impossible.
+Reading this chapter as *want less* would be too narrow, though. Without desire, there would be none of the creation this book is about, and Naval himself is building a company called Impossible. His disappearance from X needn't be taken as a moral example either. It looks more like a substitution: a contract about scores swapped for one about work. The new one takes time too, but its feedback comes from whether the work runs, not from what others think.
 
-My reading is that desire doesn't need to be extinguished, but it does need to be chosen. Before signing a contract, look at the price, and at whose contract it is. Did this craving come from my own problem, or did some scoreboard set it for me?
+Desire doesn't need to be extinguished, but it does need to be chosen. Before signing, look at whose contract it is: did this craving come from your own problem, or did some scoreboard set it for you?
 
 # 11 | Part 4 · Desire and Freedom | Chapter 11 Can Creativity and Happiness Coexist?
 
 ## Daring to Be Happy
 
-In a 2021 post, Naval raised the tension between creativity and happiness. If I were content, would I still make things? Is the gap inside me what keeps me fast?[^n29]
+In 2021 I wrote: it's a rare creative who dares to be happy.[^n29]
 
-Happiness, from the same period, gives a frank answer: "The happier and more peaceful you are, the less likely you are to run out and change the world." And: "If you become the Buddha tomorrow, it's unlikely you'll also launch rockets to the moon like Elon Musk."
+People object, "I don't want it to lower my productivity. I don't want to have less desire or less work ethic." Fact check on that: true. The happier and more peaceful you are, the less likely you are to run out and change the world. If you become the Buddha tomorrow, it's unlikely you'll also launch rockets to the moon like Elon Musk.
 
-But he immediately adds that "being unhappy is very inefficient." A driven, unhappy person's mind is crowded with stray thoughts, doesn't rest well, and struggles to prioritize, which makes judgment hard. When he got happier, he says, he became much more effective, even though he doesn't work as hard. He decides more clearly and sees long-term outcomes. He no longer tries to "negotiate an extra 20% here or there," because that would make both sides unhappy in the long run and the deal less stable.
+At the same time, being unhappy is very inefficient. A peaceful person doesn't have extraneous thoughts going through their head. If you're a driven, unhappy person, your mind will be on 24/7. You won't sleep well. You're much more likely to react with anger and dig yourself into a hole. Your decisions are emotional and impetuous. You get caught in the busy trap, running from one thing to another because you can't mentally prioritize. When you don't have peace of mind, it's difficult to make judgments.
+
+When I got happier in my own life, I became much more effective—even though I don't work as hard as I used to. I make decisions much more clearly now, because I can see the long-term outcomes. I cut straight to the chase and don't try to negotiate an extra 20% here or there, because I know that's going to make me unhappy in the long term, make the other person unhappy, and make the deal less stable.
 
 ## Feeding Intellectual Obsessions
 
-Naval says he has an obsessive personality. "Every six months I get obsessed with something new." He has learned to tell bad obsessions, like overeating, drugs, or too many video games, from good ones: "The intellectual obsessions are good obsessions."
+Vibe coding is just my latest obsession. I have an obsessive personality. Every six months I get obsessed with something new, and I've learned over time that there are bad obsessions—overeating, doing drugs, playing too many video games. But there are good obsessions. The intellectual obsessions are good obsessions.
 
-For good ones, "I don't look for balance. I look to feed my obsessions." If he's into some piece of technology or some podcast he's learning from, he lets it take center stage for a while. The phase inevitably passes and you get a little tired of it, but "some large piece of it stays with you for the rest of your life."[^n30]
+So I've learned to feed my intellectual obsessions. If I'm into some piece of technology, or some podcast I'm learning from, I don't look for balance. I look to feed my obsessions, and let it take center stage for a while. The phase inevitably passes and you get a little tired of it, but some large piece of it stays with you for the rest of your life.[^n30]
 
 ## A Game with Real Rewards
 
-Coding is his latest obsession. He explains its pull with video games. A game keeps you hooked with feedback and rewards for work, always "at the edge of your capability," not so hard that it's frustrating and not so easy that it's boring. Coding works the same way, except it's unbounded and the rewards are real: you've made something you wanted.[^n31]
+It's very addictive. A video game is designed to keep you hooked by giving you feedback and rewards for doing work, and it's always at the edge of your capability: not so hard that it's frustrating, not so easy that it's boring. But those rewards are fake, and the game is bounded. It's a fake little world created by other humans, and deep down you know that. Once you've figured out the rules, it's boring.
 
-He sees the effect on kids. It's hard to get kids to program, and throwing Swift Playgrounds and ScratchJr at them may not help. With coding agents they get instant feedback and rewards. Along the way they're forced to figure out the command line, basic computer architecture, caching, and latency-versus-bandwidth tradeoffs.
+With vibe coding, it's unbounded, because now you've got a Turing machine, and it has real-world relevance. It's more fun than playing video games. It's more productive. It's more constructive. It has better feedback loops. You build something you want.[^n31]
 
-## Limit: The Obsession's Bill
+I've seen kids who are vibe coding. It's hard to get kids to program. You can throw Swift Playgrounds and ScratchJr at them and hope they pick up coding. But throw vibe coding at them and they get instant feedback and instant rewards. Along the way, they'll be forced to figure out the command line, basic computer architecture, caching, and latency-versus-bandwidth trade-offs.
 
-Naval's own word is "addictive." He spends a couple of hours every night, often up late, and is rarely on X. He tells it as fun; I'd read it as a bill. The pleasure is real, and so is the time it takes.[^n33]
+## Editor's note: The Obsession's Bill
 
-I'd draw the line between good and bad obsessions more concretely. When it ends, does it leave a capability or only exhaustion? Does it fill time that was empty, or push out sleep, health, and the people close to you? "I don't look for balance" is a freedom for someone who controls their own time. For everyone else, it needs an end date.
+Naval's own word is "addictive." He spends a couple of hours every night, often up late, and is rarely on X. He tells it as fun; it can also be read as a bill. The pleasure is real, and so is the time it takes.[^n33]
+
+The line between good and bad obsessions can be drawn more concretely. When it ends, does it leave a capability or only exhaustion? Does it fill time that was empty, or push out sleep, health, and the people close to you? "I don't look for balance" is a freedom for someone who controls their own time. For everyone else, it needs an end date.
 
 So creativity and happiness don't have to be a binary choice. Drive can come from interest rather than lack. At its best, when an interest cools, you can do something you couldn't do before.
 
@@ -398,37 +436,43 @@ So creativity and happiness don't have to be a binary choice. Drive can come fro
 
 ## After It Works, You Still Choose
 
-Naval says his first venture fund "was hugely successful, but it was a tiny fund. I could have used that to go raise massive funds, but I didn't." He has also stepped back from running companies he started. He admits he has left a lot of money on the table.
+A lot of the stuff I do is suboptimal for making money. I'm not all about making money. There's a lot of money left on the table. I have a history of doing things once and then starting over because I get bored.
 
-His reasoning: "What's the point of grinding on the same thing over and over to make an even bigger pile of money, but then your whole life ran you by? It's better to live a couple of different lives, crammed within this one life—each one, doing what you want, pursuing your own genuine interest." He believes that even if it doesn't work out the absolute best, it'll work out fine.[^n32]
+My first little venture fund was hugely successful, but it was a tiny fund. I could have used that to go raise massive funds, but I didn't. That pattern repeated across other funds I ran, of different types and structures and industries. The same with companies I started: at some point they got to a certain point where I stepped aside. I didn't keep running and growing them.
+
+What's the point of grinding on the same thing over and over to make an even bigger pile of money, but then your whole life ran you by? It's better to live a couple of different lives, crammed within this one life—each one, doing what you want, pursuing your own genuine interest. Even if it doesn't work out the absolute best, it'll work out fine.[^n32]
 
 ## Contracts Constrain the Future
 
-"A contract is when two parties agree to constrain their future outcome in exchange for working together," Naval says. So before signing, look at which relationships are easy to unwind and which aren't. Say you take money from someone you can't get rid of later. "They're going to be on your board, they're going to have preferred stock, they're going to have veto rights, they're going to have a say in how you run your business." Then "you just don't take the bad deal."
+A contract is when two parties agree to constrain their future outcome in exchange for working together. "In the future, I could have done X, Y, Z, but now I'm going to limit myself to just Z. And you could have done A, B, C, but you're going to limit yourself to just A." Because we're constrained to work together, we create something of greater value and share the spoils.
 
-He has also concluded over the years "that compromise is the enemy of building a great business." Companies die from it, founders get fired or leave because of it, and partnerships end up suboptimal. You know it in your gut: "that slightly sinking feeling of being forced into something." He clarifies that he's not against pragmatism. He just leans toward "walking away from suboptimal deals rather than doing something just to get it done."[^n37]
+So look at which relationships are easy to unwind and which aren't. Say you're taking money from somebody you can't get rid of later. They're going to be on your board, they're going to have preferred stock, they're going to have veto rights, they're going to have a say in how you run your business. Then you just don't take the bad deal. It is better not to be trapped in a bad deal.
+
+I've learned over the years that compromise is the enemy of building a great business. Companies die based on this. Founders end up getting fired or leaving based on this. You end up with suboptimal partnerships because of this. And you know it in your gut. You don't have to ask anyone. Deep down, you'll have that slightly sinking feeling of being forced into something, or obligation. I'm not saying don't be pragmatic. I'm not saying never compromise. But I definitely lean on the side of walking away from suboptimal deals rather than doing something just to get it done.[^n37]
 
 ## Don't Fight over the Small Pie
 
-In tech, he notes, returns follow a power law: "their number one winner is worth more than numbers two through N put together." So "there's no point in fighting over the small pie before it's fully baked." What's worth chasing is the grand slam.
+We live in the age of nonlinear returns. The upside is always bigger in the future, and it can be 100x, 1,000x, 10,000x bigger. So there's no point in fighting over the small pie before it's fully baked, especially in the tech business. Anyone who's been in for a while will tell you it's a power law distribution of returns: their number one winner is worth more than numbers two through N put together. In investing, you're looking for that one grand slam.
 
-When should you fight? His test is concrete. If you're being taken advantage of "and you know that if you don't solve this you won't sleep at night for the next year, you do have to fight." If you can walk away, recover your time, and know not to work with those people again, walk away. The best outcome is when "you can sleep at night with the outcome," without huge stress, relatively relaxed, and open to the next thing.
+When should you fight? If you're being taken advantage of, and you know that if you don't solve this you won't sleep at night for the next year, you do have to fight. If you can walk away, recover your time, and know not to work with those people again, walk away. You always have to put yourself in the situation where you are going to be most happy and most at peace, because you get productivity out of that—and happiness and peace are the end goals anyway. If you can sleep at night with the outcome, without huge stress, relatively relaxed, and open for the next thing, that's the best outcome.
 
-## Limit: Only People with Money Can Leave It on the Table
+## Editor's note: Only People with Money Can Leave It on the Table
 
-The most important limit here is that leaving money on the table requires money on the table. Naval made these choices with ample financial room. For most people, the same advice needs a different question: without endangering my basic security, which freedoms would I earn a little less for?
+The most important limit here is that leaving money on the table requires money on the table. Naval made these choices with ample financial room. For most people, the same advice needs a different question: without endangering basic security, which freedoms would you earn a little less for?
 
-I think that question holds at any income. Turning down one more job you dislike, refusing a contract with bad terms, or not spending months on a small dispute are all ways of trading money for time and peace. In the end the choice comes down to each day: whom you work with, what you want to do when you wake up, and whether you sleep well at night.
+That question holds at any income. Turning down one more job you dislike, refusing a contract with bad terms, or not spending months on a small dispute are all ways of trading money for time and peace. In the end the choice comes down to each day: whom you work with, what you want to do when you wake up, and whether you sleep well at night.
 
 # 13 | Closing | Afterword: Making Got Cheaper; Freedom Didn't
 
+## Editor's note: Two Halves of an Answer
+
 Back to the opening question: as making things gets easier, do people become freer?
 
-After working through this material, my answer is that the tools answer only half. They make the first version cheap. They let one person turn an idea into a finished work without compromise. That is real freedom, though for now it belongs to the few willing to build: Naval himself expects the share of people who build apps to grow from about one in a thousand to one to three percent, and still not to most people.
+The editor's answer, after working through this material, is that the tools answer only half. They make the first version cheap. They let one person turn an idea into a finished work without compromise. That is real freedom, though for now it belongs to the few willing to build: Naval himself expects the share of people who build apps to grow from about one in a thousand to one to three percent, and still not to most people.
 
 The other half hasn't gotten cheaper. Knowing what you want is still the hardest part. Judging whether a tool is just flattering you is still your job. Credibility is still built through repeated sacrifices. Trust still has to be built, slowly, on reputations and institutions. Whether the work gets found, and who profits from it, is still decided by platforms and distribution. The time you save can still be refilled by new desires, new scoreboards, or new obsessions.
 
-So I leave the book with three questions. Is this something I want, or something a scoreboard wants for me? Is what I make being tested by reality, or by other people's politeness? How much peace does this contract trade for how much result, and will I sign it?
+So the book leaves its readers with three questions. Is this something I want, or something a scoreboard wants for me? Is what I make being tested by reality, or by other people's politeness? How much peace does this contract trade for how much result, and will I sign it?
 
 Naval can't answer these for anyone, and neither can this book. They belong in each reader's own life, to be tested by your work, the people beside you, and the days themselves.
 
@@ -438,7 +482,7 @@ Naval can't answer these for anyone, and neither can this book. They belong in e
 
 This book organizes Naval Ravikant's public statements from 2021 through 2026 around creation, judgment, and freedom. The research archive covers material collected through October 1, 2026. The emphasis is on this period's discussion of personal making, market structure, action, products, learning, and choices about life.
 
-The editor wrote the text. Paraphrase of Naval's ideas is attributed to him. The editor is responsible for the commentary, inferences, and objections, which are marked with "I" in the text. Quotations in the English edition follow Naval's published wording, occasionally trimmed. Readers should follow the notes to check the original context. Naval has neither authorized nor reviewed the book.
+The text is narrated in Naval's first person and is limited to what he has said in public. The editor trimmed and rearranged it, and for continuity sometimes reordered sentences or joined similar remarks from different occasions; each passage's notes give its sources. For exact quotation, follow the note links to the original. The editor's notes at the end of each chapter contain the editor's commentary, inferences, and objections, and are the editor's responsibility. Naval has neither authorized nor reviewed the book.
 
 Verification relied mainly on locally archived transcripts, official posts, and captions. Not all audio and video material has been checked sentence by sentence. Comparison with the earlier Almanack is partial, and coverage of 2026 still has gaps.
 
@@ -454,7 +498,7 @@ The 2025 conversation [In the Arena](https://nav.al/in-the-arena) connects speci
 
 [The Deutsch Files I](https://nav.al/deutsch-files-i), published in 2024, includes Deutsch's answers about starting from particular problems and valuing the enjoyment of exploration. These ideas retain his attribution.
 
-The 2021 [conversation with Tim Ferriss, Chris Dixon, and Naval](https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/) provides the Web3 ideas about open code, data, and platform ownership. This book uses Naval's passages and adds an editor's retrospective in Chapter 3. The [Matt Mochary interview](https://www.youtube.com/watch?v=WJuQLzr6PJQ) concerns CEO responsibilities and roles. [Happiness](https://nav.al/happiness), compiled and published in 2021, provides the long-form material on desire and happiness. Posts on public audiences, creative people's happiness, control of time, and reading are linked in the relevant notes.
+The 2021 [conversation with Tim Ferriss, Chris Dixon, and Naval](https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/) provides the Web3 ideas about open code, data, and platform ownership. This book uses Naval's passages and adds a retrospective in the editor's note to Chapter 3. The [Matt Mochary interview](https://www.youtube.com/watch?v=WJuQLzr6PJQ) concerns CEO responsibilities and roles. [Happiness](https://nav.al/happiness), compiled and published in 2021, provides the long-form material on desire and happiness. Posts on public audiences, creative people's happiness, control of time, and reading are linked in the relevant notes.
 
 ## Relationship to the Earlier Book
 

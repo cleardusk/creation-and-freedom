@@ -103,7 +103,7 @@ html[lang=en] .chapter h1{font-weight:600;line-height:1.25}
 html[lang=en] :is(.chapter-part,.toc-group h2){letter-spacing:.01em;text-transform:none}
 html[lang=en] .cover-meta{letter-spacing:.07em}
 
-/* "Limit" sections carry the counterpoints; a ruled margin sets them apart. */
+/* Editor's notes carry the counterpoints; a ruled margin sets them apart. */
 .limit-row h2,.limit-row p{border-left:2px solid var(--accent-line);padding-left:1.1em}
 .limit-row h2{margin-bottom:0;padding-bottom:.8em}
 .limit-row p{margin-bottom:0;padding-bottom:1.05em}

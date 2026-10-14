@@ -33,7 +33,7 @@ UI = {
         chapter_nav='章节导航', cover='封面', prev_chapter='上一章', next_chapter='下一章',
         note_label='查看批注{n}: {title}', notes_bank='批注', note_kind='来源', end='终', sep='；',
         tagline='创造的成本下降了，自由的成本没有。', disclaimer='独立编写 · 未经纳瓦尔授权或审阅',
-        limit='边界', downloads_note='下载版为 v2.3.3 文本', part_range='第{a}—{b}章', chapter_no='第{n}章',
+        limit='编者按', downloads_note='下载版为 v2.3.3 文本', part_range='第{a}—{b}章', chapter_no='第{n}章',
     ),
     'en': dict(
         lang='en', out='en/index.html', assets='../assets/', other='../index.html', other_lang='zh-CN', other_label='中文',
@@ -56,7 +56,7 @@ UI = {
         next_chapter='Next chapter', note_label='Read note {n}: {title}', notes_bank='Notes', note_kind='Source',
         end='FINIS', sep='; ',
         tagline='Making got cheaper. Freedom didn’t.', disclaimer='Independent · Not authorized or reviewed by Naval',
-        limit='Limit', downloads_note='Downloads contain the v2.3.3 text', part_range='Chapters {a}–{b}', chapter_no='Chapter {n}',
+        limit='Editor’s note', downloads_note='Downloads contain the v2.3.3 text', part_range='Chapters {a}–{b}', chapter_no='Chapter {n}',
     ),
 }
 
@@ -189,7 +189,7 @@ def build(lang):
             bid = f'c{cid}-b{b:03d}'
             rendered, plain = inline(text, ui, notes, numbers)
             if tag == 'h2':
-                m = re.match(r'^(边界：|Limit: )(.+)$', text)
+                m = re.match(r'^(编者按：|Editor’s note: )(.+)$', text)
                 limit = bool(m)
                 if m:
                     rendered = (f'<span class="limit-tag">{esc(ui["limit"])}<span class="visually-hidden">{esc(m.group(1)[len(ui["limit"]):])}</span></span>'

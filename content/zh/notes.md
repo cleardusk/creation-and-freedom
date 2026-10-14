@@ -1,3 +1,7 @@
+@ n40 | 永远是第一天
+Impossible这个名字、“永远是第一天”，以及不想只做投资人、哲学家或评论员的说法，出自2026年2月对谈的开头。
+> A Motorcycle for the Mind | https://nav.al/ai | Naval；Nivi主持
+
 @ n01 | 重新开始写代码
 纳瓦尔把转折点定在2025年12月Claude Opus 4.5发布前后。他描述的流程是：用语言描述应用，代理下载依赖、连接服务、编写测试并运行，再接受语音或文字反馈。他提到自己有计算机学位，但几十年没有认真编程。
 > A Return to Code | https://nav.al/code | Naval；Nivi主持
@@ -45,7 +49,7 @@ Airchat是纳瓦尔痴迷约一年的语音与视频社交应用：八九个工�
 > ‘Nothing Ever Happens’ Is Over | https://nav.al/over | Naval；Nivi主持
 
 @ n08 | 所有权与开放代码
-2021年对谈把开放代码、用户数据和贡献者所有权连在一起，用积木说明应用的可组合性。本章后半关于这组设想后来走向的判断，属于编者的回看，不代表纳瓦尔的表态。
+2021年对谈把开放代码、用户数据和贡献者所有权连在一起，用积木说明应用的可组合性。本章编者按中关于这组设想后来走向的判断，属于编者的回看，不代表纳瓦尔的表态。
 > Tim Ferriss #542 | https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/ | Naval Ravikant、Chris Dixon；Tim Ferriss主持
 
 @ n10 | 真实的反馈
@@ -143,7 +147,7 @@ Rogan早年在Ustream上深夜直播的例子，以及“播客版的看手表�
 > 欲望与脆弱的满足 | https://x.com/naval/status/1864727453773763062 | Naval
 
 @ n29 | 创作者的疑问
-2021年短推只提出创作者与幸福之间的张力。本章引用《Happiness》中收录的更早谈话，作为他的回答。
+2021年短推原文是“很少有创作者敢于幸福”。本章接着引用《Happiness》中收录的更早谈话，作为他对这份张力的回答。
 > 创作者与幸福 | https://x.com/naval/status/1426752559679643651 | Naval
 > Happiness | https://nav.al/happiness | Naval
 
