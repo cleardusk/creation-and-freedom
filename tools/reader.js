@@ -2,6 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const root = document.documentElement, data = JSON.parse($('book-data').textContent);
+  if ('scrollRestoration' in history) history.scrollRestoration='manual';
   const en=data.language==='en',t=(zh,english)=>en?english:zh;
   const chapters = [...document.querySelectorAll('.chapter')];
   const stage = $('reading-stage'), menu = $('contents'), noteDialog = $('note-dialog');
@@ -408,7 +409,13 @@
     const chapter=active();chapter.style.setProperty('--page-shift','0px');page=0;
     if(paged()){
       window.scrollTo(0,0);stage.style.setProperty('--page-width',stage.clientWidth+'px');
-      step=stage.clientWidth+48;pages=Math.max(1,Math.ceil((chapter.scrollWidth+47)/step));
+      step=stage.clientWidth+48;
+      // Column padding can overflow into an empty trailing column. Count pages
+      // through the last text fragment, including the book's closing ornament.
+      const end=chapter.querySelector('.book-end span')||[...chapter.querySelectorAll('[data-prose]')].at(-1);
+      const range=document.createRange();range.selectNodeContents(end);
+      const right=Math.max(...[...range.getClientRects()].filter(r=>r.width>0&&r.height>0).map(r=>r.right));
+      pages=Number.isFinite(right)?Math.max(1,Math.floor((right-stage.getBoundingClientRect().left-.5)/step)+1):Math.max(1,Math.ceil((chapter.scrollWidth+47)/step));
       const el=pos&&$(pos.anchor);
       const rect=el&&chapter.contains(el)?charRect(el,pos.textOffset):null;
       setPage(rect?Math.floor((rect.left-stage.getBoundingClientRect().left+1)/step):0);
@@ -472,10 +479,11 @@
     if(pinned())menu.querySelector('#panel-toc a[aria-current="page"]')?.scrollIntoView({block:'nearest'});
   };
   const navigate=(hash,restore=false,atEnd=false,replace=false)=>{remember();if(location.hash!==hash)history[replace?'replaceState':'pushState'](null,'',hash);show(hash,restore,atEnd);};
+  const finishStartup=()=>{clearTimeout(startupTimer);root.classList.remove('reader-starting');};
+  const startupTimer=setTimeout(finishStartup,2500);
   root.classList.add('js');$('menu-button').hidden=false;applyOptions();markCurrent();
   const reloading=performance.getEntriesByType('navigation')[0]?.type==='reload';
   show(location.hash||'#cover',reloading&&location.hash===(state.hash||'#c'+state.chapter));
-  root.classList.remove('reader-starting');
   window.addEventListener('hashchange',()=>show(location.hash));
   const turn = direction => {
     cancelTap();
@@ -637,9 +645,17 @@
     if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.6&&elapsed<700&&!getSelection()?.toString())turn(dx<0?1:-1);
   },{passive:true});
   stage.addEventListener('touchcancel',()=>{touch=null;},{passive:true});
-  window.addEventListener('resize',()=>{dismissMarks();queueNotePlacement();clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const pos=savedPosition;busy=true;layout(pos);busy=false;remember(pos);placeNote();if(pinned()&&menu.open)menu.querySelector('#panel-toc a[aria-current="page"]')?.scrollIntoView({block:'nearest'});},150);});
+  const queueLayout=()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const pos=savedPosition;busy=true;layout(pos);busy=false;remember(pos);placeNote();if(pinned()&&menu.open)menu.querySelector('#panel-toc a[aria-current="page"]')?.scrollIntoView({block:'nearest'});},150);};
+  window.addEventListener('resize',()=>{dismissMarks();queueNotePlacement();queueLayout();});
+  // Dynamic browser bars can resize the reading columns without a window resize.
+  let stageWidth=stage.clientWidth,stageHeight=stage.clientHeight;
+  if(window.ResizeObserver)new ResizeObserver(()=>{
+    const width=stage.clientWidth,height=stage.clientHeight;
+    if(width===stageWidth&&height===stageHeight)return;
+    stageWidth=width;stageHeight=height;if(current)queueLayout();
+  }).observe(stage);
   const fontLayout=()=>{if(current){const pos=savedPosition;layout(pos);remember(pos);placeNote();}};
-  document.fonts?.ready.then(fontLayout);
+  if(document.fonts)document.fonts.ready.then(()=>{fontLayout();finishStartup();},finishStartup);else finishStartup();
   window.addEventListener('beforeprint',()=>{const art=document.querySelector('.cover-art[data-src]');if(art&&!art.hasAttribute('src'))art.src=art.dataset.src;});
   document.fonts?.addEventListener('loadingdone',fontLayout);
   window.addEventListener('scroll',()=>{dismissMarks();queueNotePlacement();if(!paged()){showProgress();clearTimeout(timer);if(Math.abs(scrollY-appScrollY)<1)return;appScrollY=-1;timer=setTimeout(remember,200);}},{passive:true});

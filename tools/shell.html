@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark"><meta name="description" content="{{description}}">
-<script>if(/^#c(?:0\d|1[0-4])(?:-b\d{3})?$/.test(location.hash)){document.documentElement.classList.add('reader-starting');document.addEventListener('DOMContentLoaded',()=>document.documentElement.classList.remove('reader-starting'),{once:true});}</script>
+<script>if(/^#c(?:0\d|1[0-4])(?:-b\d{3})?$/.test(location.hash)){document.documentElement.classList.add('reader-starting');document.addEventListener('DOMContentLoaded',()=>{if(!document.documentElement.classList.contains('js'))document.documentElement.classList.remove('reader-starting');},{once:true});}</script>
 <title>{{title}} · {{subtitle}}</title><link rel="icon" href="data:,"><style>
 {{css}}
 </style>
