@@ -10,11 +10,13 @@
   const font = $('font-size'), family = $('font-family'), weight = $('font-weight'), mode = $('reading-mode'), night = $('night-mode'), notes = $('show-notes');
   for (const group of [family,weight,mode]) Object.defineProperty(group,'value',{get:()=>group.querySelector('input:checked').value,set:value=>group.querySelectorAll('input').forEach(input=>input.checked=input.value===value)});
   const key = 'naval-reader-v2.2';
+  const preferenceKey='naval-reader-preferences-v1',preferenceNames=['font','family','weight','mode','night','notes','tocPinned'];
+  const record=value=>value&&typeof value==='object'&&!Array.isArray(value);
   let state = {}, current = '', page = 0, pages = 1, step = 1, busy = false, timer, resizeTimer, appScrollY = -1;
   let laidOut = null, savedPosition = null, trigger = null, progressWarningShown=false;
   const warnProgress=()=>{
     $('storage-message').hidden=false;
-    if(!progressWarningShown){$('mark-status').textContent=t('当前浏览器无法保存阅读进度。','This browser cannot save your reading position.');progressWarningShown=true;}
+    if(!progressWarningShown){$('mark-status').textContent=t('当前浏览器无法保存阅读设置或进度。','This browser cannot save your reading settings or position.');progressWarningShown=true;}
   };
   try {
     const own = localStorage.getItem(key);
@@ -24,8 +26,35 @@
       const previous = JSON.parse(localStorage.getItem('naval-reader-v2.1') || '{}') || {};
       state = {chapter:previous.chapter,font:previous.font,night:previous.night,notes:previous.notes};
     }
+    const preferences=JSON.parse(localStorage.getItem(preferenceKey)||'null');
+    if(record(preferences)){
+      for(const name of preferenceNames)if(Object.hasOwn(preferences,name))state[name]=preferences[name];
+      if(record(preferences.typefaces))state.typefaces=preferences.typefaces;
+    }
   } catch { warnProgress(); }
-  const save = () => { try {localStorage.setItem(key,JSON.stringify(state));} catch {warnProgress();} };
+  const save = (changed=[]) => {
+    try {
+      let latest={};
+      try {latest=JSON.parse(localStorage.getItem(key)||'{}')||{};} catch {}
+      if(typeof latest!=='object'||Array.isArray(latest))latest={};
+      let preferences=null;
+      try {preferences=JSON.parse(localStorage.getItem(preferenceKey)||'null');} catch {}
+      if(!record(preferences))preferences=null;
+      const savedPreferences=preferences||latest;
+      const next={...latest,...state};
+      // Saving progress from an older tab must not undo another tab's settings.
+      for(const name of preferenceNames){
+        if(!changed.includes(name)&&Object.hasOwn(savedPreferences,name))next[name]=savedPreferences[name];
+      }
+      const faces=record(savedPreferences.typefaces)?savedPreferences.typefaces:state.typefaces;
+      next.typefaces={...faces};
+      if(changed.includes('family')||changed.includes('weight'))next.typefaces[data.language]=state.typefaces[data.language];
+      // Older reader versions only write the progress key. Migrate settings once,
+      // then update this separate record only after an explicit settings change.
+      if(!preferences||changed.length)localStorage.setItem(preferenceKey,JSON.stringify(Object.fromEntries([...preferenceNames,'typefaces'].filter(name=>Object.hasOwn(next,name)).map(name=>[name,next[name]]))));
+      localStorage.setItem(key,JSON.stringify(next));
+    } catch {warnProgress();}
+  };
   font.value = Number.isFinite(state.font) ? Math.min(26,Math.max(12,state.font)) : 18;
   const validFamily=value=>['serif','sans','kai'].includes(value),validWeight=value=>['light','normal','heavy'].includes(value);
   if(!state.typefaces||typeof state.typefaces!=='object'||Array.isArray(state.typefaces)){
@@ -395,10 +424,10 @@
     const r=charRect(next,0),box=stage.getBoundingClientRect();
     return (paged()?r.left<box.right-1:r.top<innerHeight)?'#'+next.id:'#'+el.id;
   };
-  const remember = (known=null) => {
+  const remember = (known=null,changed=[]) => {
     if(!current||busy)return;
     savedPosition=known||position();state.position=savedPosition;state.language=data.language;
-    $('language-switch').hash=switchAnchor(savedPosition);state.chapter=current;state.hash=location.hash;save();markCurrent();
+    $('language-switch').hash=switchAnchor(savedPosition);state.chapter=current;state.hash=location.hash;save(changed);markCurrent();
   };
   const setPage = number => {
     dismissMarks(true);
@@ -538,7 +567,7 @@
   document.addEventListener('pointercancel',cancelTap,true);
   document.addEventListener('contextmenu',cancelTap,true);
   const closeContents=()=>{
-    const pos=position();if(pinned()){state.tocPinned=false;save();}
+    const pos=position();if(pinned()){state.tocPinned=false;save(['tocPinned']);}
     menu.close();syncContents();layout(pos);remember(pos);$('menu-button').focus({preventScroll:true});
   };
   const openMenu=()=>{
@@ -556,7 +585,7 @@
   });
   pinContents.addEventListener('click',()=>{
     const pos=position(),scroll=menu.querySelector('.drawer-body').scrollTop;
-    menu.close();state.tocPinned=!pinned();save();syncContents();
+    menu.close();state.tocPinned=!pinned();save(['tocPinned']);syncContents();
     // Finish the closed layout before moving the dialog between display layers.
     if(!pinned())menu.getBoundingClientRect();
     if(pinned())menu.show();else menu.showModal();syncContents();
@@ -610,7 +639,8 @@
     const pos=savedPosition||position();busy=true;
     Object.assign(state,{font:Number(font.value),family:family.value,weight:weight.value,mode:mode.value,night:night.checked,notes:notes.checked});
     state.typefaces[data.language]={family:family.value,weight:weight.value};
-    applyOptions();layout(pos);busy=false;remember(pos);save();
+    const changed=control===family||control===weight?['family','weight']:[control===font?'font':control===mode?'mode':control===night?'night':'notes'];
+    applyOptions();layout(pos);busy=false;if(current)remember(pos,changed);else save(changed);
   });
   const search=$('search'),results=$('search-results');
   const runSearch=()=>{

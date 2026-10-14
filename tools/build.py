@@ -13,7 +13,7 @@ import html, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
-VERSION = '2.4.5'
+VERSION = '2.4.6'
 
 UI = {
     'zh': dict(
@@ -28,7 +28,7 @@ UI = {
         size='字号', weight='字重', weights=('轻', '标准', '重'), night='夜读', show_notes='显示批注',
         tap_help='轻点正文左侧返回、右侧前进，中间可选字。', mark_help='选中文字可高亮或划线，标记保存在当前浏览器。',
         epub=f'creation-and-freedom-v{VERSION}.epub', pdf=f'creation-and-freedom-v{VERSION}.pdf',
-        storage='当前浏览器无法保存阅读进度。', note='批注', close_note='关闭批注', text_marks='文字标记',
+        storage='当前浏览器无法保存阅读设置或进度。', note='批注', close_note='关闭批注', text_marks='文字标记',
         mark_buttons=('高亮', '划线', '清除'), close_marks='关闭标记工具', undo='撤销上次修改',
         chapter_nav='章节导航', cover='封面', prev_chapter='上一章', next_chapter='下一章',
         note_label='查看批注{n}: {title}', notes_bank='批注', note_kind='来源', end='终', sep='；',
@@ -50,7 +50,7 @@ UI = {
         tap_help='Tap the left side to go back or the right side to continue. The center remains available for selecting text.',
         mark_help='Select text to highlight or underline. Marks are saved in this browser.',
         epub=f'creation-and-freedom-v{VERSION}-en.epub', pdf=f'creation-and-freedom-v{VERSION}-en.pdf',
-        storage='This browser cannot save your reading position.', note='Note', close_note='Close note',
+        storage='This browser cannot save your reading settings or position.', note='Note', close_note='Close note',
         text_marks='Text marks', mark_buttons=('Highlight', 'Underline', 'Clear'), close_marks='Close marking tools',
         undo='Undo last change', chapter_nav='Chapter navigation', cover='Cover', prev_chapter='Previous chapter',
         next_chapter='Next chapter', note_label='Read note {n}: {title}', notes_bank='Notes', note_kind='Source',

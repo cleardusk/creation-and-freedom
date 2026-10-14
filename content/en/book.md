@@ -418,7 +418,7 @@ I've seen kids who are vibe coding. It's hard to get kids to program. You can th
 
 ## Editor's note: What an Interest Gives and Takes
 
-Naval describes the pleasure of coding and says he has been spending a couple of hours on it late at night.[^n33] The gains and the time spent are worth considering together: what have you learned, and how have your sleep and existing commitments been affected?
+Naval enjoys coding and has given it the evening hours he once spent reading, scrolling, or playing video games.[^n33] What does an interest add to your life, and how does it change your daily routines?
 
 # 12 | Part 4 · Desire and Freedom | Chapter 12 Leaving Money on the Table
 
