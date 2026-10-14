@@ -7,8 +7,8 @@
   const chapters = [...document.querySelectorAll('.chapter')];
   const stage = $('reading-stage'), menu = $('contents'), noteDialog = $('note-dialog');
   const pinContents = $('pin-contents'), wideScreen = matchMedia('(min-width:1024px)');
-  const font = $('font-size'), family = $('font-family'), mode = $('reading-mode'), night = $('night-mode'), notes = $('show-notes');
-  for (const group of [family,mode]) Object.defineProperty(group,'value',{get:()=>group.querySelector('input:checked').value,set:value=>group.querySelectorAll('input').forEach(input=>input.checked=input.value===value)});
+  const font = $('font-size'), family = $('font-family'), weight = $('font-weight'), mode = $('reading-mode'), night = $('night-mode'), notes = $('show-notes');
+  for (const group of [family,weight,mode]) Object.defineProperty(group,'value',{get:()=>group.querySelector('input:checked').value,set:value=>group.querySelectorAll('input').forEach(input=>input.checked=input.value===value)});
   const key = 'naval-reader-v2.2';
   let state = {}, current = '', page = 0, pages = 1, step = 1, busy = false, timer, resizeTimer, appScrollY = -1;
   let laidOut = null, savedPosition = null, trigger = null, progressWarningShown=false;
@@ -27,7 +27,17 @@
   } catch { warnProgress(); }
   const save = () => { try {localStorage.setItem(key,JSON.stringify(state));} catch {warnProgress();} };
   font.value = Number.isFinite(state.font) ? Math.min(26,Math.max(12,state.font)) : 18;
-  family.value = ['serif','sans','kai'].includes(state.family) ? state.family : root.dataset.font;
+  const validFamily=value=>['serif','sans','kai'].includes(value),validWeight=value=>['light','normal','heavy'].includes(value);
+  if(!state.typefaces||typeof state.typefaces!=='object'||Array.isArray(state.typefaces)){
+    state.typefaces={};
+    if(validFamily(state.family)){
+      const language=['zh-CN','en'].includes(state.language)?state.language:data.language;
+      state.typefaces[language]={family:state.family,weight:validWeight(state.weight)?state.weight:'normal'};
+    }
+  }
+  const typography=state.typefaces[data.language]||{};
+  family.value=validFamily(typography.family)?typography.family:root.dataset.font;
+  weight.value=validWeight(typography.weight)?typography.weight:'normal';
   mode.value = state.mode === 'scroll' ? 'scroll' : 'paged';
   night.checked = state.night === true; notes.checked = state.notes === true;
   const active = () => $('c'+current);
@@ -47,7 +57,7 @@
     menu.setAttribute('aria-modal',String(menuBlocking()));
   };
   const applyOptions = () => {
-    root.style.setProperty('--body-size',font.value+'px'); root.dataset.font = family.value;
+    root.style.setProperty('--body-size',font.value+'px'); root.dataset.font = family.value; root.dataset.weight=weight.value;
     root.toggleAttribute('data-night',night.checked);
     document.body.classList.toggle('notes-hidden',!notes.checked);
     document.body.classList.toggle('is-paged',paged());
@@ -595,10 +605,11 @@
       if(link.dataset.offset){const pos={anchor:link.hash.slice(1),textOffset:Number(link.dataset.offset)};layout(pos);remember(pos);}
     }
   });
-  for(const control of [font,family,mode,night,notes])control.addEventListener('input',()=>{
+  for(const control of [font,family,weight,mode,night,notes])control.addEventListener('input',()=>{
     // Re-measuring after each step of a slider drag walks the anchor backwards.
     const pos=savedPosition||position();busy=true;
-    Object.assign(state,{font:Number(font.value),family:family.value,mode:mode.value,night:night.checked,notes:notes.checked});
+    Object.assign(state,{font:Number(font.value),family:family.value,weight:weight.value,mode:mode.value,night:night.checked,notes:notes.checked});
+    state.typefaces[data.language]={family:family.value,weight:weight.value};
     applyOptions();layout(pos);busy=false;remember(pos);save();
   });
   const search=$('search'),results=$('search-results');

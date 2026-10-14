@@ -1,5 +1,9 @@
 @font-face{font-family:"Creation Kai";src:url("{{ASSETS}}fonts/reader-kai-v243.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Creation Song";src:url("{{ASSETS}}fonts/reader-song-v243.woff2") format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
+@font-face{font-family:"Creation Kai";src:url("{{ASSETS}}fonts/reader-kai-light-v245.woff2") format("woff2");font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:"Creation Kai";src:url("{{ASSETS}}fonts/reader-kai-medium-v245.woff2") format("woff2");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Creation Song";src:url("{{ASSETS}}fonts/reader-song-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
+@font-face{font-family:"Creation Serif";src:url("{{ASSETS}}fonts/reader-serif-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
+@font-face{font-family:"Creation Classic";src:url("{{ASSETS}}fonts/reader-classic-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
 
 /* Tokens. One neutral paper, one ink, one ink-indigo accent used sparingly. */
 :root{
@@ -8,7 +12,7 @@
  --shadow:0 1px 2px rgb(27 28 31 / 6%),0 10px 32px rgb(27 28 31 / 10%);
  --body-size:18px;--serif:"Creation Song","Songti SC","Noto Serif CJK SC","Source Han Serif SC",SimSun,serif;
  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;--kai:"Creation Kai","Kaiti SC","STKaiti","KaiTi",var(--serif);
- --body-font:var(--serif);--page-gap:48px;--bar:56px;--ease:cubic-bezier(.2,.7,.2,1);color-scheme:light
+ --body-font:var(--serif);--body-weight:400;--page-gap:48px;--bar:56px;--ease:cubic-bezier(.2,.7,.2,1);color-scheme:light
 }
 :root[data-night]{
  --paper:#121315;--raised:#1d1f22;--ink:#dcdde0;--secondary:#9c9fa6;--line:#2b2d31;--line-strong:#43464c;--toggle-off:#73767d;--panel:#18191c;
@@ -17,6 +21,10 @@
 }
 :root[data-font=sans]{--body-font:var(--sans)}:root[data-font=kai]{--body-font:var(--kai)}
 html[lang=en]{--serif:Charter,"Iowan Old Style",Georgia,"Times New Roman",serif;--kai:Baskerville,"Palatino Linotype",Palatino,Georgia,serif}
+:root[data-weight=light]{--body-weight:300}:root[data-weight=heavy]{--body-weight:600}
+html[lang=zh-CN][data-font=kai][data-weight=heavy]{--body-weight:500}
+html[lang=en][data-font=serif]{--body-font:"Creation Serif",var(--serif)}
+html[lang=en][data-font=kai]{--body-font:"Creation Classic",var(--kai)}
 
 /* Base */
 *{box-sizing:border-box}html{scroll-padding-top:84px;background:var(--paper)}
@@ -85,7 +93,7 @@ html[lang=en] .tagline{font-style:italic}
 
 /* Reading column */
 #reading-stage{width:min(100%,30em);font-size:var(--body-size);margin:auto}
-.chapter{font:var(--body-size)/1.9 var(--body-font);overflow-wrap:break-word;line-break:strict;font-kerning:normal}
+.chapter{font:var(--body-weight) var(--body-size)/1.9 var(--body-font);overflow-wrap:break-word;line-break:strict;font-kerning:normal;font-synthesis-weight:none}
 html[lang=zh-CN] .chapter{text-spacing-trim:trim-start}
 html[lang=zh-CN] .cover-title h1{font-feature-settings:"halt"}
 html[lang=zh-CN] :is(.chapter,.drawer-body,#note-dialog){text-autospace:normal}
@@ -273,7 +281,7 @@ input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
 #note-dialog .close-button{margin:-8px -10px 0 0}
 .note-kind-label{font:600 10px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
 #note-dialog h2{font:600 16px/1.5 var(--sans)}
-#note-dialog-content{font:max(16px,calc(var(--body-size) - 2px))/1.8 var(--body-font)}
+#note-dialog-content{font:var(--body-weight) max(16px,calc(var(--body-size) - 2px))/1.8 var(--body-font);font-synthesis-weight:none}
 html[lang=en] #note-dialog-content{line-height:1.65}
 .note-copy>p{margin:0 0 16px}
 .note-links{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:14px;font:13px/1.55 var(--sans)}

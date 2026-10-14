@@ -13,6 +13,7 @@ from pathlib import Path
 
 from ebooklib import epub
 from fontTools.ttLib import TTFont
+from fontTools.varLib.instancer import instantiateVariableFont
 from playwright.sync_api import sync_playwright
 
 import build
@@ -44,7 +45,17 @@ def build_epub(lang, out):
     book.set_title(ui['title'] + ' · ' + ui['subtitle'])
     book.set_language(ui['lang'])
     book.add_metadata('DC', 'description', ui['disclaimer'])
-    css = epub.EpubItem(uid='style', file_name='style.css', media_type='text/css', content=STYLE.encode())
+    style=STYLE
+    if lang=='en':
+        style+='\n@font-face {font-family: "Creation Serif"; src: url("fonts/reader-serif.ttf"); font-weight: 400;}\nbody:lang(en) {font-family: "Creation Serif", Georgia, "Times New Roman", serif;}\n'
+        serif=TTFont(ROOT / 'assets/fonts/reader-serif-v245.woff2')
+        serif.ensureDecompiled()
+        instantiateVariableFont(serif,{'wght':400},inplace=True)
+        serif.flavor=None
+        serif_bytes=io.BytesIO();serif.save(serif_bytes)
+        book.add_item(epub.EpubItem(uid='serif-font',file_name='fonts/reader-serif.ttf',media_type='font/ttf',content=serif_bytes.getvalue()))
+        book.add_item(epub.EpubItem(uid='serif-license',file_name='fonts/OFL-serif.txt',media_type='text/plain',content=(ROOT / 'assets/fonts/OFL-serif.txt').read_bytes()))
+    css = epub.EpubItem(uid='style', file_name='style.css', media_type='text/css', content=style.encode())
     book.add_item(css)
     font = TTFont(ROOT / 'assets/fonts/reader-song-v243.woff2')
     font.flavor = None

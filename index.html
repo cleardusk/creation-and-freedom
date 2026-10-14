@@ -6,7 +6,11 @@
 <script>if(/^#c(?:0\d|1[0-4])(?:-b\d{3})?$/.test(location.hash)){document.documentElement.classList.add('reader-starting');document.addEventListener('DOMContentLoaded',()=>{if(!document.documentElement.classList.contains('js'))document.documentElement.classList.remove('reader-starting');},{once:true});}</script>
 <title>创造与自由 · 纳瓦尔思想读本</title><link rel="icon" href="data:,"><style>
 @font-face{font-family:"Creation Kai";src:url("assets/fonts/reader-kai-v243.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Creation Song";src:url("assets/fonts/reader-song-v243.woff2") format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
+@font-face{font-family:"Creation Kai";src:url("assets/fonts/reader-kai-light-v245.woff2") format("woff2");font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:"Creation Kai";src:url("assets/fonts/reader-kai-medium-v245.woff2") format("woff2");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Creation Song";src:url("assets/fonts/reader-song-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
+@font-face{font-family:"Creation Serif";src:url("assets/fonts/reader-serif-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
+@font-face{font-family:"Creation Classic";src:url("assets/fonts/reader-classic-v245.woff2") format("woff2");font-style:normal;font-weight:300 600;font-display:swap}
 
 /* Tokens. One neutral paper, one ink, one ink-indigo accent used sparingly. */
 :root{
@@ -15,7 +19,7 @@
  --shadow:0 1px 2px rgb(27 28 31 / 6%),0 10px 32px rgb(27 28 31 / 10%);
  --body-size:18px;--serif:"Creation Song","Songti SC","Noto Serif CJK SC","Source Han Serif SC",SimSun,serif;
  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;--kai:"Creation Kai","Kaiti SC","STKaiti","KaiTi",var(--serif);
- --body-font:var(--serif);--page-gap:48px;--bar:56px;--ease:cubic-bezier(.2,.7,.2,1);color-scheme:light
+ --body-font:var(--serif);--body-weight:400;--page-gap:48px;--bar:56px;--ease:cubic-bezier(.2,.7,.2,1);color-scheme:light
 }
 :root[data-night]{
  --paper:#121315;--raised:#1d1f22;--ink:#dcdde0;--secondary:#9c9fa6;--line:#2b2d31;--line-strong:#43464c;--toggle-off:#73767d;--panel:#18191c;
@@ -24,6 +28,10 @@
 }
 :root[data-font=sans]{--body-font:var(--sans)}:root[data-font=kai]{--body-font:var(--kai)}
 html[lang=en]{--serif:Charter,"Iowan Old Style",Georgia,"Times New Roman",serif;--kai:Baskerville,"Palatino Linotype",Palatino,Georgia,serif}
+:root[data-weight=light]{--body-weight:300}:root[data-weight=heavy]{--body-weight:600}
+html[lang=zh-CN][data-font=kai][data-weight=heavy]{--body-weight:500}
+html[lang=en][data-font=serif]{--body-font:"Creation Serif",var(--serif)}
+html[lang=en][data-font=kai]{--body-font:"Creation Classic",var(--kai)}
 
 /* Base */
 *{box-sizing:border-box}html{scroll-padding-top:84px;background:var(--paper)}
@@ -92,7 +100,7 @@ html[lang=en] .tagline{font-style:italic}
 
 /* Reading column */
 #reading-stage{width:min(100%,30em);font-size:var(--body-size);margin:auto}
-.chapter{font:var(--body-size)/1.9 var(--body-font);overflow-wrap:break-word;line-break:strict;font-kerning:normal}
+.chapter{font:var(--body-weight) var(--body-size)/1.9 var(--body-font);overflow-wrap:break-word;line-break:strict;font-kerning:normal;font-synthesis-weight:none}
 html[lang=zh-CN] .chapter{text-spacing-trim:trim-start}
 html[lang=zh-CN] .cover-title h1{font-feature-settings:"halt"}
 html[lang=zh-CN] :is(.chapter,.drawer-body,#note-dialog){text-autospace:normal}
@@ -280,7 +288,7 @@ input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
 #note-dialog .close-button{margin:-8px -10px 0 0}
 .note-kind-label{font:600 10px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
 #note-dialog h2{font:600 16px/1.5 var(--sans)}
-#note-dialog-content{font:max(16px,calc(var(--body-size) - 2px))/1.8 var(--body-font)}
+#note-dialog-content{font:var(--body-weight) max(16px,calc(var(--body-size) - 2px))/1.8 var(--body-font);font-synthesis-weight:none}
 html[lang=en] #note-dialog-content{line-height:1.65}
 .note-copy>p{margin:0 0 16px}
 .note-links{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:14px;font:13px/1.55 var(--sans)}
@@ -403,13 +411,14 @@ html[lang=en] #note-dialog-content{line-height:1.65}
 <details id="settings-panel" class="drawer-section settings-panel"><summary>阅读设置</summary>
 <div class="reading-options" role="group" aria-label="阅读">
 <div id="font-family" class="choice-row" role="radiogroup" aria-labelledby="font-family-label"><span id="font-family-label" class="choice-label">字体</span><div class="choice-options"><label class="font-serif"><input type="radio" name="typeface" value="serif" ><span>书宋</span></label><label class="font-sans"><input type="radio" name="typeface" value="sans"><span>黑体</span></label><label class="font-kai"><input type="radio" name="typeface" value="kai" checked><span>楷体</span></label></div></div>
+<div id="font-weight" class="choice-row" role="radiogroup" aria-labelledby="font-weight-label"><span id="font-weight-label" class="choice-label">字重</span><div class="choice-options"><label><input type="radio" name="weight" value="light"><span>轻</span></label><label><input type="radio" name="weight" value="normal" checked><span>标准</span></label><label><input type="radio" name="weight" value="heavy"><span>重</span></label></div></div>
 <div id="reading-mode" class="choice-row" role="radiogroup" aria-labelledby="reading-mode-label"><span id="reading-mode-label" class="choice-label">翻页</span><div class="choice-options"><label><input type="radio" name="reading-mode" value="paged" checked><span>左右翻页</span></label><label><input type="radio" name="reading-mode" value="scroll"><span>连续滚动</span></label></div></div>
 <label class="font-control" for="font-size">字号 <output id="font-value" for="font-size">18</output><input id="font-size" type="range" min="12" max="26" value="18"></label>
 <label><input id="night-mode" type="checkbox">夜读</label><label><input id="show-notes" type="checkbox">显示批注</label>
 </div><p id="tap-help" class="mark-help muted" hidden>轻点正文左侧返回、右侧前进，中间可选字。</p><p class="mark-help muted">选中文字可高亮或划线，标记保存在当前浏览器。</p><p id="mark-storage-message" class="muted" hidden></p></details>
 <a class="toc-cover" href="#cover">返回封面</a><nav id="panel-toc" class="book-toc" aria-label="章节"><div class="toc-group"><h2>卷首</h2><a href="#c00">写在前面</a></div><div class="toc-group"><h2>第1部 · 杠杆与分配</h2><a href="#c01"><span class="toc-number">01</span><span class="toc-title">知道自己要什么</span></a><a href="#c02"><span class="toc-number">02</span><span class="toc-title">省下的时间归谁</span></a><a href="#c03"><span class="toc-number">03</span><span class="toc-title">代码便宜以后，谁拥有价值</span></a></div><div class="toc-group"><h2>第2部 · 专长与信誉</h2><a href="#c04"><span class="toc-number">04</span><span class="toc-title">一万次迭代，而非一万小时</span></a><a href="#c05"><span class="toc-number">05</span><span class="toc-title">当工具总说“你说得对”</span></a><a href="#c06"><span class="toc-number">06</span><span class="toc-title">信誉是愿意放弃一次成交</span></a></div><div class="toc-group"><h2>第3部 · 理解与选择</h2><a href="#c07"><span class="toc-number">07</span><span class="toc-title">好产品难以随意改动</span></a><a href="#c08"><span class="toc-number">08</span><span class="toc-title">从百分之二十读到百分之三十一</span></a><a href="#c09"><span class="toc-number">09</span><span class="toc-title">最小的团队，最高的信任</span></a></div><div class="toc-group"><h2>第4部 · 欲望与自由</h2><a href="#c10"><span class="toc-number">10</span><span class="toc-title">欲望是一份不快乐的契约</span></a><a href="#c11"><span class="toc-number">11</span><span class="toc-title">创造欲与幸福能否同时存在</span></a><a href="#c12"><span class="toc-number">12</span><span class="toc-title">把钱留在桌上</span></a></div><div class="toc-group"><h2>书后</h2><a href="#c13">结语</a><a href="#c14">材料说明</a></div></nav>
 
-<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.4.4/creation-and-freedom-v2.4.4.epub" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.4.4/creation-and-freedom-v2.4.4.pdf" download>PDF</a></p>
+<p class="downloads"><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.4.5/creation-and-freedom-v2.4.5.epub" download>EPUB</a><a href="https://github.com/cleardusk/creation-and-freedom/releases/download/v2.4.5/creation-and-freedom-v2.4.5.pdf" download>PDF</a></p>
 <p id="storage-message" class="muted" hidden>当前浏览器无法保存阅读进度。</p>
 </div></dialog>
 <dialog id="note-dialog" aria-labelledby="note-dialog-title" aria-modal="false"><div class="note-scroll">
@@ -427,8 +436,8 @@ html[lang=en] #note-dialog-content{line-height:1.65}
   const chapters = [...document.querySelectorAll('.chapter')];
   const stage = $('reading-stage'), menu = $('contents'), noteDialog = $('note-dialog');
   const pinContents = $('pin-contents'), wideScreen = matchMedia('(min-width:1024px)');
-  const font = $('font-size'), family = $('font-family'), mode = $('reading-mode'), night = $('night-mode'), notes = $('show-notes');
-  for (const group of [family,mode]) Object.defineProperty(group,'value',{get:()=>group.querySelector('input:checked').value,set:value=>group.querySelectorAll('input').forEach(input=>input.checked=input.value===value)});
+  const font = $('font-size'), family = $('font-family'), weight = $('font-weight'), mode = $('reading-mode'), night = $('night-mode'), notes = $('show-notes');
+  for (const group of [family,weight,mode]) Object.defineProperty(group,'value',{get:()=>group.querySelector('input:checked').value,set:value=>group.querySelectorAll('input').forEach(input=>input.checked=input.value===value)});
   const key = 'naval-reader-v2.2';
   let state = {}, current = '', page = 0, pages = 1, step = 1, busy = false, timer, resizeTimer, appScrollY = -1;
   let laidOut = null, savedPosition = null, trigger = null, progressWarningShown=false;
@@ -447,7 +456,17 @@ html[lang=en] #note-dialog-content{line-height:1.65}
   } catch { warnProgress(); }
   const save = () => { try {localStorage.setItem(key,JSON.stringify(state));} catch {warnProgress();} };
   font.value = Number.isFinite(state.font) ? Math.min(26,Math.max(12,state.font)) : 18;
-  family.value = ['serif','sans','kai'].includes(state.family) ? state.family : root.dataset.font;
+  const validFamily=value=>['serif','sans','kai'].includes(value),validWeight=value=>['light','normal','heavy'].includes(value);
+  if(!state.typefaces||typeof state.typefaces!=='object'||Array.isArray(state.typefaces)){
+    state.typefaces={};
+    if(validFamily(state.family)){
+      const language=['zh-CN','en'].includes(state.language)?state.language:data.language;
+      state.typefaces[language]={family:state.family,weight:validWeight(state.weight)?state.weight:'normal'};
+    }
+  }
+  const typography=state.typefaces[data.language]||{};
+  family.value=validFamily(typography.family)?typography.family:root.dataset.font;
+  weight.value=validWeight(typography.weight)?typography.weight:'normal';
   mode.value = state.mode === 'scroll' ? 'scroll' : 'paged';
   night.checked = state.night === true; notes.checked = state.notes === true;
   const active = () => $('c'+current);
@@ -467,7 +486,7 @@ html[lang=en] #note-dialog-content{line-height:1.65}
     menu.setAttribute('aria-modal',String(menuBlocking()));
   };
   const applyOptions = () => {
-    root.style.setProperty('--body-size',font.value+'px'); root.dataset.font = family.value;
+    root.style.setProperty('--body-size',font.value+'px'); root.dataset.font = family.value; root.dataset.weight=weight.value;
     root.toggleAttribute('data-night',night.checked);
     document.body.classList.toggle('notes-hidden',!notes.checked);
     document.body.classList.toggle('is-paged',paged());
@@ -1015,10 +1034,11 @@ html[lang=en] #note-dialog-content{line-height:1.65}
       if(link.dataset.offset){const pos={anchor:link.hash.slice(1),textOffset:Number(link.dataset.offset)};layout(pos);remember(pos);}
     }
   });
-  for(const control of [font,family,mode,night,notes])control.addEventListener('input',()=>{
+  for(const control of [font,family,weight,mode,night,notes])control.addEventListener('input',()=>{
     // Re-measuring after each step of a slider drag walks the anchor backwards.
     const pos=savedPosition||position();busy=true;
-    Object.assign(state,{font:Number(font.value),family:family.value,mode:mode.value,night:night.checked,notes:notes.checked});
+    Object.assign(state,{font:Number(font.value),family:family.value,weight:weight.value,mode:mode.value,night:night.checked,notes:notes.checked});
+    state.typefaces[data.language]={family:family.value,weight:weight.value};
     applyOptions();layout(pos);busy=false;remember(pos);save();
   });
   const search=$('search'),results=$('search-results');

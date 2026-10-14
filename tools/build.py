@@ -13,7 +13,7 @@ import html, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
-VERSION = '2.4.4'
+VERSION = '2.4.5'
 
 UI = {
     'zh': dict(
@@ -25,7 +25,7 @@ UI = {
         marks='我的标记', export='导出备份', import_='导入备份', marks_hint='标记按语言保存；导入备份会合并现有标记。',
         marks_empty='你高亮或划线的文字会显示在这里。', back_cover='返回封面', chapters_label='章节',
         reading='阅读', typeface='字体', faces=('书宋', '黑体', '楷体'), layout='翻页', modes=('左右翻页', '连续滚动'),
-        size='字号', night='夜读', show_notes='显示批注',
+        size='字号', weight='字重', weights=('轻', '标准', '重'), night='夜读', show_notes='显示批注',
         tap_help='轻点正文左侧返回、右侧前进，中间可选字。', mark_help='选中文字可高亮或划线，标记保存在当前浏览器。',
         epub=f'creation-and-freedom-v{VERSION}.epub', pdf=f'creation-and-freedom-v{VERSION}.pdf',
         storage='当前浏览器无法保存阅读进度。', note='批注', close_note='关闭批注', text_marks='文字标记',
@@ -46,7 +46,7 @@ UI = {
         marks_hint='Marks are saved per language. Importing merges them with your existing marks.',
         marks_empty='Your highlights and underlines will appear here.', back_cover='Back to cover', chapters_label='Chapters',
         reading='Reading', typeface='Typeface', faces=('Serif', 'Sans', 'Classic'), layout='Layout', modes=('Pages', 'Scroll'),
-        size='Size', night='Night', show_notes='Show notes',
+        size='Size', weight='Weight', weights=('Light', 'Regular', 'Heavy'), night='Night', show_notes='Show notes',
         tap_help='Tap the left side to go back or the right side to continue. The center remains available for selecting text.',
         mark_help='Select text to highlight or underline. Marks are saved in this browser.',
         epub=f'creation-and-freedom-v{VERSION}-en.epub', pdf=f'creation-and-freedom-v{VERSION}-en.pdf',
@@ -236,7 +236,7 @@ def render(ui, chapters, sections, bank, data, starts):
     values = dict(ui, css=css.rstrip('\n'), js=js.rstrip('\n'), toc=toc(chapters, ui), parts=parts,
                   chapters=''.join(sections), bank=''.join(bank), data=json.dumps(data, ensure_ascii=False).replace('</', '<\\/'),
                   meta_a=ui['cover_meta'][0], meta_b=ui['cover_meta'][1], face_a=ui['faces'][0], face_b=ui['faces'][1],
-                  face_c=ui['faces'][2], serif_checked='checked' if ui['default_family']=='serif' else '',
+                  face_c=ui['faces'][2], weight_a=ui['weights'][0], weight_b=ui['weights'][1], weight_c=ui['weights'][2], serif_checked='checked' if ui['default_family']=='serif' else '',
                   kai_checked='checked' if ui['default_family']=='kai' else '',
                   mode_a=ui['modes'][0], mode_b=ui['modes'][1], mark_a=ui['mark_buttons'][0],
                   mark_b=ui['mark_buttons'][1], mark_c=ui['mark_buttons'][2], version=VERSION)
