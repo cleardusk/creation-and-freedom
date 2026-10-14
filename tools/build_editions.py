@@ -20,8 +20,10 @@ import build
 ROOT = Path(build.ROOT)
 STYLE = '''
 @font-face {font-family: "Creation Song"; src: url("fonts/reader-song.ttf")}
-body {font-family: "Creation Song", Georgia, serif; line-height: 1.8; margin: 5%;}
+@font-face {font-family: "Creation Kai"; src: url("fonts/reader-kai.ttf")}
+body {font-family: "Creation Kai", "Creation Song", serif; line-height: 1.8; margin: 5%;}
 body:lang(en) {font-family: Georgia, "Times New Roman", serif;}
+.ebook-cover:lang(zh-CN) {font-family: "Creation Song", serif;}
 h1 {font-size: 1.8em; line-height: 1.35; margin: 1.5em 0 1em; text-wrap: balance; hyphens: none;}
 h2 {font-size: 1.2em; margin-top: 1.8em; hyphens: none;}
 p {margin: 0 0 1em; orphans: 2; widows: 2;}
@@ -50,6 +52,12 @@ def build_epub(lang, out):
     font.save(font_bytes)
     book.add_item(epub.EpubItem(uid='font', file_name='fonts/reader-song.ttf', media_type='font/ttf', content=font_bytes.getvalue()))
     book.add_item(epub.EpubItem(uid='font-license', file_name='fonts/OFL.txt', media_type='text/plain', content=(ROOT / 'assets/fonts/OFL.txt').read_bytes()))
+    kai = TTFont(ROOT / 'assets/fonts/reader-kai-v243.woff2')
+    kai.flavor = None
+    kai_bytes = io.BytesIO()
+    kai.save(kai_bytes)
+    book.add_item(epub.EpubItem(uid='kai-font', file_name='fonts/reader-kai.ttf', media_type='font/ttf', content=kai_bytes.getvalue()))
+    book.add_item(epub.EpubItem(uid='kai-license', file_name='fonts/OFL-kai.txt', media_type='text/plain', content=(ROOT / 'assets/fonts/OFL-kai.txt').read_bytes()))
     book.set_cover('art.png', (ROOT / 'assets/cover-art.png').read_bytes(), create_page=False)
 
     def page(name, title, content):

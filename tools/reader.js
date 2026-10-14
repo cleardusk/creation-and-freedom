@@ -27,7 +27,7 @@
   } catch { warnProgress(); }
   const save = () => { try {localStorage.setItem(key,JSON.stringify(state));} catch {warnProgress();} };
   font.value = Number.isFinite(state.font) ? Math.min(26,Math.max(12,state.font)) : 18;
-  family.value = ['serif','sans','kai'].includes(state.family) ? state.family : 'serif';
+  family.value = ['serif','sans','kai'].includes(state.family) ? state.family : root.dataset.font;
   mode.value = state.mode === 'scroll' ? 'scroll' : 'paged';
   night.checked = state.night === true; notes.checked = state.notes === true;
   const active = () => $('c'+current);

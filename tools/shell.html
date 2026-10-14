@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{lang}}">
+<html lang="{{lang}}" data-font="{{default_family}}">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark"><meta name="description" content="{{description}}">
@@ -39,7 +39,7 @@
 </details>
 <details id="settings-panel" class="drawer-section settings-panel"><summary>{{settings}}</summary>
 <div class="reading-options" role="group" aria-label="{{reading}}">
-<div id="font-family" class="choice-row" role="radiogroup" aria-labelledby="font-family-label"><span id="font-family-label" class="choice-label">{{typeface}}</span><div class="choice-options"><label class="font-serif"><input type="radio" name="typeface" value="serif" checked><span>{{face_a}}</span></label><label class="font-sans"><input type="radio" name="typeface" value="sans"><span>{{face_b}}</span></label><label class="font-kai"><input type="radio" name="typeface" value="kai"><span>{{face_c}}</span></label></div></div>
+<div id="font-family" class="choice-row" role="radiogroup" aria-labelledby="font-family-label"><span id="font-family-label" class="choice-label">{{typeface}}</span><div class="choice-options"><label class="font-serif"><input type="radio" name="typeface" value="serif" {{serif_checked}}><span>{{face_a}}</span></label><label class="font-sans"><input type="radio" name="typeface" value="sans"><span>{{face_b}}</span></label><label class="font-kai"><input type="radio" name="typeface" value="kai" {{kai_checked}}><span>{{face_c}}</span></label></div></div>
 <div id="reading-mode" class="choice-row" role="radiogroup" aria-labelledby="reading-mode-label"><span id="reading-mode-label" class="choice-label">{{layout}}</span><div class="choice-options"><label><input type="radio" name="reading-mode" value="paged" checked><span>{{mode_a}}</span></label><label><input type="radio" name="reading-mode" value="scroll"><span>{{mode_b}}</span></label></div></div>
 <label class="font-control" for="font-size">{{size}} <output id="font-value" for="font-size">18</output><input id="font-size" type="range" min="12" max="26" value="18"></label>
 <label><input id="night-mode" type="checkbox">{{night}}</label><label><input id="show-notes" type="checkbox">{{show_notes}}</label>

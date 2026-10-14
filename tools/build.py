@@ -13,12 +13,12 @@ import html, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
-VERSION = '2.4.3'
+VERSION = '2.4.4'
 
 UI = {
     'zh': dict(
         lang='zh-CN', out='index.html', assets='assets/', other='en/index.html', other_lang='en', other_label='EN',
-        title='创造与自由', subtitle='纳瓦尔思想读本', description='创造与自由：纳瓦尔思想读本。', afterword='结语',
+        title='创造与自由', subtitle='纳瓦尔思想读本', description='创造与自由：纳瓦尔思想读本。', afterword='结语', default_family='kai',
         cover_meta=('2021 — 2026', '四部 · 十二章'), start='开始阅读', parts_label='四部', full_toc='全书目录',
         skip='跳到正文', switch='切换语言', contents='目录', pager='翻页', prev_page='上一页', next_page='下一页',
         settings='阅读设置', pin='固定目录', close_contents='关闭目录', search='搜索全书', search_placeholder='输入词句…',
@@ -37,7 +37,7 @@ UI = {
     ),
     'en': dict(
         lang='en', out='en/index.html', assets='../assets/', other='../index.html', other_lang='zh-CN', other_label='中文',
-        title='Creation and Freedom', subtitle='A Naval Reader', description='Creation and Freedom：A Naval Reader。', afterword='Afterword',
+        title='Creation and Freedom', subtitle='A Naval Reader', description='Creation and Freedom：A Naval Reader。', afterword='Afterword', default_family='serif',
         cover_meta=('2021 — 2026', 'FOUR PARTS · TWELVE CHAPTERS'), start='Start reading', parts_label='Four parts',
         full_toc='Full contents', skip='Skip to text', switch='Switch language', contents='Contents', pager='Layout',
         prev_page='Previous page', next_page='Next page', settings='Reading settings', pin='Pin contents',
@@ -236,7 +236,9 @@ def render(ui, chapters, sections, bank, data, starts):
     values = dict(ui, css=css.rstrip('\n'), js=js.rstrip('\n'), toc=toc(chapters, ui), parts=parts,
                   chapters=''.join(sections), bank=''.join(bank), data=json.dumps(data, ensure_ascii=False).replace('</', '<\\/'),
                   meta_a=ui['cover_meta'][0], meta_b=ui['cover_meta'][1], face_a=ui['faces'][0], face_b=ui['faces'][1],
-                  face_c=ui['faces'][2], mode_a=ui['modes'][0], mode_b=ui['modes'][1], mark_a=ui['mark_buttons'][0],
+                  face_c=ui['faces'][2], serif_checked='checked' if ui['default_family']=='serif' else '',
+                  kai_checked='checked' if ui['default_family']=='kai' else '',
+                  mode_a=ui['modes'][0], mode_b=ui['modes'][1], mark_a=ui['mark_buttons'][0],
                   mark_b=ui['mark_buttons'][1], mark_c=ui['mark_buttons'][2], version=VERSION)
     return re.sub(r'\{\{(\w+)\}\}', lambda m: values[m.group(1)], tpl)
 
