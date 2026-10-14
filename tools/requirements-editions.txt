@@ -1,0 +1,4 @@
+EbookLib==0.20
+playwright==1.63.0
+fonttools[woff]==4.66.1
+pymupdf==1.28.2
