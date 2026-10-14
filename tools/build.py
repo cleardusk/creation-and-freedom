@@ -229,7 +229,7 @@ def render(ui, chapters, sections, bank, data, starts):
     js = open(os.path.join(TOOLS, 'reader.js'), encoding='utf-8').read()
     parts = ''.join(
         f'<a href="#c{a}"><span class="part-number">{i:02d}</span><span class="part-name">{esc(re.sub(r"^.*· ", "", part))}</span>'
-        f'<span class="part-range">{ui["part_range"].format(a=a, b=b)}</span><span class="part-arrow" aria-hidden="true">→</span></a>'
+        f'<span class="part-range">{ui["part_range"].format(a=int(a), b=int(b))}</span><span class="part-arrow" aria-hidden="true">→</span></a>'
         for i, (part, (a, b)) in enumerate(starts.items(), 1))
     values = dict(ui, css=css.rstrip('\n'), js=js.rstrip('\n'), toc=toc(chapters), parts=parts,
                   chapters=''.join(sections), bank=''.join(bank), data=json.dumps(data, ensure_ascii=False).replace('</', '<\\/'),
