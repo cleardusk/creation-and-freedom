@@ -21,8 +21,9 @@ ROOT = Path(build.ROOT)
 STYLE = '''
 @font-face {font-family: "Creation Song"; src: url("fonts/reader-song.ttf")}
 body {font-family: "Creation Song", Georgia, serif; line-height: 1.8; margin: 5%;}
-h1 {font-size: 1.8em; line-height: 1.35; margin: 1.5em 0 1em;}
-h2 {font-size: 1.2em; margin-top: 1.8em;}
+body:lang(en) {font-family: Georgia, "Times New Roman", serif;}
+h1 {font-size: 1.8em; line-height: 1.35; margin: 1.5em 0 1em; text-wrap: balance; hyphens: none;}
+h2 {font-size: 1.2em; margin-top: 1.8em; hyphens: none;}
 p {margin: 0 0 1em; orphans: 2; widows: 2;}
 a {color: #2e4a6b;} .part, .disclaimer {font-size: .85em;}
 .art {width: 100%; height: auto; margin: 2em 0;}
@@ -43,7 +44,7 @@ def build_epub(lang, out):
     book.add_metadata('DC', 'description', ui['disclaimer'])
     css = epub.EpubItem(uid='style', file_name='style.css', media_type='text/css', content=STYLE.encode())
     book.add_item(css)
-    font = TTFont(ROOT / 'assets/fonts/reader-song-v240.woff2')
+    font = TTFont(ROOT / 'assets/fonts/reader-song-v243.woff2')
     font.flavor = None
     font_bytes = io.BytesIO()
     font.save(font_bytes)
@@ -95,8 +96,17 @@ def build_pdfs(out):
         for ui in build.UI.values():
             page = browser.new_page(java_script_enabled=False)
             page.goto((ROOT / ui['out']).as_uri(), wait_until='networkidle')
+            # Print the lossless master directly, without web-only image masks.
+            page.locator('.cover-artwork').evaluate('''(element, source) => {
+                const image = document.createElement('img');
+                image.className = 'cover-art';
+                image.alt = '';
+                image.src = source;
+                element.replaceChildren(image);
+            }''', (ROOT / 'assets/cover-art.png').as_uri())
             page.emulate_media(media='print')
             page.evaluate('document.fonts.ready')
+            page.evaluate('Promise.all(Array.from(document.images, image => image.decode()))')
             page.pdf(path=str(out / ui['pdf']), prefer_css_page_size=True, print_background=True,
                      display_header_footer=True, header_template='<span></span>',
                      footer_template='<div style="font-size:8px;width:100%;text-align:center;color:#666"><span class="pageNumber"></span></div>',

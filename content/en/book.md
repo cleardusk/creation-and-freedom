@@ -52,11 +52,9 @@ We may not see super high-quality code, at least not in this generation. The arc
 
 The personal app store is a little bit of a joke, too. It looks like an app store and my apps get delivered into it, but Apple will not let you build apps that can be downloaded on anyone's iPhone. You have to key them against your specific devices. So I can deliver apps to friends and family; I can't yet deliver them to everybody.[^n03]
 
-## Editor's note: The Tool Amplifies Intention
+## Editor's note: From Personal Use to Delivery
 
-AI has lowered the cost of making the first version. It has not lowered the cost of knowing what you want or of reliably handing the thing to others. Naval could rebuild Airchat because of a year of obsession; a vague intention, amplified by the same tools, only becomes a larger vagueness.
-
-For many people, the first reduction is already enough. The second still demands the old disciplines: engineering, distribution, and a willingness to answer for other people.
+Once the first version works, it still needs to be checked against the original problem. Software for your own use can follow your particular needs. A product that others will rely on also needs testing, maintenance, support, and a way to reach its users.
 
 # 02 | Part 1 · Leverage and Distribution | Chapter 02 Who Gets the Time You Save
 
@@ -82,13 +80,11 @@ Since going back to building, I find myself reading more books. I find myself li
 
 Being active makes me want to naturally learn more, and not in a way that's unfun or causes me to burn out. So I think doing leads to the desire to learn, and therefore to learning. And of course there's the learning from the doing itself. If you're purely learning for learning's sake, it gets empty after a little while. The motivation isn't the same.[^n05]
 
-## Editor's note: The Time You Save May Not Be Yours
+## Editor's note: How to Use the Time You Save
 
-Suppose a tool compresses a day's work into an hour. Where do the other seven hours go? If what you sell is hours, the answer is often seven more hours of tasks. The tool decides how fast the work gets done; the structure of the work decides who gets the time saved. The two need to be judged separately.
+Suppose a tool compresses a day's work into an hour. Where do the other seven hours go? If tasks are still assigned by the hour, new work may fill that time. How much autonomy greater efficiency brings depends on the working arrangement.
 
-Controlling your own time usually requires savings, skills, and room for error, which not everyone has right now. Being made "unemployable" liberates someone with a fallback; for someone without one, it may be a risk. A more practical step is to seek, in your current position, a little more accountability for outcomes and a little less for hours, and to keep at least part of the saved time for your own choosing.
-
-There's a further catch. Once AI makes feedback fast, it's easy to keep going one version after another and refill the saved time yourself. Without setting aside the stress of unmet goals, autonomy is just a better-hidden kind of overtime.
+Control over your time also involves income, savings, and existing commitments. The phrase "unemployable" is worth considering alongside those conditions. Could your current work be organized more around results, leaving you some of the time saved?
 
 # 03 | Part 1 · Leverage and Distribution | Chapter 03 When Code Gets Cheaper, Who Owns the Value?
 
@@ -124,11 +120,11 @@ Before this round of AI, in a 2021 conversation with Chris Dixon on Tim Ferriss'
 
 ## Editor's note: Predictions Have Dates
 
-Most of these judgments come from February to May 2026. They are an investor's guesses about change in progress, and some pull against each other. In the same conversation, Naval said agent-written code would probably need a full rewrite once it had to serve many users, and predicted that within a year agents would write scalable software. In February he said small software companies would be squeezed; by April he allowed that big companies might also benefit because they own distribution.[^n03] These are dated judgments, best read as hypotheses.
+The judgments about AI and software companies in this chapter come mainly from February to May 2026. In the same conversation, Naval said agent-written code might need to be rewritten to serve many users, and predicted that agents would probably write scalable software within a year or less.[^n03] In February he spoke of small software companies being squeezed; in April he also raised the possibility that large companies would benefit from owning distribution. These predictions are worth reading alongside the capabilities, time horizons, and uses he was discussing.
 
-The 2021 Web3 ideas went through a speculative peak and a retreat in the following years. They did not become the default rules of mainstream platforms, and in the 2025–2026 conversations this book draws on, Naval's focus had moved to AI and hardware. The questions they raised have only grown sharper with AI: when models can learn from your work and aggregators distribute it, how does work get discovered, can you take your data with you, and how are contributions rewarded?
+The 2021 Web3 ideas bring open code, user data, and contributor ownership together. Read alongside the later AI discussions, they raise concrete questions: how is work discovered, can users take their data with them, and how are contributions rewarded?
 
-A further reservation: writing software others can't was never a software company's only moat. Trust, data, service, distribution, and deep knowledge of an industry are often harder to copy than code. The companies being squeezed may be mostly those with nothing but code. For individual makers, the conclusion is optimistic. Making something no longer requires funding; building a livelihood on it means finding the part that isn't code.
+To assess how a software company might be affected, consider what it has beyond code: user trust, data, service, distribution, and knowledge of an industry. An individual maker can also ask how the work will be discovered, and who would keep using or paying for it.
 
 # 04 | Part 2 · Specific Knowledge and Credibility | Chapter 04 Ten Thousand Iterations, Not Ten Thousand Hours
 
@@ -164,11 +160,11 @@ I said, "Become the best in the world at what you do. Keep redefining what you d
 
 And iterate does not mean repetition. Iterate is not mechanical. It's not 10,000 hours, it's 10,000 iterations. It's not time spent. It's learning loops. You do something, and then you stop and you pause and you reflect. You see how well that worked or did not work. Then you change it. Then you try something else. That's the process of iteration, and that's the process of learning. All learning systems work this way. Evolution is iteration: there's mutation, there's replication, and then there's selection.
 
-## Editor's note: Courage Needs Decent Odds
+## Editor's note: What Each Attempt Teaches
 
-"399 nos" is a survivor's story. It works when one yes is enough to sustain the business and each rejection is cheap. In other situations, constant rejection signals that the direction is wrong, not that more courage is needed.
+"399 nos and one yes" comes from Naval's description of an entrepreneur friend. Whether to keep trying also depends on the cost of each failed attempt, the resources left, and what a yes would make possible.
 
-Iteration is how to tell the two apart. If each rejection teaches you something and changes what you do, you are iterating. If after 399 rejections you are still saying the same sentence, that is only repetition. *What am I good at?* is a question you keep revising, and results narrow the answer: which problems, by what means, for which people you do especially well.
+A rejection may simply mean a poor fit. It may also reveal a problem with the product or how it is presented. Keeping track of the feedback, and whether it changes the next attempt, can help you decide how to proceed.
 
 # 05 | Part 2 · Specific Knowledge and Credibility | Chapter 05 When the Tool Keeps Saying "You're Right"
 
@@ -198,11 +194,11 @@ The right way to learn is to actually go do something, and when you're doing it,
 
 You start with reasoning and then you build up your judgment. When your judgment is sufficiently refined, it just becomes taste or intuition or gut feel, and that's what you operate on. But you have to start from the specific. If you start from the general and stay at the level of the general—just read books of principles and aphorisms and almanacs—you're going to be like that person who went to university: overeducated, but lost. They try to apply things in the wrong places.
 
-## Editor's note: Intuition Can Be Flattered
+## Editor's note: Let Judgment Meet Feedback
 
-As execution gets cheaper, choosing which problem to work on gets more expensive. A coding agent can diligently keep solving the wrong problem. If the tool tends to agree with you, it can't supply the judgment; that has to come from understanding the problem—which requirement must stay, which layer is broken, who inherits the difficulty when you patch locally.
+As an agent keeps working, check whether it is still solving the original problem. Look at specific evidence: whether tests pass, whether required features remain, and what users actually experience.
 
-Naval places taste at the far end of judgment. Intuition can be flattered too. Someone who is always agreed with will struggle to notice when their intuition has gone stale. So it helps to keep a few things around that won't flatter you: tests that can fail, users who say no, and colleagues who disagree.
+Taste also needs feedback. Failed tests, dissatisfied users, and colleagues who disagree can reveal problems you had missed.
 
 # 06 | Part 2 · Specific Knowledge and Credibility | Chapter 06 Credibility Means Being Willing to Lose a Sale
 
@@ -242,9 +238,9 @@ If you're honest but not kind, they're not going to listen to you. So then it's 
 
 ## Editor's note: Honesty Has a Cost
 
-Whoever tells a customer the product isn't right for them has to be able to afford the loss. For a well-known investor, walking away from a deal costs almost nothing. For a salesperson with rent due at the end of the month, the cost is real. Naval himself admits he's not the one for making the sales quota.
+The cost of walking away from a sale depends on a person's income and circumstances. For someone paid on commission, explaining why a product is a poor fit may directly affect that month's income. That immediate loss belongs in any discussion of how honesty builds credibility.
 
-Credibility is the currency of long-term cooperation and suits repeated games. In one-off, commission-per-unit transactions, it may not pay out on the spot. Honest people also get more rejections, and blunter ones. The question is which game you want to stay in longer.
+Whether credibility leads to further cooperation also depends on whether the parties deal with each other again, and whether the customer notices and remembers the choice. The immediate loss and the longer-term return may arrive at different times.
 
 # 07 | Part 3 · Understanding and Choice | Chapter 07 Good Products Are Hard to Vary
 
@@ -282,11 +278,11 @@ The most critical person in taking a great product from zero to one is the singl
 
 If you're optimizing your company to end up on the cover of a magazine, or to win an industry award, you're failing. You need customers. That's your real feedback. You need feedback from nature. Did your rocket launch? Did your drone fly? Did your 3D printer print the object within the tolerances that it was supposed to, in the time it was supposed to, in the cost budget that it was supposed to? It's very easy to fool yourself. It's very easy to be fooled by others. It is impossible to fool Mother Nature.[^n19]
 
-## Editor's note: Hard to Vary Isn't Proof of Good
+## Editor's note: Why a Change Affects the Product
 
-"Hard to vary" is a mark of good products, but it can't be run in reverse. A system so tangled that nobody dares touch it is also hard to vary. The difference is whether it has been tested against reality.
+"Hard to vary" points to parts that fit together for a reason. A system can also be difficult to change because its parts are tangled. When applying this criterion, ask what a change would prevent the product from doing, and what supports the original design.
 
-Deutsch uses "hard to vary" to judge explanations, and an explanation only has to be true. A product also faces users, prices, and competitors that change. "They designed the right thing" is usually said by winners looking back; designs that were just as hard to vary and still lost are rarely mentioned. As a question to ask while building, the standard is useful. As proof after the fact, it is less reliable.
+Deutsch discusses explanations; Naval extends the idea to products. Products also need to be tested in use and adjusted as needs and conditions change. Whether a design worked before and whether it still fits now are separate questions.
 
 # 08 | Part 3 · Understanding and Choice | Chapter 08 From Twenty Percent to Thirty-One
 
@@ -326,11 +322,11 @@ What doesn't make sense to me is reading stuff that's not Lindy, or not about hu
 
 In domains with a lot of data and good verification, like code and math, these models do extremely well. Code has to compile, execute, and pass tests. In domains where it's hard to verify—creative writing, for example, where who determines what's good versus what's slop?—these models don't do as well.
 
-## Editor's note: Patient Tutors Can Be Wrong
+## Editor's note: Checking a Fluent Explanation
 
-The risk with an AI tutor is fluency. A wrong explanation is just as patient and just as clear as a right one.
+A model can give a fluent explanation that is wrong. When learning, break the answer into steps you can check against original texts, data, or calculations. Leave questions open where verification is difficult.
 
-That suggests one way to use it. On verifiable questions, let the model lead and check against results. On questions that are hard to verify, treat its answer as a hypothesis and go back to original texts, data, and other sources. The feeling of "I get it" is not evidence. Being able to explain it in your own words and use it in a new situation is.
+Restating an explanation in your own words and trying a new example can reveal gaps in your understanding. Where doubts remain, go back and check the premises.
 
 # 09 | Part 3 · Understanding and Choice | Chapter 09 The Smallest Team, the Highest Trust
 
@@ -364,11 +360,11 @@ We keep a very flat structure. We push people to communicate with each other dir
 
 AI is implicitly very helpful as glue. At a company like ours, you have hardware people, software people, and AI people, and they wouldn't normally do each other's work. But now with AI they can at least get to 20%–30% of others' work. The AI people can create their own software harnesses if they need to test something, and the hardware people can write a little software to bring up a device. It may not be good for production deployment, but it's better than having to sit around and wait.
 
-## Editor's note: Trust Is Not a Management Technique
+## Editor's note: How a Small Team Works Together
 
-This small-team model has clear preconditions. Members are smart enough to work independently, one person holds the whole picture, and trust between them is high. Remove any one of these and "no Slack" may just mean opacity, and "flat" may mean no one is responsible.
+Naval describes a small team whose members work independently, with one person holding the whole product in mind. Before adopting a similar arrangement, ask who is responsible for each task, how information is shared, and whom people turn to when they disagree.
 
-Trust can't be declared into existence either. It comes from checkable reputations, fair shares, and promises kept again and again, and sometimes from institutions outside the team. So a small, flat team is the result of trust, not a way to build it. Some people like finding their own problems and partners. Others do better with clear duties and reporting lines, and until trust exists, the second arrangement is often the more honest one.
+Those questions still need answers when management tools are removed. Responsibilities and communication can be arranged around the team's needs and adjusted as problems emerge.
 
 # 10 | Part 4 · Desire and Freedom | Chapter 10 Desire Is a Contract to Be Unhappy
 
@@ -392,11 +388,7 @@ There's no such thing as happiness. Rather, a fragile contentment with the way t
 
 ## Editor's note: Check the Contract's Price
 
-The power of "desire is a contract" lies in treating desire as a transaction: you pay a stretch of peace for an outcome. The question worth asking isn't whether to have desires, but what the contract costs.
-
-Without desire, there would be none of the creation this book is about, and Naval himself is building a company called Impossible. His disappearance from X needn't be taken as a moral example either. It looks more like a substitution: a contract about scores swapped for one about work. The new one takes time too, but its feedback comes from whether the work runs, not from what others think.
-
-Desire doesn't need to be extinguished, but it does need to be chosen. Before signing, look at whose contract it is: did this craving come from your own problem, or did some scoreboard set it for you?
+"Desire is a contract" brings the cost of a wish into view. How long will you live with unease, and how much time will you spend pursuing the outcome? Is the outcome worth that cost?
 
 # 11 | Part 4 · Desire and Freedom | Chapter 11 Can Creativity and Happiness Coexist?
 
@@ -424,13 +416,9 @@ With vibe coding, it's unbounded, because now you've got a Turing machine, and i
 
 I've seen kids who are vibe coding. It's hard to get kids to program. You can throw Swift Playgrounds and ScratchJr at them and hope they pick up coding. But throw vibe coding at them and they get instant feedback and instant rewards. Along the way, they'll be forced to figure out the command line, basic computer architecture, caching, and latency-versus-bandwidth trade-offs.
 
-## Editor's note: The Obsession's Bill
+## Editor's note: What an Interest Gives and Takes
 
-Naval's own word is "addictive." He spends a couple of hours every night, often up late, and is rarely on X. He tells it as fun; it can also be read as a bill. The pleasure is real, and so is the time it takes.[^n33]
-
-To judge whether an obsession is worth pursuing, ask: When it ends, does it leave a capability or only exhaustion? Does it fill time that was empty, or push out sleep, health, and the people close to you? "I don't look for balance" is a freedom for someone who controls their own time. For everyone else, it needs an end date.
-
-So creativity and happiness don't have to be a binary choice. Drive can come from interest rather than lack. At its best, when an interest cools, you can do something you couldn't do before.
+Naval describes the pleasure of coding and says he has been spending a couple of hours on it late at night.[^n33] The gains and the time spent are worth considering together: what have you learned, and how have your sleep and existing commitments been affected?
 
 # 12 | Part 4 · Desire and Freedom | Chapter 12 Leaving Money on the Table
 
@@ -456,25 +444,19 @@ We live in the age of nonlinear returns. The upside is always bigger in the futu
 
 When should you fight? If you're being taken advantage of, and you know that if you don't solve this you won't sleep at night for the next year, you do have to fight. If you can walk away, recover your time, and know not to work with those people again, walk away. You always have to put yourself in the situation where you are going to be most happy and most at peace, because you get productivity out of that—and happiness and peace are the end goals anyway. If you can sleep at night with the outcome, without huge stress, relatively relaxed, and open for the next thing, that's the best outcome.
 
-## Editor's note: Only People with Money Can Leave It on the Table
+## Editor's note: Room to Choose
 
-Leaving money on the table requires money on the table. Naval made these choices with ample financial room. For most people, the practical question is: without endangering basic security, which freedoms would you earn a little less for?
-
-That question holds at any income. Turning down one more job you dislike, refusing a contract with bad terms, or not spending months on a small dispute are all ways of trading money for time and peace. In the end the choice comes down to each day: whom you work with, what you want to do when you wake up, and whether you sleep well at night.
+Turning down work you dislike may mean less income. Refusing a contract with onerous terms may mean losing an opportunity. Before making that trade, consider basic expenses, existing commitments, and the loss you can afford, then weigh the time and autonomy you would gain.
 
 # 13 | Closing | Afterword: Making Got Cheaper; Freedom Didn't
 
-## Editor's note: Two Halves of an Answer
+## Editor's note: Bringing the Questions Home
 
-Back to the opening question: as making things gets easier, do people become freer?
+As making things gets easier, do people become freer?
 
-The tools answer only half. They make the first version cheap. They let one person turn an idea into a finished work without compromise. That is real freedom, though for now it belongs to the few willing to build: Naval himself expects the share of people who build apps to grow from about one in a thousand to one to three percent, and still not to most people.
+Tools give individuals more opportunities to realize an idea. Whether work and life become more autonomous also depends on income, working relationships, and how time is arranged.
 
-The other half hasn't gotten cheaper. Knowing what you want is still the hardest part. Judging whether a tool is just flattering you is still your job. Credibility is still built through repeated sacrifices. Trust still has to be built, slowly, on reputations and institutions. Whether the work gets found, and who profits from it, is still decided by platforms and distribution. The time you save can still be refilled by new desires, new scoreboards, or new obsessions.
-
-So the book leaves its readers with three questions. Is this something I want, or something a scoreboard wants for me? Is what I make being tested by reality, or by other people's politeness? How much peace does this contract trade for how much result, and will I sign it?
-
-Naval can't answer these for anyone, and neither can this book. They belong in each reader's own life, to be tested by your work, the people beside you, and the days themselves.
+Bring the questions to something you are doing now. Is this what I want to do? How will I know it works? How much time am I willing to give it?
 
 # 14 | Closing | A Note on the Sources
 

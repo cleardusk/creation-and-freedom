@@ -1,5 +1,5 @@
-@font-face{font-family:"Creation Kai";src:url("{{ASSETS}}fonts/reader-kai-v241.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Creation Song";src:url("{{ASSETS}}fonts/reader-song-v240.woff2") format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
+@font-face{font-family:"Creation Kai";src:url("{{ASSETS}}fonts/reader-kai-v243.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Creation Song";src:url("{{ASSETS}}fonts/reader-song-v243.woff2") format("woff2");font-style:normal;font-weight:400 600;font-display:swap}
 
 /* Tokens. One neutral paper, one ink, one ink-indigo accent used sparingly. */
 :root{
@@ -78,7 +78,7 @@ html[lang=en] .tagline{font-style:italic}
 .part-number{font:500 11px/1.4 var(--sans);letter-spacing:.1em;color:var(--accent);font-variant-numeric:tabular-nums}
 .part-name{font:500 17px/1.5 var(--serif);letter-spacing:.02em}
 .part-range{align-self:end;font-size:12px;color:var(--secondary)}
-.part-arrow{position:absolute;right:0;top:15px;color:var(--secondary);opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s var(--ease)}
+.part-arrow{position:absolute;right:0;top:17px;width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;color:var(--secondary);opacity:0;transform:translateX(-2px);transition:opacity .2s,transform .2s var(--ease)}
 .cover-index a:hover .part-arrow,.cover-index a:focus-visible .part-arrow{opacity:1;transform:none;color:var(--accent)}
 .cover-index a:hover .part-name{text-decoration:underline;text-decoration-color:var(--accent-line);text-underline-offset:.3em}
 .cover-toc{margin-top:50px}.js .cover-toc{display:none}
@@ -115,8 +115,9 @@ html[lang=en] .cover-meta{letter-spacing:.07em}
 @media(hover:hover){.chapter-nav a:hover{border-color:var(--line-strong);background:var(--wash)}}
 .chapter-nav a:last-child{grid-column:2;text-align:right}
 .chapter-nav-label{display:block;font-size:11px;letter-spacing:.06em;color:var(--secondary);margin-bottom:4px}
-.book-end{break-inside:avoid;text-align:center;padding:5em 0 3em;color:var(--secondary);font:15px/1.5 var(--serif);letter-spacing:.3em}
-.book-end i{display:block;width:6px;height:6px;margin:24px auto 0;border-radius:50%;background:var(--accent)}
+.book-end{display:flex;flex-direction:column;align-items:center;break-inside:avoid;text-align:center;padding:5em 0 3em;color:var(--secondary);font:15px/1.5 var(--serif)}
+html[lang=en] .book-end span{letter-spacing:.3em;padding-left:.3em}
+.book-end i{display:block;width:6px;height:6px;margin:24px 0 0;border-radius:50%;background:var(--accent)}
 
 /* Note markers */
 .paragraph-note{position:relative;display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;top:-.5em;width:18px;min-width:18px;height:18px;padding:0;margin-left:3px;border-radius:50%;font:600 9.5px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--accent);background:var(--accent-soft);text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}
@@ -315,7 +316,7 @@ html[lang=en] #note-dialog-content{line-height:1.65}
  .reading-entry{width:100%;min-height:52px}
  .disclaimer{width:100%}
  .cover-index{grid-template-columns:1fr 1fr;gap:0 18px;margin-top:40px}
- .cover-index a{padding:14px 0 16px}.part-name{font-size:16px}
+ .cover-index a{padding:14px 0 16px}.part-arrow{top:14px}.part-name{font-size:16px}
  .chapter h1{font-size:1.5em}.chapter-no{font-size:44px}html[lang=en] .chapter-no{font-size:48px}
  .chapter-part{gap:10px;font-size:11px}
  .js body.is-paged #reading-stage{top:max(72px,calc(env(safe-area-inset-top) + 60px));width:calc(100vw - 48px);height:calc(100dvh - 144px - env(safe-area-inset-bottom))}
@@ -353,11 +354,11 @@ html[lang=en] #note-dialog-content{line-height:1.65}
  #reading-stage{position:static!important;transform:none!important;width:100%!important;height:auto!important;overflow:visible!important}
  .chapter,#cover{display:block!important;break-before:page;transform:none!important;columns:auto!important;width:auto!important;height:auto!important}
  .chapter{font-size:11pt;line-height:1.8}.chapter h2{break-after:avoid}
- .limit-row p{orphans:3;widows:3}
+ .limit-row p{orphans:3;widows:3;break-inside:avoid}
  #c13 .chapter-header{margin-bottom:1.4em}
  #c13 .limit-row p{padding-bottom:.7em}
  .cover-title{padding-top:18mm}.cover-meta{margin-top:15mm}
- .cover-art{margin-top:14mm;max-height:70mm;filter:none!important;mix-blend-mode:normal!important}
+ .cover-art{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;margin:14mm 0 0;max-height:70mm;filter:none!important;mix-blend-mode:normal!important;-webkit-mask-image:none!important;mask-image:none!important}
  .reader-mark{background:transparent!important;text-decoration:none!important}
  .chapter-header{animation:none!important}
 }

@@ -49,7 +49,7 @@ The 92 percent versus 88 percent comparison comes from February 2026. The analys
 > ‘Nothing Ever Happens’ Is Over | https://nav.al/over | Naval; hosted by Nivi
 
 @ n08 | Ownership and Open Code
-The 2021 conversation links open code, user data, and contributor ownership, using building blocks to explain composability. The judgment in the chapter's editor's note on how these ideas fared is the editor's retrospective, not a statement by Naval.
+The 2021 conversation links open code, user data, and contributor ownership, using building blocks to explain composability.
 > Tim Ferriss #542 | https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/ | Naval Ravikant and Chris Dixon; hosted by Tim Ferriss
 
 @ n10 | Real Feedback

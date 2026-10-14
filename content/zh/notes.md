@@ -49,7 +49,7 @@ Airchat是纳瓦尔痴迷约一年的语音与视频社交应用：八九个工�
 > ‘Nothing Ever Happens’ Is Over | https://nav.al/over | Naval；Nivi主持
 
 @ n08 | 所有权与开放代码
-2021年对谈把开放代码、用户数据和贡献者所有权连在一起，用积木说明应用的可组合性。本章编者按中关于这组设想后来走向的判断，属于编者的回看，不代表纳瓦尔的表态。
+2021年对谈把开放代码、用户数据和贡献者所有权连在一起，用积木说明应用的可组合性。
 > Tim Ferriss #542 | https://tim.blog/2021/10/28/chris-dixon-naval-ravikant-transcript/ | Naval Ravikant、Chris Dixon；Tim Ferriss主持
 
 @ n10 | 真实的反馈

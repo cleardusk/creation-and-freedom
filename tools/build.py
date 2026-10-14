@@ -13,12 +13,12 @@ import html, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
-VERSION = '2.4.2'
+VERSION = '2.4.3'
 
 UI = {
     'zh': dict(
         lang='zh-CN', out='index.html', assets='assets/', other='en/index.html', other_lang='en', other_label='EN',
-        title='创造与自由', subtitle='纳瓦尔思想读本', description='创造与自由：纳瓦尔思想读本。',
+        title='创造与自由', subtitle='纳瓦尔思想读本', description='创造与自由：纳瓦尔思想读本。', afterword='结语',
         cover_meta=('2021 — 2026', '四部 · 十二章'), start='开始阅读', parts_label='四部', full_toc='全书目录',
         skip='跳到正文', switch='切换语言', contents='目录', pager='翻页', prev_page='上一页', next_page='下一页',
         settings='阅读设置', pin='固定目录', close_contents='关闭目录', search='搜索全书', search_placeholder='输入词句…',
@@ -37,7 +37,7 @@ UI = {
     ),
     'en': dict(
         lang='en', out='en/index.html', assets='../assets/', other='../index.html', other_lang='zh-CN', other_label='中文',
-        title='Creation and Freedom', subtitle='A Naval Reader', description='Creation and Freedom：A Naval Reader。',
+        title='Creation and Freedom', subtitle='A Naval Reader', description='Creation and Freedom：A Naval Reader。', afterword='Afterword',
         cover_meta=('2021 — 2026', 'FOUR PARTS · TWELVE CHAPTERS'), start='Start reading', parts_label='Four parts',
         full_toc='Full contents', skip='Skip to text', switch='Switch language', contents='Contents', pager='Layout',
         prev_page='Previous page', next_page='Next page', settings='Reading settings', pin='Pin contents',
@@ -151,7 +151,7 @@ def toc_title(ch):
     return (m.group(1) or m.group(2), m.group(3)) if m else (None, ch['title'])
 
 
-def toc(chapters):
+def toc(chapters, ui):
     groups = []
     for ch in chapters:
         if not groups or groups[-1][0] != ch['part']:
@@ -165,6 +165,7 @@ def toc(chapters):
             if num:
                 links.append(f'<a href="#c{ch["id"]}"><span class="toc-number">{num}</span><span class="toc-title">{esc(title)}</span></a>')
             else:
+                title = ui['afterword'] if ch['id'] == '13' else title
                 links.append(f'<a href="#c{ch["id"]}">{esc(title)}</a>')
         out.append(f'<div class="toc-group"><h2>{esc(part)}</h2>{"".join(links)}</div>')
     return ''.join(out)
@@ -229,9 +230,10 @@ def render(ui, chapters, sections, bank, data, starts):
     js = open(os.path.join(TOOLS, 'reader.js'), encoding='utf-8').read()
     parts = ''.join(
         f'<a href="#c{a}"><span class="part-number">{i:02d}</span><span class="part-name">{esc(re.sub(r"^.*· ", "", part))}</span>'
-        f'<span class="part-range">{ui["part_range"].format(a=int(a), b=int(b))}</span><span class="part-arrow" aria-hidden="true">→</span></a>'
+        f'<span class="part-range">{ui["part_range"].format(a=int(a), b=int(b))}</span>'
+        '<svg class="part-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>'
         for i, (part, (a, b)) in enumerate(starts.items(), 1))
-    values = dict(ui, css=css.rstrip('\n'), js=js.rstrip('\n'), toc=toc(chapters), parts=parts,
+    values = dict(ui, css=css.rstrip('\n'), js=js.rstrip('\n'), toc=toc(chapters, ui), parts=parts,
                   chapters=''.join(sections), bank=''.join(bank), data=json.dumps(data, ensure_ascii=False).replace('</', '<\\/'),
                   meta_a=ui['cover_meta'][0], meta_b=ui['cover_meta'][1], face_a=ui['faces'][0], face_b=ui['faces'][1],
                   face_c=ui['faces'][2], mode_a=ui['modes'][0], mode_b=ui['modes'][1], mark_a=ui['mark_buttons'][0],
