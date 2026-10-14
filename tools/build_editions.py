@@ -28,6 +28,7 @@ a {color: #2e4a6b;} .part, .disclaimer {font-size: .85em;}
 .art {width: 100%; height: auto; margin: 2em 0;}
 .noteref {font-size: .7em; vertical-align: super; text-decoration: none;}
 .note {margin-bottom: 2em;} .note-anchor {white-space: nowrap;}
+.ebook-cover .cover-meta {border-bottom: 1px solid #c9cbcd; padding-bottom: .8em; margin-bottom: 0;}
 '''
 
 
@@ -57,7 +58,7 @@ def build_epub(lang, out):
         book.add_item(item)
         return item
 
-    cover = page('cover.xhtml', ui['title'], f'<section epub:type="titlepage"><p>2021 — 2026 · v{build.VERSION}</p>'
+    cover = page('cover.xhtml', ui['title'], f'<section class="ebook-cover" epub:type="titlepage"><p class="cover-meta">2021 — 2026 · v{build.VERSION}</p>'
                  f'<h1>{build.esc(ui["title"])}</h1><p>{build.esc(ui["subtitle"])}</p><p>{build.esc(ui["tagline"])}</p>'
                  f'<img class="art" src="art.png" alt=""/><p class="disclaimer">{build.esc(ui["disclaimer"])}</p></section>')
     numbers, items = {}, []

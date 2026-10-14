@@ -13,7 +13,7 @@ import html, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOOLS = os.path.join(ROOT, 'tools')
-VERSION = '2.4.1'
+VERSION = '2.4.2'
 
 UI = {
     'zh': dict(
