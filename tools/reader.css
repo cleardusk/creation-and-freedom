@@ -138,15 +138,20 @@ html[lang=zh-CN] .paragraph-note{margin-left:1px}
 .js .notes-hidden .paragraph-note{visibility:hidden;pointer-events:none}
 .annotation-bank{border-top:1px solid var(--line);margin-top:50px}.annotation-bank article{padding:20px 0}.js .annotation-bank{display:none}
 
-/* Paged mode. reader.js assumes the 48px column gap. */
-.js body.is-paged{overflow:clip}
+/* Paged mode. reader.js assumes the 48px column gap.
+   Keep the reading surface and controls in one document container: iOS 26
+   can displace independent fixed layers when its browser bars change. */
+.js:has(body.is-paged){overflow:hidden;overscroll-behavior:none}
+.js body.is-paged{position:relative;height:100dvh;overflow:clip}
+.js body.is-paged .topbar{position:absolute}
 .js body.is-paged main{max-width:none;padding:0}
-.js body.is-paged #reading-stage{position:fixed;top:max(84px,calc(env(safe-area-inset-top) + 64px));left:50%;transform:translateX(-50%);width:min(30em,calc(100vw - 64px));height:calc(100dvh - 164px - env(safe-area-inset-bottom));overflow:clip;touch-action:pan-y pinch-zoom}
+.js body.is-paged #reading-stage{position:absolute;top:max(84px,calc(env(safe-area-inset-top) + 64px));left:50%;transform:translateX(-50%);width:min(30em,calc(100vw - 64px));height:calc(100dvh - 164px - env(safe-area-inset-bottom));overflow:clip;touch-action:pan-y pinch-zoom}
 .js body.is-paged .chapter{height:100%;width:100%;column-width:var(--page-width);column-gap:var(--page-gap);column-fill:auto;transform:translateX(var(--page-shift,0px))}
 .js body.is-paged .prose p{hanging-punctuation:none}
 .js body.is-paged .chapter-nav{display:none}
 .js body.is-paged .chapter-header{margin-bottom:1.9em}
 #pager{position:fixed;bottom:max(14px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:min(30em,calc(100vw - 40px));font-size:var(--body-size);display:flex;justify-content:space-between;align-items:center;color:var(--secondary);z-index:3}
+.js body.is-paged #pager{position:absolute}
 #pager button{color:var(--secondary);border-radius:50%;width:44px;padding:0;display:grid;place-items:center;transition:background .15s,color .15s}
 @media(hover:hover){#pager button:hover:not([aria-disabled=true]){color:var(--ink);background:var(--wash)}}
 #pager svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -356,8 +361,8 @@ html[lang=en] #note-dialog-content{line-height:1.65}
 
 @media print{
  @page{size:A5;margin:18mm 15mm}
- html{background:#fff}
- body{--paper:#fff;--ink:#222;--secondary:#666;--line:#ccc;--accent:#2e4a6b;--body-size:11pt;overflow:visible!important}
+ html{background:#fff;overflow:visible!important}
+ body{--paper:#fff;--ink:#222;--secondary:#666;--line:#ccc;--accent:#2e4a6b;--body-size:11pt;position:static!important;height:auto!important;overflow:visible!important}
  .topbar,.skip-link,dialog,.chapter-nav,.paragraph-note,.annotation-bank,.cover-actions,.cover-index,.cover-toc,#pager,#mark-toolbar,#mark-status,.last-position{display:none!important}
  main,.has-pinned-contents main{padding:0!important;margin:0!important;max-width:none!important}
  #reading-stage{position:static!important;transform:none!important;width:100%!important;height:auto!important;overflow:visible!important}
